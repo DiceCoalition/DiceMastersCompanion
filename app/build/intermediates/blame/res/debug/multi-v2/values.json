@@ -1,0 +1,79 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\projects\\DiceMastersCompanion\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "map": [
+                {
+                    "source": "C:\\projects\\DiceMastersCompanion\\app\\src\\main\\res\\values\\dimens.xml",
+                    "from": {
+                        "startLines": "3,4",
+                        "startColumns": "4,4",
+                        "startOffsets": "92,151",
+                        "endColumns": "57,55",
+                        "endOffsets": "145,202"
+                    },
+                    "to": {
+                        "startLines": "10,11",
+                        "startColumns": "4,4",
+                        "startOffsets": "397,455",
+                        "endColumns": "57,55",
+                        "endOffsets": "450,506"
+                    }
+                },
+                {
+                    "source": "C:\\projects\\DiceMastersCompanion\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "4,7,8,5,9,3,10,6",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "108,228,268,148,313,59,361,187",
+                        "endColumns": "38,38,43,37,46,47,46,39",
+                        "endOffsets": "142,262,307,181,355,102,403,222"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,94,133,177,215,262,310,357",
+                        "endColumns": "38,38,43,37,46,47,46,39",
+                        "endOffsets": "89,128,172,210,257,305,352,392"
+                    }
+                },
+                {
+                    "source": "C:\\projects\\DiceMastersCompanion\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "6,15",
+                        "startColumns": "4,4",
+                        "startOffsets": "191,522",
+                        "endLines": "12,17",
+                        "endColumns": "12,12",
+                        "endOffsets": "481,679"
+                    },
+                    "to": {
+                        "startLines": "21,28",
+                        "startColumns": "4,4",
+                        "startOffsets": "1061,1352",
+                        "endLines": "27,30",
+                        "endColumns": "12,12",
+                        "endOffsets": "1347,1507"
+                    }
+                },
+                {
+                    "source": "C:\\projects\\DiceMastersCompanion\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "4,3,8,6,10,11,9,5,7",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "113,59,355,225,480,553,409,167,285",
+                        "endColumns": "52,52,52,58,71,63,69,56,68",
+                        "endOffsets": "161,107,403,279,547,612,474,219,349"
+                    },
+                    "to": {
+                        "startLines": "12,13,14,15,16,17,18,19,20",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "511,564,617,670,729,801,865,935,992",
+                        "endColumns": "52,52,52,58,71,63,69,56,68",
+                        "endOffsets": "559,612,665,724,796,860,930,987,1056"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="C:\projects\DiceMastersCompanion\app\src\main\assets"/><source path="C:\projects\DiceMastersCompanion\app\build\intermediates\shader_assets\debug\compileDebugShaders\out"/></dataSet><dataSet config="debug"><source path="C:\projects\DiceMastersCompanion\app\src\debug\assets"/></dataSet></merger>

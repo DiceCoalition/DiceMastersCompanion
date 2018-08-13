@@ -1,0 +1,169 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:2:1-84:12
+	package
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:3:5-51
+		INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml
+		INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:6:5-33
+		INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml
+		INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:5:5-29
+		INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml
+		INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml
+	android:installLocation
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:4:5-35
+uses-sdk
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:8:5-17
+INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:8:5-17
+INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:8:5-17
+INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:8:5-17
+INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:8:5-17
+	android:targetSdkVersion
+		INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:8:5-17
+		INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:8:5-17
+		INJECTED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:11:5-81
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:11:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:12:5-80
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:12:22-77
+application
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:16:5-82:19
+	android:label
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:19:9-41
+	android:icon
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:18:9-45
+	android:allowBackup
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:17:9-35
+	android:theme
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:20:9-40
+activity#fluffyhairedkid.dicemasterscompanion.MainActivity
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:21:9-29:20
+	android:label
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:23:13-45
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:22:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:24:13-28:29
+action#android.intent.action.MAIN
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:25:17-69
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:25:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:27:17-77
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:27:27-74
+activity#fluffyhairedkid.dicemasterscompanion.CardViewer
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:30:9-33:48
+	android:label
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:33:13-45
+	android:configChanges
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:32:13-59
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:31:13-39
+activity#fluffyhairedkid.dicemasterscompanion.CardCollector
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:34:9-37:48
+	android:label
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:37:13-45
+	android:configChanges
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:36:13-59
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:35:13-42
+activity#fluffyhairedkid.dicemasterscompanion.CardCollectorNEW
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:38:9-41:48
+	android:label
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:41:13-45
+	android:configChanges
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:40:13-59
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:39:13-45
+activity#fluffyhairedkid.dicemasterscompanion.Search
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:42:9-45:61
+	android:label
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:45:13-58
+	android:configChanges
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:44:13-59
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:43:13-35
+activity#fluffyhairedkid.dicemasterscompanion.Credits
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:46:9-48:62
+	android:label
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:48:13-59
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:47:13-36
+activity#fluffyhairedkid.dicemasterscompanion.Marvel
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:49:9-51:48
+	android:label
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:51:13-45
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:50:13-35
+activity#fluffyhairedkid.dicemasterscompanion.TeamBuilder
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:52:9-54:67
+	android:label
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:54:13-64
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:53:13-40
+activity#fluffyhairedkid.dicemasterscompanion.DCComics
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:55:9-57:48
+	android:label
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:57:13-45
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:56:13-37
+activity#fluffyhairedkid.dicemasterscompanion.LifeCounter
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:63:9-67:52
+	android:screenOrientation
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:67:13-49
+	android:label
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:66:13-64
+	android:configChanges
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:65:13-59
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:64:13-40
+activity#fluffyhairedkid.dicemasterscompanion.TeamViewer
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:68:9-70:48
+	android:label
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:70:13-45
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:69:13-39
+activity#fluffyhairedkid.dicemasterscompanion.DnD
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:71:9-73:48
+	android:label
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:73:13-45
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:72:13-32
+activity#fluffyhairedkid.dicemasterscompanion.Tools
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:74:9-76:48
+	android:label
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:76:13-45
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:75:13-34
+activity#fluffyhairedkid.dicemasterscompanion.OtherSets
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:77:9-79:47
+	android:label
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:79:13-45
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:78:13-38
+activity#fluffyhairedkid.dicemasterscompanion.DataManagement
+ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:80:9-81:47
+	android:label
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:81:13-45
+	android:name
+		ADDED from C:\projects\DiceMastersCompanion\app\src\main\AndroidManifest.xml:80:19-49

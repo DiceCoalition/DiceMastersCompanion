@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Transition Zone</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_search">Search</string>
+    <string name="title_activity_credits">Credits</string>
+    <string name="title_activity_team_builder">Team Builder</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_randomizer">Transition Zone</string>
+    <string name="title_activity_life_counter">Transition Zone</string>
+    <string name="title_activity_other_sets">OtherSets</string>
+
+</resources>

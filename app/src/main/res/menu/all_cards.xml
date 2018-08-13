@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/collapse"
+        android:title="Collapse All" />
+    <item
+        android:id="@+id/expand"
+        android:title="Expand All" />
+    <item
+        android:id="@+id/tieDice"
+        android:title="Change Dice W/Cards"
+        android:checkable="true"/>
+    <item
+        android:id="@+id/massAdd"
+        android:title="Mass Add"
+        android:checkable="true"/>
+    <item
+        android:id="@+id/massRemove"
+        android:title="Mass Remove"
+        android:checkable="true"/>
+
+</menu>

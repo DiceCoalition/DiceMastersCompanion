@@ -1,0 +1,55 @@
+Applications Memory Usage (kB):
+Uptime: 892529002 Realtime: 1843030040
+
+** MEMINFO in pid 18996 [fluffyhairedkid.dicemasterscompanion] **
+                   Pss  Private  Private  Swapped     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap     4013     3976        0      420     6452     6309      142
+  Dalvik Heap     6904     6856        0     9808    24174    20969     3205
+ Dalvik Other      406      404        0        0                           
+        Stack      124      124        0        0                           
+       Ashmem        2        0        0        0                           
+      Gfx dev     5572     5572        0        0                           
+    Other dev        5        0        4        0                           
+     .so mmap      793      108      332     2764                           
+    .apk mmap      279        0      112        0                           
+    .ttf mmap        1        0        0        0                           
+    .dex mmap     1464     1432       32        0                           
+    .oat mmap      829        0      208        0                           
+    .art mmap     2274     2104        4       60                           
+   Other mmap       12        8        0        0                           
+      Unknown      116      116        0      100                           
+        TOTAL    22794    20700      692    13152    30626    27278     3347
+ 
+ App Summary
+                       Pss(KB)
+                        ------
+           Java Heap:     8964
+         Native Heap:     3976
+                Code:     2224
+               Stack:      124
+            Graphics:     5572
+       Private Other:      532
+              System:     1402
+ 
+               TOTAL:    22794      TOTAL SWAP (KB):    13152
+ 
+ Objects
+               Views:       73         ViewRootImpl:        2
+         AppContexts:        4           Activities:        3
+              Assets:        4        AssetManagers:        2
+       Local Binders:       10        Proxy Binders:       20
+       Parcel memory:        3         Parcel count:       13
+    Death Recipients:        0      OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:      248          MALLOC_SIZE:        0
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4      336             97       12/27/13  /data/user/0/fluffyhairedkid.dicemasterscompanion/databases/tblCards.db
+ 
+ Asset Allocations
+    : 1K

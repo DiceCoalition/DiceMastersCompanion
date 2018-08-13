@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".TeamBuilder">
+
+    <EditText
+        android:id="@+id/etNewTeam"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter new team name..."
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@id/etNewTeam"
+        android:background="@drawable/custom_button"
+        android:text="Add" />
+
+    <ListView
+        android:id="@+id/lvTeamList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_below="@id/btAdd"
+        android:choiceMode="singleChoice" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btShow"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:text="Delete Team" />
+
+        <Button
+            android:id="@+id/btRandom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:text="Randomizer" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/custom_button"
+        android:text="Show Team" />
+
+</RelativeLayout>

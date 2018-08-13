@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".LifeCounter">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transwhite" />
+
+    <TextView
+        android:id="@+id/tvOpp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="50dp"
+        android:text="Opponent"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/tvOppHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvOpp"
+        android:layout_centerHorizontal="true"
+        android:text="20"
+        android:textSize="75dp" />
+
+    <TextView
+        android:id="@+id/tvMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvMyHealth"
+        android:layout_centerHorizontal="true"
+        android:text="Me"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/tvMyHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="50dp"
+        android:text="20"
+        android:textSize="75dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvOpp"
+        android:layout_toLeftOf="@+id/tvOppHealth"
+        android:orientation="vertical"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/btOppOneDamage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/custom_button"
+            android:text="-1" />
+
+        <Button
+            android:id="@+id/btOppFiveDamage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/custom_button"
+            android:text="-5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMe"
+        android:layout_toLeftOf="@+id/tvMyHealth"
+        android:orientation="vertical"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/btMeOneDamage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/custom_button"
+            android:text="-1" />
+
+        <Button
+            android:id="@+id/btMeFiveDamage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/custom_button"
+            android:text="-5" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btOppOneHeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvOpp"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@+id/tvOppHealth"
+        android:background="@drawable/custom_button"
+        android:paddingLeft="10dp"
+        android:text="+1" />
+
+    <Button
+        android:id="@+id/btOppTwoHeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btOppOneHeal"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@+id/tvOppHealth"
+        android:background="@drawable/custom_button"
+        android:paddingLeft="10dp"
+        android:text="+2" />
+
+    <Button
+        android:id="@+id/btMeOneHeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMe"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@+id/tvMyHealth"
+        android:background="@drawable/custom_button"
+        android:paddingLeft="10dp"
+        android:text="+1" />
+
+    <Button
+        android:id="@+id/btMeTwoHeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btMeOneHeal"
+        android:layout_margin="5dp"
+        android:layout_toRightOf="@+id/tvMyHealth"
+        android:background="@drawable/custom_button"
+        android:paddingLeft="10dp"
+        android:text="+2" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvMe"
+        android:layout_below="@+id/tvOppHealth"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/btReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/custom_button"
+            android:text="Reset"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+</RelativeLayout>
