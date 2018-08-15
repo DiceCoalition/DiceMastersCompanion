@@ -27,6 +27,9 @@ public class Marvel extends Activity {
         Button gotg = (Button) findViewById(R.id.btGOTG);
         Button xmfc = (Button) findViewById(R.id.btXMFC);
         Button tmt = (Button) findViewById(R.id.btTMT);
+        Button ai = (Button) findViewById(R.id.btAI);
+        Button ki = (Button) findViewById(R.id.btKI);
+        Button jll = (Button) findViewById(R.id.btJLL);
         Button promosMarvel = (Button) findViewById(R.id.btPromosMarvel);
 
         allMarvel.setOnClickListener(new View.OnClickListener() {
@@ -179,6 +182,39 @@ public class Marvel extends Activity {
                 Intent intent = new Intent(Marvel.this, CardCollectorNEW.class);
                 intent.putExtra("view", "collection");
                 intent.putExtra("whereCriteria", "where CardSet='TMT'");
+                startActivity(intent);
+            }
+        });
+
+        ai.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Marvel.this, CardCollectorNEW.class);
+                intent.putExtra("view", "collection");
+                intent.putExtra("whereCriteria", "where CardSet='AI'");
+                startActivity(intent);
+            }
+        });
+
+        ki.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Marvel.this, CardCollectorNEW.class);
+                intent.putExtra("view", "collection");
+                intent.putExtra("whereCriteria", "where CardSet='KI'");
+                startActivity(intent);
+            }
+        });
+
+        jll.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Marvel.this, CardCollectorNEW.class);
+                intent.putExtra("view", "collection");
+                intent.putExtra("whereCriteria", "where CardSet='JLL'");
                 startActivity(intent);
             }
         });

@@ -20,6 +20,7 @@ public class DCComics extends Activity {
         Button gatf = (Button) findViewById(R.id.btGATF);
         Button bm = (Button) findViewById(R.id.btBM);
         Button sww = (Button) findViewById(R.id.btSWW);
+        Button hq = (Button) findViewById(R.id.btHQ);
         Button promosDC = (Button) findViewById(R.id.btPromosDC);
 
         allDC.setOnClickListener(new View.OnClickListener() {
@@ -95,6 +96,17 @@ public class DCComics extends Activity {
                 Intent intent = new Intent(DCComics.this, CardCollectorNEW.class);
                 intent.putExtra("view", "collection");
                 intent.putExtra("whereCriteria", "where CardSet='SWW'");
+                startActivity(intent);
+            }
+        });
+
+        hq.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DCComics.this, CardCollectorNEW.class);
+                intent.putExtra("view", "collection");
+                intent.putExtra("whereCriteria", "where CardSet='HQ'");
                 startActivity(intent);
             }
         });

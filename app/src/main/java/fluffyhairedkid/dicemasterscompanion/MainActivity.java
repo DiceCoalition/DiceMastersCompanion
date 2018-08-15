@@ -31,13 +31,13 @@ public class MainActivity extends Activity {
                 MainActivity.this);
         closeAlert.setTitle("Updates");
         closeAlert
-                .setMessage("The Mighty Thor updated and images added!"
+                .setMessage("Avengers Infinity Campaign Box added!"
                         + "\n" + "\n" +
-                        "Rocket and Groot OP cards added!"
+                        "Kree Invasion Team Pack added!"
                         + "\n" + "\n" +
-                        "Misc missing promo images added"
-                        //+ "\n" + "\n" +
-                        //"Misc promos, some ToA, and most of First Class info added"
+                        "Justice Like Lightning Team Pack added"
+                        + "\n" + "\n" +
+                        "Harley Quinn Team Pack added"
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",

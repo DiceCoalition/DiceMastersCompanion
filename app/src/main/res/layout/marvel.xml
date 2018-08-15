@@ -130,6 +130,30 @@
                 android:text="The Mighty Thor" />
 
             <Button
+                android:id="@+id/btAI"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_button"
+                android:text="Avengers Infinity" />
+
+            <Button
+                android:id="@+id/btKI"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_button"
+                android:text="Kree Invasion" />
+
+            <Button
+                android:id="@+id/btJLL"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_button"
+                android:text="Justice Like Lightning" />
+
+            <Button
                 android:id="@+id/btPromosMarvel"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
