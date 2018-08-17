@@ -49,6 +49,86 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
+                    android:text="Avengers Infinity"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/cbAIStarter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Kree Invasion"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/cbKIStarter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Justice Like Lightning"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/cbJLLStarter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Harley Quinn"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/cbHQStarter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
                     android:text="Spider-Man Maxiumum Carnage"
                     android:textSize="15sp" />
 

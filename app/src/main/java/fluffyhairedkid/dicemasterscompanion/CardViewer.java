@@ -59,8 +59,11 @@ public class CardViewer extends Activity {
     }
 
     public void setImageView() {
+        //TODO: Can we download images as needed instead of including them in the initial download?
         ImageView imgView = (ImageView) findViewById(R.id.ivViewer);
         int cardimage = heroCards.get(childPosition);
+        // if it will return 0, then the resource you are looking for does not exist
+        //imgView.getResources().getIdentifier(cardimage)
         if (cardimage > 0) {
             imgView.setBackgroundResource(0);
             imgView.setImageResource(cardimage);

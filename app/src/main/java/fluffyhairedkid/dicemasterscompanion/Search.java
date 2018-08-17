@@ -58,6 +58,10 @@ public class Search extends Activity {
         final CheckBox setToA = (CheckBox) findViewById(R.id.cb101);
         final CheckBox setXMFC = (CheckBox) findViewById(R.id.cb104);
         final CheckBox setTMT = (CheckBox) findViewById(R.id.cb107);
+        final CheckBox setAI = (CheckBox) findViewById(R.id.cb108);
+        final CheckBox setKI = (CheckBox) findViewById(R.id.cb109);
+        final CheckBox setJLL = (CheckBox) findViewById(R.id.cb110);
+        final CheckBox setHQ = (CheckBox) findViewById(R.id.cb111);
         final CheckBox costOne = (CheckBox) findViewById(R.id.cb1);
         final CheckBox costTwo = (CheckBox) findViewById(R.id.cb2);
         final CheckBox costThree = (CheckBox) findViewById(R.id.cb3);
@@ -458,6 +462,34 @@ public class Search extends Activity {
                                                   setCriteria = setCriteria + "'TMT'";
                                               } else {
                                                   setCriteria = setCriteria + ",'TMT'";
+                                              }
+                                          }
+                                          if (setAI.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'AI'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'AI'";
+                                              }
+                                          }
+                                          if (setKI.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'KI'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'KI'";
+                                              }
+                                          }
+                                          if (setJLL.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'JLL'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'JLL'";
+                                              }
+                                          }
+                                          if (setHQ.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'HQ'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'HQ'";
                                               }
                                           }
 
@@ -1303,6 +1335,10 @@ public class Search extends Activity {
                                          setToA.setChecked(false);
                                          setXMFC.setChecked(false);
                                          setTMT.setChecked(false);
+                                         setAI.setChecked(false);
+                                         setKI.setChecked(false);
+                                         setJLL.setChecked(false);
+                                         setHQ.setChecked(false);
                                          costOne.setChecked(false);
                                          costTwo.setChecked(false);
                                          costThree.setChecked(false);

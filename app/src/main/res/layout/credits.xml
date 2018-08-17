@@ -50,6 +50,15 @@
                 android:layout_height="wrap_content"
                 android:background="@color/transblack"
                 android:paddingTop="20dp"
+                android:text="Visit http://www.dicecoalition.com for more great Dice Masters articles, coverage, sexy mustaches, and tools!"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transblack"
+                android:paddingTop="20dp"
                 android:text="The information presented on this app about Dice Masters, both literal and graphical, is copyrighted by WizKids/NECA LLC and/or Marvel and/or Kazuki Takahashi and/or Wizards of the Coast LLC and/or DC Comics."
                 android:textColor="@color/white"
                 android:textSize="18sp" />

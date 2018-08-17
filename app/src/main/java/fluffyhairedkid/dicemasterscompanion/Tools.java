@@ -58,6 +58,10 @@ public class Tools extends Activity {
                 Button add = (Button) dialog.findViewById(R.id.btAddCards);
                 Button cancel = (Button) dialog.findViewById(R.id.btCancelAdd);
 
+                final CheckBox aiStarter = (CheckBox) dialog.findViewById(R.id.cbAIStarter);
+                final CheckBox kiStarter = (CheckBox) dialog.findViewById(R.id.cbKIStarter);
+                final CheckBox jllStarter = (CheckBox) dialog.findViewById(R.id.cbJLLStarter);
+                final CheckBox hqStarter = (CheckBox) dialog.findViewById(R.id.cbHQStarter);
                 final CheckBox smmcStarter = (CheckBox) dialog.findViewById(R.id.cbSMMCStarter);
                 final CheckBox swwStarter = (CheckBox) dialog.findViewById(R.id.cbSWWStarter);
                 final CheckBox tdStarter = (CheckBox) dialog.findViewById(R.id.cbTDStarter);
@@ -96,7 +100,31 @@ public class Tools extends Activity {
                         String starterCriteria = "";
                         String fullCriteria = "";
 
-                        if (smmcStarter.isChecked()) {
+                        if (aiStarter.isChecked()) {
+                            if (starterCriteria.equals("")) {
+                                starterCriteria = "'AI'";
+                            } else {
+                                starterCriteria = starterCriteria + ",'AI'";
+                            }
+                        }if (kiStarter.isChecked()) {
+                            if (starterCriteria.equals("")) {
+                                starterCriteria = "'KI'";
+                            } else {
+                                starterCriteria = starterCriteria + ",'KI'";
+                            }
+                        }if (jllStarter.isChecked()) {
+                            if (starterCriteria.equals("")) {
+                                starterCriteria = "'JLL'";
+                            } else {
+                                starterCriteria = starterCriteria + ",'JLL'";
+                            }
+                        }if (hqStarter.isChecked()) {
+                            if (starterCriteria.equals("")) {
+                                starterCriteria = "'HQ'";
+                            } else {
+                                starterCriteria = starterCriteria + ",'HQ'";
+                            }
+                        }if (smmcStarter.isChecked()) {
                             if (starterCriteria.equals("")) {
                                 starterCriteria = "'SMMC'";
                             } else {
