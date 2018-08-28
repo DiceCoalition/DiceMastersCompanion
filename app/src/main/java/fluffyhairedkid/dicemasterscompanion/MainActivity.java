@@ -31,13 +31,13 @@ public class MainActivity extends Activity {
                 MainActivity.this);
         closeAlert.setTitle("Updates");
         closeAlert
-                .setMessage("Avengers Infinity Campaign Box added!"
+                .setMessage("Battle For Ultramar Campaign Box added!"
                         + "\n" + "\n" +
-                        "Kree Invasion Team Pack added!"
+                        "Orks Team Pack added!"
                         + "\n" + "\n" +
-                        "Justice Like Lightning Team Pack added"
-                        + "\n" + "\n" +
-                        "Harley Quinn Team Pack added"
+                        "Space Wolves Team Pack added!"
+                        //+ "\n" + "\n" +
+                        //"Harley Quinn Team Pack added"
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",
@@ -70,6 +70,7 @@ public class MainActivity extends Activity {
         Button marvel = (Button) findViewById(R.id.btMarvel);
         Button dc = (Button) findViewById(R.id.btDC);
         Button dnd = (Button) findViewById(R.id.btDnD);
+        Button w40k = (Button) findViewById(R.id.btW40K);
         Button other = (Button) findViewById(R.id.btOther);
         Button tools = (Button) findViewById(R.id.btTools);
         Button credits = (Button) findViewById(R.id.btCredits);
@@ -110,6 +111,15 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
 
                 startActivity(new Intent(MainActivity.this, DnD.class));
+            }
+        });
+
+        w40k.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(MainActivity.this, W40K.class));
             }
         });
 

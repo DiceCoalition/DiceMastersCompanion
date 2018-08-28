@@ -58,6 +58,9 @@ public class Tools extends Activity {
                 Button add = (Button) dialog.findViewById(R.id.btAddCards);
                 Button cancel = (Button) dialog.findViewById(R.id.btCancelAdd);
 
+                final CheckBox bfuStarter = (CheckBox) dialog.findViewById(R.id.cbBFUStarter);
+                final CheckBox orkStarter = (CheckBox) dialog.findViewById(R.id.cbORKStarter);
+                final CheckBox swStarter = (CheckBox) dialog.findViewById(R.id.cbSWStarter);
                 final CheckBox aiStarter = (CheckBox) dialog.findViewById(R.id.cbAIStarter);
                 final CheckBox kiStarter = (CheckBox) dialog.findViewById(R.id.cbKIStarter);
                 final CheckBox jllStarter = (CheckBox) dialog.findViewById(R.id.cbJLLStarter);
@@ -100,7 +103,25 @@ public class Tools extends Activity {
                         String starterCriteria = "";
                         String fullCriteria = "";
 
-                        if (aiStarter.isChecked()) {
+                        if (bfuStarter.isChecked()) {
+                            if (starterCriteria.equals("")) {
+                                starterCriteria = "'BFU'";
+                            } else {
+                                starterCriteria = starterCriteria + ",'BFU'";
+                            }
+                        }if (orkStarter.isChecked()) {
+                            if (starterCriteria.equals("")) {
+                                starterCriteria = "'ORK'";
+                            } else {
+                                starterCriteria = starterCriteria + ",'ORK'";
+                            }
+                        }if (swStarter.isChecked()) {
+                            if (starterCriteria.equals("")) {
+                                starterCriteria = "'SW'";
+                            } else {
+                                starterCriteria = starterCriteria + ",'SW'";
+                            }
+                        }if (aiStarter.isChecked()) {
                             if (starterCriteria.equals("")) {
                                 starterCriteria = "'AI'";
                             } else {

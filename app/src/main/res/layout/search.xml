@@ -90,6 +90,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="TMNT" />
+
+                <CheckBox
+                    android:id="@+id/cb115"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="W40K" />
             </LinearLayout>
 
             <TextView
@@ -373,6 +379,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="HQ" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb112"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BFU" />
+
+                <CheckBox
+                    android:id="@+id/cb113"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ORK" />
+
+                <CheckBox
+                    android:id="@+id/cb114"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SW" />
 
 
             </LinearLayout>
@@ -928,6 +960,48 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb116"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/imperium" />
+
+                <CheckBox
+                    android:id="@+id/cb117"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ultramarines" />
+
+                <CheckBox
+                    android:id="@+id/cb118"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/chaos" />
+
+                <CheckBox
+                    android:id="@+id/cb119"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/deathguard" />
+
+                <CheckBox
+                    android:id="@+id/cb120"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/orks" />
+
+                <CheckBox
+                    android:id="@+id/cb121"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spacewolves" />
+
+            </LinearLayout>
         </LinearLayout>
 
     </ScrollView>

@@ -33,6 +33,7 @@ public class Search extends Activity {
         final CheckBox uniDnD = (CheckBox) findViewById(R.id.cb22);
         final CheckBox uniDC = (CheckBox) findViewById(R.id.cb23);
         final CheckBox uniTMNT = (CheckBox) findViewById(R.id.cb86);
+        final CheckBox uniW40K = (CheckBox) findViewById(R.id.cb115);
         final CheckBox setAvX = (CheckBox) findViewById(R.id.cb15);
         final CheckBox setUX = (CheckBox) findViewById(R.id.cb16);
         final CheckBox setS1 = (CheckBox) findViewById(R.id.cb17);
@@ -62,6 +63,9 @@ public class Search extends Activity {
         final CheckBox setKI = (CheckBox) findViewById(R.id.cb109);
         final CheckBox setJLL = (CheckBox) findViewById(R.id.cb110);
         final CheckBox setHQ = (CheckBox) findViewById(R.id.cb111);
+        final CheckBox setBFU = (CheckBox) findViewById(R.id.cb112);
+        final CheckBox setORK = (CheckBox) findViewById(R.id.cb113);
+        final CheckBox setSW = (CheckBox) findViewById(R.id.cb114);
         final CheckBox costOne = (CheckBox) findViewById(R.id.cb1);
         final CheckBox costTwo = (CheckBox) findViewById(R.id.cb2);
         final CheckBox costThree = (CheckBox) findViewById(R.id.cb3);
@@ -139,6 +143,12 @@ public class Search extends Activity {
         final CheckBox greenarrow = (CheckBox) findViewById(R.id.cb84);
         final CheckBox target = (CheckBox) findViewById(R.id.cb89);
         final CheckBox newGods = (CheckBox) findViewById(R.id.cb98);
+        final CheckBox imperium = (CheckBox) findViewById(R.id.cb116);
+        final CheckBox ultramarines = (CheckBox) findViewById(R.id.cb117);
+        final CheckBox chaos = (CheckBox) findViewById(R.id.cb118);
+        final CheckBox deathguard = (CheckBox) findViewById(R.id.cb119);
+        final CheckBox orks = (CheckBox) findViewById(R.id.cb120);
+        final CheckBox spacewolves = (CheckBox) findViewById(R.id.cb121);
 
 
         final EditText editSearch = (EditText) findViewById(R.id.etSearchText);
@@ -217,6 +227,13 @@ public class Search extends Activity {
                                                   uniCriteria = uniCriteria + "'TMNT'";
                                               } else {
                                                   uniCriteria = uniCriteria + ",'TMNT'";
+                                              }
+                                          }
+                                          if (uniW40K.isChecked()) {
+                                              if (uniCriteria.equals("")) {
+                                                  uniCriteria = uniCriteria + "'W40K'";
+                                              } else {
+                                                  uniCriteria = uniCriteria + ",'W40K'";
                                               }
                                           }
 
@@ -492,7 +509,27 @@ public class Search extends Activity {
                                                   setCriteria = setCriteria + ",'HQ'";
                                               }
                                           }
-
+                                          if (setBFU.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'BFU'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'BFU'";
+                                              }
+                                          }
+                                          if (setORK.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'ORK'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'ORK'";
+                                              }
+                                          }
+                                          if (setSW.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'SW'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'SW'";
+                                              }
+                                          }
                                           if (!"".equals(setCriteria)) {
                                               setCriteria = "CardSet in(" + setCriteria + ")";
                                           }
@@ -1006,6 +1043,48 @@ public class Search extends Activity {
                                                   affilCriteria = affilCriteria + "'newgods'";
                                               } else {
                                                   affilCriteria = affilCriteria + ",'newgods'";
+                                              }
+                                          }
+                                          if (imperium.isChecked()) {
+                                              if (affilCriteria.equals("")) {
+                                                  affilCriteria = affilCriteria + "'imperium'";
+                                              } else {
+                                                  affilCriteria = affilCriteria + ",'imperium'";
+                                              }
+                                          }
+                                          if (ultramarines.isChecked()) {
+                                              if (affilCriteria.equals("")) {
+                                                  affilCriteria = affilCriteria + "'ultramarines'";
+                                              } else {
+                                                  affilCriteria = affilCriteria + ",'ultramarines'";
+                                              }
+                                          }
+                                          if (chaos.isChecked()) {
+                                              if (affilCriteria.equals("")) {
+                                                  affilCriteria = affilCriteria + "'chaos'";
+                                              } else {
+                                                  affilCriteria = affilCriteria + ",'chaos'";
+                                              }
+                                          }
+                                          if (deathguard.isChecked()) {
+                                              if (affilCriteria.equals("")) {
+                                                  affilCriteria = affilCriteria + "'deathguard'";
+                                              } else {
+                                                  affilCriteria = affilCriteria + ",'deathguard'";
+                                              }
+                                          }
+                                          if (orks.isChecked()) {
+                                              if (affilCriteria.equals("")) {
+                                                  affilCriteria = affilCriteria + "'orks'";
+                                              } else {
+                                                  affilCriteria = affilCriteria + ",'orks'";
+                                              }
+                                          }
+                                          if (spacewolves.isChecked()) {
+                                              if (affilCriteria.equals("")) {
+                                                  affilCriteria = affilCriteria + "'spacewolves'";
+                                              } else {
+                                                  affilCriteria = affilCriteria + ",'spacewolves'";
                                               }
                                           }
 

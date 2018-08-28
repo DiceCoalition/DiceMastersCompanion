@@ -52,6 +52,14 @@
                 android:text="Dungeons &amp; Dragons" />
 
             <Button
+                android:id="@+id/btW40K"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_button"
+                android:text="Warhammer 40K" />
+
+            <Button
                 android:id="@+id/btOther"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
