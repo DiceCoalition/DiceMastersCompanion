@@ -36,8 +36,8 @@ public class MainActivity extends Activity {
                         "Orks Team Pack added!"
                         + "\n" + "\n" +
                         "Space Wolves Team Pack added!"
-                        //+ "\n" + "\n" +
-                        //"Harley Quinn Team Pack added"
+                        + "\n" + "\n" +
+                        "Various database fixes."
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",
