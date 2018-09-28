@@ -8,7 +8,7 @@ import android.util.Log;
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "tblCards.db";
-    private static final int DATABASE_VERSION = 112;
+    private static final int DATABASE_VERSION = 113;
 
     private static final String DATABASE_CREATE = "create table tblCards (_id integer not null, CharID integer not null, DieID integer not null, CardID integer not null, "
             + "Universe text not null, CardSet text not null, CharName text not null, CardName text not null, "
@@ -1881,11 +1881,13 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2100,428,1,4,'DC Comics','GATF','Jay Garrick','Leadfoot (Blank)','jaygarrick','leadfootblank','four','society','','','bs','gp',4,0,0,-1 "
             + "union select 2101,433,1,4,'DC Comics','GATF','Professor Zoom','Thief','professorzoom','thief','seven','villain','','','fist','gp',3,0,0,-1 "
             + "union select 2102,434,1,4,'DC Comics','GATF','Roy Harper','Adolescent Archer','royharper','adolescentarcher','five','greenarroworg','','','fist','gp',4,0,0,-1 "
-            + "union select 2296,434,1,5,'DC Comics','GATF','Roy Harper','Don''t Call Me Speedy (Alt)','royharper','nopic','four','greenarroworg','','','fist','halt',3,0,0,-1 "
-            + "union select 2297,163,2,9,'DC Comics','GATF','Green Arrow','Robin Hood (Alt)','greenarrowga','nopic','five','greenarroworg','','','ms','halt',3,0,0,-1 "
             + "union select 2859,411,1,4,'DC Comics','GATF','Rip Hunter''s Chalkboard','''''Only Zatara Can Reach The POINT'''' (Alt)','riphunterschalkboard','onlyzataracanreachthepointa','four','','','','ms','halt',3,0,0,0 "
             + "union select 2860,163,2,10,'DC Comics','GATF','Green Arrow','Robin Hood (Blank)','greenarrowga','robinhoodblank','five','greenarroworg','','','ms','halt',3,0,0,-1 ";
-
+//removed items
+/*
++ "union select 2296,434,1,5,'DC Comics','GATF','Roy Harper','Don''t Call Me Speedy (Alt)','royharper','nopic','four','greenarroworg','','','fist','halt',3,0,0,-1 "
++ "union select 2297,163,2,9,'DC Comics','GATF','Green Arrow','Robin Hood (Alt)','greenarrowga','nopic','five','greenarroworg','','','ms','halt',3,0,0,-1 "
+*/
     private static final String DATABASE_POPULATEDS = "insert into tblCards "
             + "select 1689,408,1,1,'Marvel','DS','Wong','Expert of Kamar-Taj','wong','expertofkamartaj','two','magicorg','','','fist','as',0,0,0,-1 "
             + "union select 1690,11,2,4,'Marvel','DS','Doctor Strange','Sanctum Santorum','doctorstrangeds','sanctumsantorum','six','magicorg','','','shield','as',0,0,0,-1 "
@@ -2266,7 +2268,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2223,172,3,11,'DC Comics','BM','Robin','Wayne Legacy','robinbm','waynelegacy','four','batmanorg','','','mask','dr',3,0,0,0 "
             + "union select 2224,513,1,1,'DC Comics','BM','Talia al Ghul','Forbidden Love','taliaalghul','forbiddenlove','three','villain','batmanorg','','shield','bc',3,0,0,0 "
             + "union select 2225,513,1,2,'DC Comics','BM','Talia al Ghul','Daughter of the Demon','taliaalghul','daughterofthedemon','four','villain','batmanorg','','shield','cu',3,0,0,0 "
-            + "union select 2226,513,1,3,'DC Comics','BM','Talia al Ghul','It''s Complicated','taliaalghul','nopic','five','villain','blank','','shield','dr',3,0,0,0 "
+            + "union select 2226,513,1,3,'DC Comics','BM','Talia al Ghul','It''s Complicated','taliaalghul','bat109','five','villain','blank','','shield','dr',3,0,0,0 "
             + "union select 2227,181,3,8,'DC Comics','BM','The Joker','Joke''s On You','thejokerbm','jokesonyou','four','villain','batmanorg','','shield','bc',3,0,0,0 "
             + "union select 2228,181,3,9,'DC Comics','BM','The Joker','Last Laugh','thejokerbm','lastlaugh','four','villain','batmanorg','','shield','cu',3,0,0,0 "
             + "union select 2229,181,3,10,'DC Comics','BM','The Joker','One Bad Day','thejokerbm','onebadday','four','villain','batmanorg','','shield','esr',3,0,0,0 "
@@ -2517,7 +2519,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2598,578,1,3,'Dungeons & Dragons','ToA','Amber Golem','Paragon Construct','ambergolem','ambergolemparagon','six','neutral','monster','','shield','dr',3,0,0,0 "
             + "union select 2599,589,1,1,'Dungeons & Dragons','ToA','Artus Cimber','Bearer of the Ring of Winter','artuscimber','beareroftheringofwinter','five','good','','','fist','dr',3,0,0,0 "
             + "union select 2600,589,1,2,'Dungeons & Dragons','ToA','Artus Cimber','Friend of Dragonbait','artuscimber','friendofdragonbait','five','good','','','fist','cu',3,0,0,0 "
-            + "union select 2601,589,1,3,'Dungeons & Dragons','ToA','Artus Cimber','Slow to Trust','artuscimber','slowtotrust','five','good','','','lightning','bc',3,0,0,0 "
+            + "union select 2601,589,1,3,'Dungeons & Dragons','ToA','Artus Cimber','Slow to Trust','artuscimber','slowtotrust','five','good','','','fist','bc',3,0,0,0 "
             + "union select 2602,590,1,1,'Dungeons & Dragons','ToA','Basilisk','Greater Monstrosity','basilisk','basiliskgreater','four','evil','monster','','lightning','cu',3,0,0,0 "
             + "union select 2603,590,1,2,'Dungeons & Dragons','ToA','Basilisk','Lesser Monstrosity','basilisk','basilisklesser','five','evil','monster','','lightning','bc',3,0,0,0 "
             + "union select 2604,590,1,3,'Dungeons & Dragons','ToA','Basilisk','Paragon Monstrosity','basilisk','basiliskparagon','four','evil','monster','','lightning','dr',3,0,0,0 "
@@ -2760,12 +2762,12 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2584,583,1,1,'Marvel','XMFC','Blink In-Betweener','Agent of Order and Chaos','blinkinbetweener','agentoforderandchaos','four','xmen','','','bm','esr',3,0,0,0 "
             + "union select 2585,584,1,1,'Marvel','XMFC','Cosmic X-23','Uni-Powered','cosmicx23','unipowered','four','xmen','','','ms','esr',3,0,0,0 "
             + "union select 2586,585,1,1,'Marvel','XMFC','Czar Colossus','Powering the State','czarcolossus','poweringthestate','four','xmen','','','fs','esr',3,0,0,0 "
-            + "union select 2587,39,5,20,'Marvel','XMFC','Wolverine','James Howlett (Alt)','wolverinexmfc','jameshowlettalt','five','xmen','','','fist','bc',3,0,0,0 "
+            + "union select 2587,39,5,20,'Marvel','XMFC','Wolverine','James Howlett (Alt)','wolverinexmfc','jameshowlettalt','five','xmen','','','fist','halt',3,0,0,0 "
             + "union select 2858,7,3,12,'Marvel','XMFC','Cyclops','Boy Scout (Alt)','cyclopsxmfc','boyscoutalt','five','xmen','','','lightning','halt',3,0,0,0 "
             + "union select 3101,264,2,5,'Marvel','XMFC','Blink','Warp-Powered Crystals (Alt)','blinkxmfc','blinkalt','five','exiles','','','mask','halt',3,0,0,-1 "
             + "union select 3102,566,1,1,'Marvel','XMFC','Morph','Exile','morph','morphexile','four','exiles','','','mask','gp',3,0,0,-1 "
             + "union select 3103,59,2,4,'Marvel','XMFC','Sabretooth','Exile','sabretooth','sabretoothexile','four','magnetoorg','villain','','fist','gp',3,0,0,-1 "
-            + "union select 3104,49,2,5,'Marvel','XMFC','Juggernaut','Get Outta My Head Charles!','juggernautxmfc','juggernautalt','six','magnetoorg','villain','','shield','halt',3,0,0,-1 "
+            + "union select 3104,49,2,5,'Marvel','XMFC','Juggernaut','Get Outta My Head Charles! (Alt)','juggernautxmfc','juggernautalt','six','magnetoorg','villain','','shield','halt',3,0,0,-1 "
             + "union select 3105,20,4,11,'Marvel','XMFC','Magneto','The Brotherhood','magnetoxmfc','magnetobro','six','magnetoorg','','','mask','gp',3,0,0,-1 ";
 
 
@@ -2906,7 +2908,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2852,651,1,1,'Marvel','TMT','Wrecker','Demolition Man','wrecker','demolitionman','four','villain','','','fist','cu',3,0,0,0 "
             + "union select 2853,651,1,2,'Marvel','TMT','Wrecker','Dirk Garthwaite','wrecker','dirkgarthwaite','four','villain','','','fist','bc',3,0,0,0 "
             + "union select 2854,651,1,3,'Marvel','TMT','Wrecker','Enchanted Crowbar','wrecker','enchantedcrowbar','four','villain','','','fist','dr',3,0,0,0 "
-            + "union select 3106,633,1,1,'Marvel','TMT','Heimdall','The All-Seeing','heimdall','heimdallalt','six','','','','mask','gp',3,0,0,-1 ";
+            + "union select 3107,633,1,1,'Marvel','TMT','Heimdall','The All-Seeing (Alt)','heimdall','heimdallalt','six','','','','mask','gp',3,0,0,-1 ";
 
     private static final String DATABASE_POPULATEAI = "insert into tblCards "
             + "select 2861,1,1,192,'Marvel','AI','Basic Action Card','Big Entrance','basic','ai49','three','','','','','as',3,0,0,-1 "
@@ -2940,7 +2942,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2889,658,1,1,'Marvel','AI','Dormammu','Call Upon the Shadowy Shapes','ai_dormammu','ai19','six','villain','','','mask','as',3,0,0,-1 "
             + "union select 2890,658,1,1,'Marvel','AI','Dormammu','From Here To Eternity','ai_dormammu','ai20','seven','villain','','','mask','as',3,0,0,-1 "
             + "union select 2891,658,1,1,'Marvel','AI','Dormammu','Crimson Bands of Cyttorak','ai_dormammu','ai21','six','villain','','','mask','as',3,0,0,-1 "
-            + "union select 2892,659,1,1,'Marvel','AI','Gamora','Power of Gem','ai_gamora','ai22','four','guardians','','','fist','as',3,0,0,-1 "
+            + "union select 2892,659,1,1,'Marvel','AI','Gamora','Power Gem','ai_gamora','ai22','four','guardians','','','fist','as',3,0,0,-1 "
             + "union select 2893,659,1,1,'Marvel','AI','Gamora','Solar Sacrifice','ai_gamora','ai23','four','guardians','','','fist','as',3,0,0,-1 "
             + "union select 2894,659,1,1,'Marvel','AI','Gamora','Black Vortex','ai_gamora','ai24','four','guardians','','','fist','as',3,0,0,-1 "
             + "union select 2895,660,1,1,'Marvel','AI','Hulk','Primal Fury','ai_hulk','ai25','six','avengers','','','shield','as',3,0,0,-1 "
@@ -2958,7 +2960,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2907,664,1,1,'Marvel','AI','Star-Lord','Space Boy!','ai_starlord','ai37','four','guardians','','','fist','as',3,0,0,-1 "
             + "union select 2908,664,1,1,'Marvel','AI','Star-Lord','Spartoian Blood','ai_starlord','ai38','four','guardians','','','fist','as',3,0,0,-1 "
             + "union select 2909,664,1,1,'Marvel','AI','Star-Lord','Human / Spartoi Hybrid','ai_starlord','ai39','four','guardians','','','fist','as',3,0,0,-1 "
-            + "union select 2910,665,1,1,'Marvel','AI','Thor','Donald Black','ai_thor','ai40','six','avengers','','','lightning','as',3,0,0,-1 "
+            + "union select 2910,665,1,1,'Marvel','AI','Thor','Donald Blake','ai_thor','ai40','six','avengers','','','lightning','as',3,0,0,-1 "
             + "union select 2911,665,1,1,'Marvel','AI','Thor','Wayward Son','ai_thor','ai41','six','avengers','','','lightning','as',3,0,0,-1 "
             + "union select 2912,665,1,1,'Marvel','AI','Thor','Every Problem is a Nail','ai_thor','ai42','six','avengers','','','lightning','as',3,0,0,-1 "
             + "union select 2913,666,1,1,'Marvel','AI','Vision','Unearthly, Inhuman','ai_vision','ai43','five','avengers','','','mask','as',3,0,0,-1 "
@@ -3157,7 +3159,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 3095,723,1,1,'W40K','SW','Wulfen','Cursed','wulfen','sw22','four','imperium','spacewolves','','mask','as',3,0,0,-1 "
             + "union select 3096,723,1,1,'W40K','SW','Wulfen','Savage','wulfen','sw23','four','imperium','spacewolves','','mask','as',3,0,0,-1 "
             + "union select 3097,723,1,1,'W40K','SW','Wulfen','Canis Helix','wulfen','sw24','four','imperium','spacewolves','','mask','as',3,0,0,-1 ";
-//char 3101
+//next char 3108
 // BAC 215
     private static final String DATABASE_BACKUP_CREATE = "create table if not exists tblBackup (CardSet text not null, CharName text not null, CardName text not null, NumOwned tinyint not null, DiceOwned tinyint not null, NumFoilsOwned tinyint not null)";
     private static final String DATABASE_BACKUP_POPULATE = "insert into tblBackup select CardSet, CharName, CardName, NumOwned, DiceOwned, NumFoilsOwned from tblCards ";

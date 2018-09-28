@@ -444,7 +444,14 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
                 .findViewById(R.id.btDiceOwned);
         TextView item = (TextView) convertView.findViewById(R.id.tvHeroName);
         ImageView image = (ImageView) convertView.findViewById(R.id.ivDieImage);
+        //TODO: NULL REFERENCE EXCEPTION BEING THROWN HERE FOR SOME USERS!
+        //diceOwnedCollection null?
+        //cards null?
+        if (null == cards || cards.isEmpty() || null ==  diceOwnedCollection ||  diceOwnedCollection.isEmpty()) {
+            return convertView;
+        }
         tempInt = diceOwnedCollection.get(cards.get(groupPosition));
+
 
         if (tblNameCollection.get(cards.get(groupPosition)).equals(
                 "Basic Action Card")) {

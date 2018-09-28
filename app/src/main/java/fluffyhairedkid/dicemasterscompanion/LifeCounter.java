@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.view.WindowManager;
 
 public class LifeCounter extends Activity {
 
@@ -18,6 +19,7 @@ public class LifeCounter extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.life_counter);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         final TextView oppHealth = (TextView) findViewById(R.id.tvOppHealth);
         final TextView myHealth = (TextView) findViewById(R.id.tvMyHealth);

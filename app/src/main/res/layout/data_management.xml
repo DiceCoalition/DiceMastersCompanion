@@ -42,5 +42,19 @@
         android:background="@drawable/custom_button"
         android:text="Restore From Back Up" />
 
+    <Button
+        android:id="@+id/btTeamsExport"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/custom_button"
+        android:text="Export Teams" />
 
+    <Button
+        android:id="@+id/btTeamsImport"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/custom_button"
+        android:text="Import Teams" />
 </LinearLayout>

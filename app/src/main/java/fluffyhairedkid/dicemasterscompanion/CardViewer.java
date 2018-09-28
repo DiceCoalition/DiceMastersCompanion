@@ -102,8 +102,11 @@ public class CardViewer extends Activity {
     }
 
     public void setValues() {
-        heroCards = imageCollection.get(groupList.get(groupPosition));
-        maxCard = heroCards.size() - 1;
+        //TODO: IndexOutOfBoundsException being thrown for some users
+        if(groupPosition != -1 && groupList.size() > groupPosition && !imageCollection.isEmpty()) {
+            heroCards = imageCollection.get(groupList.get(groupPosition));
+            maxCard = heroCards.size() - 1;
+        }
     }
 
 }

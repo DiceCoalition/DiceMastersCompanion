@@ -1,5 +1,6 @@
 package fluffyhairedkid.dicemasterscompanion;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -617,5 +618,112 @@ public class SQLDataSource {
     void sqlRestore() {
         database.execSQL("update tblCards set DiceOwned=(select DiceOwned from tblBackup where CardSet=tblCards.CardSet and CharName=tblCards.CharName and CardName=tblCards.CardName), NumOwned=(select NumOwned from tblBackup where CardSet=tblCards.CardSet and CharName=tblCards.CharName and CardName=tblCards.CardName), NumFoilsOwned=(select NumFoilsOwned from tblBackup where CardSet=tblCards.CardSet and CharName=tblCards.CharName and CardName=tblCards.CardName) where exists (select DiceOwned from tblBackup where CardSet=tblCards.CardSet and CharName=tblCards.CharName and CardName=tblCards.CardName)");
         ;
+    }
+
+    void sqlTeamsExport(Context context) {
+        Cursor cursor = database.rawQuery("select TeamName, CardSet, CharName, CardName, NumDice from tblTeams", null);
+        FileOutputStream outputStream;
+
+        if (!cursor.moveToFirst()) {
+            Toast.makeText(context, "Huh?",
+                    Toast.LENGTH_LONG).show();
+        }
+        cursor.moveToFirst();
+        //String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath();
+        //File file = new File(path, "Transition Zone Teams.csv");
+        File file = new File(Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_DOWNLOADS), "Transition Zone Teams.csv");
+        try {
+            outputStream = new FileOutputStream(file);
+
+            outputStream.write("TeamName".getBytes());
+            outputStream.write(",".getBytes());
+            outputStream.write("Set".getBytes());
+            outputStream.write(",".getBytes());
+            outputStream.write("Character".getBytes());
+            outputStream.write(",".getBytes());
+            outputStream.write("Card Name".getBytes());
+            outputStream.write(",".getBytes());
+            outputStream.write("Dice Number".getBytes());
+            outputStream.write("\n".getBytes());
+
+            do {
+                outputStream.write("\"".getBytes());
+                outputStream.write(cursor.getString(0).getBytes());
+                outputStream.write("\",\"".getBytes());
+                outputStream.write(cursor.getString(1).getBytes());
+                outputStream.write("\",\"".getBytes());
+                outputStream.write(cursor.getString(2).getBytes());
+                outputStream.write("\",\"".getBytes());
+                outputStream.write(cursor.getString(3).getBytes());
+                outputStream.write("\",".getBytes());
+                outputStream.write(cursor.getString(4).getBytes());
+                outputStream.write("\n".getBytes());
+
+
+            } while (cursor.moveToNext());
+
+            outputStream.flush();
+            outputStream.close();
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+        }
+
+
+        cursor.close();
+
+
+        MediaScannerConnection.scanFile(context, new String[] {file.toString()}, null, null);
+    }
+
+    void sqlTeamsImport(Context context) {
+        File file = new File(Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_DOWNLOADS), "Transition Zone Teams.csv");
+        FileInputStream is;
+
+
+        try {
+            is = new FileInputStream(file);
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+            try {
+
+                String line;
+                int lineNum = 0;
+                while ((line = reader.readLine()) != null) {
+                    if (lineNum > 0) {
+                        String[] RowData = line.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)", -1);
+                        String teamName = RowData[0].replace("'", "''").replace("\"", "");
+                        String cardSet = RowData[1].replace("'", "''").replace("\"", "");
+                        String charName = RowData[2].replace("'", "''").replace("\"", "");
+                        String cardName = RowData[3].replace("'", "''").replace("\"", "");
+                        int dice = Integer.parseInt(RowData[4]);
+//TODO: Likely need to remove team before adding.  Not sure.
+                        //if(sqlCheckTeamName(teamName)) {
+                            //TeamName, CardSet, CharName, CardName, NumDice
+                            sqlAddTeamCard(teamName, charName, cardName, cardSet);
+                        //}
+
+                        sqlUpdateTeamDice(dice, charName, cardSet, teamName);
+                     }
+                    lineNum++;
+                }
+
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            } finally {
+                try {
+                    is.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
     }
 }

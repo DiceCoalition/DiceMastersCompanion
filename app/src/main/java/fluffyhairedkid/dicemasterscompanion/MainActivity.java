@@ -31,13 +31,13 @@ public class MainActivity extends Activity {
                 MainActivity.this);
         closeAlert.setTitle("Updates");
         closeAlert
-                .setMessage("Battle For Ultramar Campaign Box added!"
+                .setMessage("Added Team Builder Export/Import"
                         + "\n" + "\n" +
-                        "Orks Team Pack added!"
+                        "Added Life Counter screen keep alive"
                         + "\n" + "\n" +
-                        "Space Wolves Team Pack added!"
+                        "Fixed Team Builder bug caused by Heimdall promo"
                         + "\n" + "\n" +
-                        "Various database fixes."
+                        "Various database fixes and card updates"
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",
