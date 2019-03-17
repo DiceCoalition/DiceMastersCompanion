@@ -82,6 +82,30 @@
                 android:text="Harley Quinn" />
 
             <Button
+                android:id="@+id/btJUS"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_button"
+                android:text="Justice" />
+
+            <Button
+                android:id="@+id/btDOOM"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_button"
+                android:text="Doom Patrol" />
+
+            <Button
+                android:id="@+id/btMYST"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_button"
+                android:text="Mystics" />
+
+            <Button
                 android:id="@+id/btPromosDC"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"

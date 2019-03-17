@@ -409,6 +409,33 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb122"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="JUS" />
+
+                <CheckBox
+                    android:id="@+id/cb123"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DOOM" />
+
+                <CheckBox
+                    android:id="@+id/cb124"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MYST" />
+
+
+            </LinearLayout>
+
+
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
@@ -957,6 +984,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/newgods" />
+                <CheckBox
+                    android:id="@+id/cb125"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/doompatrol" />
 
             </LinearLayout>
 

@@ -66,6 +66,9 @@ public class Search extends Activity {
         final CheckBox setBFU = (CheckBox) findViewById(R.id.cb112);
         final CheckBox setORK = (CheckBox) findViewById(R.id.cb113);
         final CheckBox setSW = (CheckBox) findViewById(R.id.cb114);
+        final CheckBox setJUS = (CheckBox) findViewById(R.id.cb122);
+        final CheckBox setDOOM = (CheckBox) findViewById(R.id.cb123);
+        final CheckBox setMYST = (CheckBox) findViewById(R.id.cb124);
         final CheckBox costOne = (CheckBox) findViewById(R.id.cb1);
         final CheckBox costTwo = (CheckBox) findViewById(R.id.cb2);
         final CheckBox costThree = (CheckBox) findViewById(R.id.cb3);
@@ -149,6 +152,7 @@ public class Search extends Activity {
         final CheckBox deathguard = (CheckBox) findViewById(R.id.cb119);
         final CheckBox orks = (CheckBox) findViewById(R.id.cb120);
         final CheckBox spacewolves = (CheckBox) findViewById(R.id.cb121);
+        final CheckBox doompatrol = (CheckBox) findViewById(R.id.cb125);
 
 
         final EditText editSearch = (EditText) findViewById(R.id.etSearchText);
@@ -528,6 +532,27 @@ public class Search extends Activity {
                                                   setCriteria = setCriteria + "'SW'";
                                               } else {
                                                   setCriteria = setCriteria + ",'SW'";
+                                              }
+                                          }
+                                          if (setJUS.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'JUS'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'JUS'";
+                                              }
+                                          }
+                                          if (setDOOM.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'DOOM'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'DOOM'";
+                                              }
+                                          }
+                                          if (setMYST.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'MYST'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'MYST'";
                                               }
                                           }
                                           if (!"".equals(setCriteria)) {
@@ -1043,6 +1068,13 @@ public class Search extends Activity {
                                                   affilCriteria = affilCriteria + "'newgods'";
                                               } else {
                                                   affilCriteria = affilCriteria + ",'newgods'";
+                                              }
+                                          }
+                                          if (doompatrol.isChecked()) {
+                                              if (affilCriteria.equals("")) {
+                                                  affilCriteria = affilCriteria + "'doompatrol'";
+                                              } else {
+                                                  affilCriteria = affilCriteria + ",'doompatrol'";
                                               }
                                           }
                                           if (imperium.isChecked()) {

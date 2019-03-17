@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fluffyhairedkid.dicemasterscompanion"
     android:installLocation="auto"
-    android:versionCode="40"
-    android:versionName="1.12.3">
+    android:versionCode="42"
+    android:versionName="1.12.5">
 
     <uses-sdk />
 
