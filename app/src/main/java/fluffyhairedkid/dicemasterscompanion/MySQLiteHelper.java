@@ -3233,7 +3233,7 @@ private static final String DATABASE_POPULATEJUS = "insert into tblCards "
         + "union select 3177,748,1,1,'DC Comics','JUS','Watchtower','JLA Watching Earth','juswatchtower','jus60','two','','','','lightning','as',3,0,0,-1 "
         + "union select 3178,749,1,1,'DC Comics','JUS','Wonder Woman','Piece of Clay','juswonderwoman','jus61','three','league','','','shield','as',3,0,0,-1 "
         + "union select 3179,749,1,1,'DC Comics','JUS','Wonder Woman','A Gift','juswonderwoman','jus62','four','league','','','shield','as',3,0,0,-1 "
-        + "union select 3180,749,1,1,'DC Comics','JUS','Wonder Woman','Ambassador to the World','juswonderwoman','jus63','four','league','','','shield','as',4,0,0,-1 ";
+        + "union select 3180,749,1,1,'DC Comics','JUS','Wonder Woman','Ambassador to the World','juswonderwoman','jus63','four','league','','','shield','as',3,0,0,-1 ";
 
 
     private static final String DATABASE_POPULATEDOOM = "insert into tblCards "
@@ -3241,7 +3241,7 @@ private static final String DATABASE_POPULATEJUS = "insert into tblCards "
             + "union select 3182,750,1,1,'DC Comics','DOOM','Beast Boy','Metamorphosis','doombeastboy','doom2','three','doompatrol','','','fist','as',3,0,0,-1 "
             + "union select 3183,750,1,1,'DC Comics','DOOM','Beast Boy','Green Givaway','doombeastboy','doom3','three','doompatrol','','','fist','as',3,0,0,-1 "
             + "union select 3184,751,1,1,'DC Comics','DOOM','Black Canary','Second Life','doomblackcanary','doom4','three','league','','','fist','as',3,0,0,-1 "
-            + "union select 3185,751,1,'DC Comics','DOOM','Black Canary','Costumed Adventurer','doomblackcanary','doom5','four','league','','','fist','as',3,0,0,-1 "
+            + "union select 3185,751,1,1,'DC Comics','DOOM','Black Canary','Costumed Adventurer','doomblackcanary','doom5','four','league','','','fist','as',3,0,0,-1 "
             + "union select 3186,751,1,1,'DC Comics','DOOM','Black Canary','Flower Shop Owner','doomblackcanary','doom6','three','league','','','fist','as',3,0,0,-1 "
             + "union select 3187,752,1,1,'DC Comics','DOOM','Elasti-Girl','Size Alteration','doomelastigirl','doom7','three','doompatrol','','','shield','as',3,0,0,-1 "
             + "union select 3188,752,1,1,'DC Comics','DOOM','Elasti-Girl','Rita Farr','doomelastigirl','doom8','three','doompatrol','','','shield','as',3,0,0,-1 "

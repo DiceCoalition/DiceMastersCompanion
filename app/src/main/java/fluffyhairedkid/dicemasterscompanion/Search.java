@@ -1450,6 +1450,12 @@ public class Search extends Activity {
                                          setKI.setChecked(false);
                                          setJLL.setChecked(false);
                                          setHQ.setChecked(false);
+                                         setBFU.setChecked(false);
+                                         setORK.setChecked(false);
+                                         setSW.setChecked(false);
+                                         setJUS.setChecked(false);
+                                         setDOOM.setChecked(false);
+                                         setMYST.setChecked(false);
                                          costOne.setChecked(false);
                                          costTwo.setChecked(false);
                                          costThree.setChecked(false);
@@ -1525,6 +1531,7 @@ public class Search extends Activity {
                                          greenarrow.setChecked(false);
                                          target.setChecked(false);
                                          newGods.setChecked(false);
+                                         doompatrol.setChecked(false);
 
                                          editSearch.setText("");
                                          editSearch.clearFocus();
