@@ -1532,6 +1532,12 @@ public class Search extends Activity {
                                          target.setChecked(false);
                                          newGods.setChecked(false);
                                          doompatrol.setChecked(false);
+                                         imperium.setChecked(false);
+                                         ultramarines.setChecked(false);
+                                         chaos.setChecked(false);
+                                         deathguard.setChecked(false);
+                                         orks.setChecked(false);
+                                         spacewolves.setChecked(false);
 
                                          editSearch.setText("");
                                          editSearch.clearFocus();
