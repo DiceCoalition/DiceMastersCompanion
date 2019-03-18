@@ -36,6 +36,8 @@ public class MainActivity extends Activity {
                         "Added Doom Patrol Team Pack"
                         + "\n" + "\n" +
                         "Added Mystics Team Pack"
+                        + "\n" + "\n" +
+                        "Fixed Mystics Zatanna database issue"
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",

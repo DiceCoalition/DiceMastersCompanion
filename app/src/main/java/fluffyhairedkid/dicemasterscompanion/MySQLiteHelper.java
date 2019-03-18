@@ -8,7 +8,7 @@ import android.util.Log;
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "tblCards.db";
-    private static final int DATABASE_VERSION = 115;
+    private static final int DATABASE_VERSION = 116;
 
     private static final String DATABASE_CREATE = "create table tblCards (_id integer not null, CharID integer not null, DieID integer not null, CardID integer not null, "
             + "Universe text not null, CardSet text not null, CharName text not null, CardName text not null, "
@@ -3284,8 +3284,8 @@ private static final String DATABASE_POPULATEJUS = "insert into tblCards "
             + "union select 3224,764,1,1,'DC Comics','MYST','Yellow Lantern Ring','The Weaponer''s Ring','mystyellowlanternring','myst19','two','','','','lightning','as',3,0,0,-1 "
             + "union select 3225,764,1,1,'DC Comics','MYST','Yellow Lantern Ring','Green Lantern Killer','mystyellowlanternring','myst20','three','','','','lightning','as',3,0,0,-1 "
             + "union select 3226,764,1,1,'DC Comics','MYST','Yellow Lantern Ring','Used for Great Good','mystyellowlanternring','myst21','four','','','','lightning','as',3,0,0,-1 "
-            + "union select 3227,765,1,1,'DC Comics','MYST','Zatanna','Being of Magic','greenlantern','mystzatanna','three','league','magicorg','','mask','as',3,0,0,-1 "
-            + "union select 3228,765,1,1,'DC Comics','MYST','Zatanna','Magical Lineage','hallofdoom','mystzatanna','three','league','magicorg','','mask','as',3,0,0,-1 "
+            + "union select 3227,765,1,1,'DC Comics','MYST','Zatanna','Being of Magic','mystzatanna','myst22','three','league','magicorg','','mask','as',3,0,0,-1 "
+            + "union select 3228,765,1,1,'DC Comics','MYST','Zatanna','Magical Lineage','mystzatanna','myst23','three','league','magicorg','','mask','as',3,0,0,-1 "
             + "union select 3229,765,1,1,'DC Comics','MYST','Zatanna','Master Magician''s Daughter','mystzatanna','myst24','three','league','magicorg','','mask','as',3,0,0,-1 ";
 
     //next card 3230
