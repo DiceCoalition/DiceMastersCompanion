@@ -31,13 +31,11 @@ public class MainActivity extends Activity {
                 MainActivity.this);
         closeAlert.setTitle("Updates");
         closeAlert
-                .setMessage("Added Team Builder Export/Import"
+                .setMessage("Added Justice Campaign Box"
                         + "\n" + "\n" +
-                        "Added Life Counter screen keep alive"
+                        "Added Doom Patrol Team Pack"
                         + "\n" + "\n" +
-                        "Fixed Team Builder bug caused by Heimdall promo"
-                        + "\n" + "\n" +
-                        "Various database fixes and card updates"
+                        "Added Mystics Team Pack"
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",
