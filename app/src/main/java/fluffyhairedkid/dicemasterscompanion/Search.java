@@ -1419,6 +1419,7 @@ public class Search extends Activity {
                                          uniDnD.setChecked(false);
                                          uniDC.setChecked(false);
                                          uniTMNT.setChecked(false);
+                                         uniW40K.setChecked(false);
                                          owned.setChecked(false);
                                          notOwned.setChecked(false);
                                          setAvX.setChecked(false);
