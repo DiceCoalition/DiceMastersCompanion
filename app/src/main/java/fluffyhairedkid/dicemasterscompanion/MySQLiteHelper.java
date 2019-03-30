@@ -8,7 +8,7 @@ import android.util.Log;
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "tblCards.db";
-    private static final int DATABASE_VERSION = 116;
+    private static final int DATABASE_VERSION = 117;
 
     private static final String DATABASE_CREATE = "create table tblCards (_id integer not null, CharID integer not null, DieID integer not null, CardID integer not null, "
             + "Universe text not null, CardSet text not null, CharName text not null, CardName text not null, "
@@ -2144,7 +2144,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2095,493,1,3,'Marvel','IMWM','Space Armor Iron Man','Model 5','spacearmorironman','modelfive','four','starkorg','','','shield','as',0,0,0,-1 "
             + "union select 2096,38,2,4,'Marvel','IMWM','War Machine','JRXL-1000','warmachineimwm','jrxlthousand','four','starkorg','','','shield','as',0,0,0,-1 "
             + "union select 2097,38,2,5,'Marvel','IMWM','War Machine','Model 11','warmachineimwm','modeleleven','three','starkorg','','','shield','as',0,0,0,-1 "
-            + "union select 2098,38,2,6,'Marvel','IMWM','War Machine','Rhodey','warmachineimwm','rhodey','four','starkorg','','','shield','as',0,0,0,-1 ";
+            + "union select 2098,38,2,6,'Marvel','IMWM','War Machine','Rhodey','warmachineimwm','rhodey','four','starkorg','','','shield','as',0,0,0,-1 "
+            + "union select 3235,38,2,6,'Marvel','IMWM','War Machine','Improv Armor','warmachineimwm','m2019_8','five','starkorg','','','shield','gp',0,0,0,-1 ";
 
     private static final String DATABASE_POPULATETD = "insert into tblCards "
             + "select 2107,409,2,4,'Marvel','TD','Clea','Mistress of the Dark Dimension','cleadef','mistressofthedarkdimension','six','defendersorg','','','lightning','as',3,0,0,-1 "
@@ -2367,7 +2368,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2328,32,5,19,'Marvel','SMMC','Spider-Man','War of the Heart','spidermanmc','waroftheheart','four','spiderfriends','','','fist','as',3,0,0,-1 "
             + "union select 2329,36,4,8,'Marvel','SMMC','Venom','Corruptor','venommc','corruptor','four','villain','','','mask','as',3,0,0,-1 "
             + "union select 2330,36,4,9,'Marvel','SMMC','Venom','Lethal Protector','venommc','lethalprotector','four','spiderfriends','','','mask','as',3,0,0,-1 "
-            + "union select 2331,36,4,10,'Marvel','SMMC','Venom','My Other','venommc','myother','four','villain','','','mask','as',3,0,0,-1 ";
+            + "union select 2331,36,4,10,'Marvel','SMMC','Venom','My Other','venommc','myother','four','villain','','','mask','as',3,0,0,-1 "
+            + "union select 3236,262,2,6,'Marvel','SMMC','Black Cat','Thief','blackcatmc','m2019_4','three','spiderfriends','','','shield','gp',3,0,0,-1 ";
 
     private static final String DATABASE_POPULATEGOTG = "insert into tblCards "
             + "select 2332,527,1,1,'Marvel','GotG','Adam Warlock','Standing Watch Over Infinity','adamwarlock','standingwatchoverinfinity','five','guardians','','','mask','cu',3,0,0,0 "
@@ -2770,7 +2772,6 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 3104,49,2,5,'Marvel','XMFC','Juggernaut','Get Outta My Head Charles! (Alt)','juggernautxmfc','juggernautalt','six','magnetoorg','villain','','shield','halt',3,0,0,-1 "
             + "union select 3105,20,4,11,'Marvel','XMFC','Magneto','The Brotherhood','magnetoxmfc','magnetobro','six','magnetoorg','','','mask','gp',3,0,0,-1 ";
 
-
     private static final String DATABASE_POPULATETMT = "insert into tblCards "
             + "select 2719,1,1,179,'Marvel','TMT','Basic Action Card','Archnemesis!','basic','archnemesisthor','four','','','','','as',3,0,0,0 "
             + "union select 2720,1,1,180,'Marvel','TMT','Basic Action Card','Big Entrance','basic','bigentrancethor','three','','','','','as',3,0,0,0 "
@@ -2908,7 +2909,12 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2852,651,1,1,'Marvel','TMT','Wrecker','Demolition Man','wrecker','demolitionman','four','villain','','','fist','cu',3,0,0,0 "
             + "union select 2853,651,1,2,'Marvel','TMT','Wrecker','Dirk Garthwaite','wrecker','dirkgarthwaite','four','villain','','','fist','bc',3,0,0,0 "
             + "union select 2854,651,1,3,'Marvel','TMT','Wrecker','Enchanted Crowbar','wrecker','enchantedcrowbar','four','villain','','','fist','dr',3,0,0,0 "
-            + "union select 3107,633,1,1,'Marvel','TMT','Heimdall','The All-Seeing (Alt)','heimdall','heimdallalt','six','','','','mask','gp',3,0,0,-1 ";
+            + "union select 3107,633,1,1,'Marvel','TMT','Heimdall','The All-Seeing (Alt)','heimdall','heimdallalt','six','','','','mask','gp',3,0,0,-1 "
+            + "union select 3230,24,1,1,'Marvel','TMT','Nick Fury','Commanding the Commandos (Alt)','nickfurythor','commandingthecommandosalt','two','shieldorg','','','shield','gp',3,0,0,-1 "
+            + "union select 3231,205,1,1,'Marvel','TMT','Pepper Potts','Virginia (Alt)','pepperpottsthor','virginiaalt','two','starkorg','','','lightning','gp',3,0,0,-1 "
+            + "union select 3234,18,5,18,'Marvel','TMT','Iron Man','Armor Supply','ironmanthor','m2019_7','four','starkorg','','','shield','gp',3,0,0,-1 "
+            + "union select 3237,639,1,1,'Marvel','TMT','Kate Bishop','Straight Shooter','katebishop','m2019_5','three','avengers','','','mask','gp',3,0,0,-1 ";
+
 
     private static final String DATABASE_POPULATEAI = "insert into tblCards "
             + "select 2861,1,1,192,'Marvel','AI','Basic Action Card','Big Entrance','basic','ai49','three','','','','','as',3,0,0,-1 "
@@ -2968,7 +2974,10 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2915,666,1,1,'Marvel','AI','Vision','Created by Ultron-5','ai_vision','ai45','four','avengers','','','mask','as',3,0,0,-1 "
             + "union select 2916,667,1,1,'Marvel','AI','Wasp','Partner-In-Peril','ai_wasp','ai46','two','avengers','','','lightning','as',3,0,0,-1 "
             + "union select 2917,667,1,1,'Marvel','AI','Wasp','Flitting About','ai_wasp','ai47','three','avengers','','','lightning','as',3,0,0,-1 "
-            + "union select 2918,667,1,1,'Marvel','AI','Wasp','Love and Loss','ai_wasp','ai48','three','avengers','','','lightning','as',3,0,0,-1 ";
+            + "union select 2918,667,1,1,'Marvel','AI','Wasp','Love and Loss','ai_wasp','ai48','three','avengers','','','lightning','as',3,0,0,-1 "
+            + "union select 3232,655,1,1,'Marvel','AI','Black Widow','Agent','ai_blackwidow','m2019_1','three','avengers','','','fist','gp',3,0,0,-1 "
+            + "union select 3233,656,1,1,'Marvel','AI','Captain America','Trained Operative','ai_captainamerica','m2019_2','four','avengers','','','shield','gp',3,0,0,-1 ";
+
 
     private static final String DATABASE_POPULATEKI = "insert into tblCards "
             + "select 2919,668,1,1,'Marvel','KI','Drax','Time Gem','ki_drax','ki1','three','guardians','','','shield','as',3,0,0,-1 "
@@ -3106,7 +3115,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 3045,706,1,1,'W40K','BFU','Typhus','Disgustingly Resillient','typhus','bfu45','seven','chaos','deathguard','','mask','as',3,0,0,-1 "
             + "union select 3046,707,1,1,'W40K','BFU','Varro Tigurius','Chief Librarian','varrotigurius','bfu46','four','imperium','ultramarines','','mask','as',3,0,0,-1 "
             + "union select 3047,707,1,1,'W40K','BFU','Varro Tigurius','Hood of Hellfire','varrotigurius','bfu47','three','imperium','ultramarines','','mask','as',3,0,0,-1 "
-            + "union select 3048,707,1,1,'W40K','BFU','Varro Tigurius','Rod of Tigurius','varrotigurius','bfu48','three','imperium','ultramarines','','mask','as',3,0,0,-1 ";
+            + "union select 3048,707,1,1,'W40K','BFU','Varro Tigurius','Rod of Tigurius','varrotigurius','bfu48','three','imperium','ultramarines','','mask','as',3,0,0,-1 "
+            + "union select 3238,1,1,225,'W40K','BFU','Basic Action Card','Grombrindal''s Fury','basic','bfu59','four','','','','','gp',3,0,0,-1 ";
 
     private static final String DATABASE_POPULATEORK = "insert into tblCards "
             + "select 3049,708,1,1,'W40K','ORK','Battlewagon','Salvaged Monstrosity','battlewagon','ork1','four','orks','','','lightning','as',3,0,0,-1 "
@@ -3288,8 +3298,8 @@ private static final String DATABASE_POPULATEJUS = "insert into tblCards "
             + "union select 3228,765,1,1,'DC Comics','MYST','Zatanna','Magical Lineage','mystzatanna','myst23','three','league','magicorg','','mask','as',3,0,0,-1 "
             + "union select 3229,765,1,1,'DC Comics','MYST','Zatanna','Master Magician''s Daughter','mystzatanna','myst24','three','league','magicorg','','mask','as',3,0,0,-1 ";
 
-    //next card 3230
-    //next BAC 225
+    //next card 3239
+    //next BAC 226
     //next char 766
     private static final String DATABASE_BACKUP_CREATE = "create table if not exists tblBackup (CardSet text not null, CharName text not null, CardName text not null, NumOwned tinyint not null, DiceOwned tinyint not null, NumFoilsOwned tinyint not null)";
     private static final String DATABASE_BACKUP_POPULATE = "insert into tblBackup select CardSet, CharName, CardName, NumOwned, DiceOwned, NumFoilsOwned from tblCards ";

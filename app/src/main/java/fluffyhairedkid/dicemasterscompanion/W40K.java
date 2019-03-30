@@ -20,6 +20,8 @@ public class W40K extends Activity {
         Button BFU = (Button) findViewById(R.id.btBFU);
         Button ORK = (Button) findViewById(R.id.btORK);
         Button SW = (Button) findViewById(R.id.btSW);
+        Button promosW40K = (Button) findViewById(R.id.btPromosW40K);
+
         //Button promosDnD = (Button) findViewById(R.id.btPromosDnD);
 
         allW40K.setOnClickListener(new View.OnClickListener() {
@@ -66,18 +68,18 @@ public class W40K extends Activity {
             }
         });
 
-        /*
-        promosDnD.setOnClickListener(new View.OnClickListener() {
+
+        promosW40K.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(W40K.this, CardCollectorNEW.class);
                 intent.putExtra("view", "collection");
-                intent.putExtra("whereCriteria", "where Universe='Dungeons & Dragons' and Rarity in('gp','halt')");
+                intent.putExtra("whereCriteria", "where Universe='W40K' and Rarity in('gp','halt')");
                 startActivity(intent);
             }
         });
-        */
+
 /*
         allDnD.setOnClickListener(new View.OnClickListener() {
 

@@ -58,6 +58,9 @@ public class Tools extends Activity {
                 Button add = (Button) dialog.findViewById(R.id.btAddCards);
                 Button cancel = (Button) dialog.findViewById(R.id.btCancelAdd);
 
+                final CheckBox jusStarter = (CheckBox) dialog.findViewById(R.id.cbJUSStarter);
+                final CheckBox doomStarter = (CheckBox) dialog.findViewById(R.id.cbDOOMStarter);
+                final CheckBox mystStarter = (CheckBox) dialog.findViewById(R.id.cbMYSTStarter);
                 final CheckBox bfuStarter = (CheckBox) dialog.findViewById(R.id.cbBFUStarter);
                 final CheckBox orkStarter = (CheckBox) dialog.findViewById(R.id.cbORKStarter);
                 final CheckBox swStarter = (CheckBox) dialog.findViewById(R.id.cbSWStarter);
@@ -103,7 +106,25 @@ public class Tools extends Activity {
                         String starterCriteria = "";
                         String fullCriteria = "";
 
-                        if (bfuStarter.isChecked()) {
+                        if (jusStarter.isChecked()) {
+                            if (starterCriteria.equals("")) {
+                                starterCriteria = "'JUS'";
+                            } else {
+                                starterCriteria = starterCriteria + ",'JUS'";
+                            }
+                        }if (doomStarter.isChecked()) {
+                            if (starterCriteria.equals("")) {
+                                starterCriteria = "'DOOM'";
+                            } else {
+                                starterCriteria = starterCriteria + ",'DOOM'";
+                            }
+                        }if (mystStarter.isChecked()) {
+                            if (starterCriteria.equals("")) {
+                                starterCriteria = "'MYST'";
+                            } else {
+                                starterCriteria = starterCriteria + ",'MYST'";
+                            }
+                        }if (bfuStarter.isChecked()) {
                             if (starterCriteria.equals("")) {
                                 starterCriteria = "'BFU'";
                             } else {

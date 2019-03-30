@@ -31,13 +31,11 @@ public class MainActivity extends Activity {
                 MainActivity.this);
         closeAlert.setTitle("Updates");
         closeAlert
-                .setMessage("Added Justice Campaign Box"
+                .setMessage("Added various OP/Promos"
                         + "\n" + "\n" +
-                        "Added Doom Patrol Team Pack"
+                        "Added Justice block buld add"
                         + "\n" + "\n" +
-                        "Added Mystics Team Pack"
-                        + "\n" + "\n" +
-                        "Fixed Mystics Zatanna database issue"
+                        "Fixed Orange Lantern search bug"
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",

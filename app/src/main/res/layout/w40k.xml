@@ -40,13 +40,13 @@
         android:layout_margin="5dp"
         android:background="@drawable/custom_button"
         android:text="Space Wolves" />
-<!--
+
     <Button
-        android:id="@+id/btPromosDnD"
+        android:id="@+id/btPromosW40K"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:background="@drawable/custom_button"
         android:text="OP/Promo Cards" />
--->
+
 </LinearLayout>

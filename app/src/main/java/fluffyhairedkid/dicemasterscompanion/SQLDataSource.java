@@ -494,7 +494,8 @@ public class SQLDataSource {
                 .rawQuery("select CardSet, CharName, sum(1) from tblCards where Rarity='as' and CardName not like '%(Alt)' and CardName not like '%(Foil)' and CardSet in(" + criteria + ") group by CardSet, CharName", null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            database.execSQL("update tblCards set DiceOwned=DiceOwned+case when CardSet='S1' then 1 when CardSet in('TMNT','HHS','AI') then 3 else 2 end where CardSet='" + cursor.getString(0).replace("'", "''") +
+            //TODO: Justice has weird dice counts per card... going to just add 2 of everything for now since that's the average
+            database.execSQL("update tblCards set DiceOwned=DiceOwned+case when CardSet='S1' then 1 when CardSet in('TMNT','HHS','AI','BFU') then 3 else 2 end where CardSet='" + cursor.getString(0).replace("'", "''") +
                     "' and CharName='" + cursor.getString(1).replace("'", "''") + "'");
             cursor.moveToNext();
         }

@@ -1004,7 +1004,7 @@ public class Search extends Activity {
                                               if (affilCriteria.equals("")) {
                                                   affilCriteria = affilCriteria + "'orangelanterncorps'";
                                               } else {
-                                                  affilCriteria = affilCriteria + ",'orangelantercorps'";
+                                                  affilCriteria = affilCriteria + ",'orangelanterncorps'";
                                               }
                                           }
                                           if (indigo.isChecked()) {
