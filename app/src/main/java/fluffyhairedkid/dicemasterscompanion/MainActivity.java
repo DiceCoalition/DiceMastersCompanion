@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
         closeAlert
                 .setMessage("Added various OP/Promos"
                         + "\n" + "\n" +
-                        "Added Justice block buld add"
+                        "Added Justice block bulk add"
                         + "\n" + "\n" +
                         "Fixed Orange Lantern search bug"
                 );

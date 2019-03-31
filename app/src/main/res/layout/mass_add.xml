@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/llButtons"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true">
 
         <TableLayout
             android:layout_width="match_parent"
@@ -19,7 +20,7 @@
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -42,560 +43,503 @@
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Justice"
-                    android:textSize="15sp" />
+                    android:textOn="Justice"
+                    android:textOff="Justice"
+                    android:textSize="15sp"
+                    android:id="@+id/tbJUSStarter"/>
 
-                <CheckBox
-                    android:id="@+id/cbJUSStarter"
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:gravity="center">
+
+                <ToggleButton
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textOn="Doom Patrol"
+                    android:textOff="Doom Patrol"
+                    android:textSize="15sp"
+                    android:id="@+id/tbDOOMStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Doom Patrol"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbDOOMStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Mystics"
+                    android:textOff="Mystics"
+                    android:textSize="15sp"
+                    android:id="@+id/tbMYSTStarter"/>
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Mystics"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbMYSTStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Battle For Ultramar"
+                    android:textOff="Battle For Ultramar"
+                    android:textSize="15sp"
+                    android:id="@+id/tbBFUStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Battle For Ultramar"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbBFUStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Orks"
+                    android:textOff="Orks"
+                    android:textSize="15sp"
+                    android:id="@+id/tbORKStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Orks"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbORKStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Space Wolves"
+                    android:textOff="Space Wolves"
+                    android:textSize="15sp"
+                    android:id="@+id/tbSWStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Space Wolves"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbSWStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Avengers Infinity"
+                    android:textOff="Avengers Infinity"
+                    android:textSize="15sp"
+                    android:id="@+id/tbAIStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Avengers Infinity"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbAIStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Kree Invasion"
+                    android:textOff="Kree Invasion"
+                    android:textSize="15sp"
+                    android:id="@+id/tbKIStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Kree Invasion"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbKIStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Justice Like Lightning"
+                    android:textOff="Justice Like Lightning"
+                    android:textSize="15sp"
+                    android:id="@+id/tbJLLStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Justice Like Lightning"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbJLLStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Harley Quinn"
+                    android:textOff="Harley Quinn"
+                    android:textSize="15sp"
+                    android:id="@+id/tbHQStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Harley Quinn"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbHQStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Spider-Man Maxiumum Carnage"
+                    android:textOff="Spider-Man Maxiumum Carnage"
+                    android:textSize="15sp"
+                    android:id="@+id/tbSMMCStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Spider-Man Maxiumum Carnage"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbSMMCStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Superman and Wonder Woman"
+                    android:textOff="Superman and Wonder Woman"
+                    android:textSize="15sp"
+                    android:id="@+id/tbSWWStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Superman and Wonder Woman"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbSWWStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Defenders"
+                    android:textOff="Defenders"
+                    android:textSize="15sp"
+                    android:id="@+id/tbTDStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Defenders"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbTDStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Iron Man and War Machine"
+                    android:textOff="Iron Man and War Machine"
+                    android:textSize="15sp"
+                    android:id="@+id/tbIMWMStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Iron Man and War Machine"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbIMWMStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Heroes in a Half Shell"
+                    android:textOff="Heroes in a Half Shell"
+                    android:textSize="15sp"
+                    android:id="@+id/tbHHSStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Heroes in a Half Shell"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbHHSStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Doctor Strange"
+                    android:textOff="Doctor Strange"
+                    android:textSize="15sp"
+                    android:id="@+id/tbDSStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Doctor Strange"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbDSStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Teenage Mutant Ninja Turtles"
+                    android:textOff="Teenage Mutant Ninja Turtles"
+                    android:textSize="15sp"
+                    android:id="@+id/tbTMNTStarter"/>
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Teenage Mutant Ninja Turtles"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbTMNTStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Civil War"
+                    android:textOff="Civil War"
+                    android:textSize="15sp"
+                    android:id="@+id/tbCWStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Civil War"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbCWStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="World's Finest"
+                    android:textOff="World's Finest"
+                    android:textSize="15sp"
+                    android:id="@+id/tbWFStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="World's Finest"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbWFStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Faerûn Under Siege"
+                    android:textOff="Faerûn Under Siege"
+                    android:textSize="15sp"
+                    android:id="@+id/tbFUSStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Faerûn Under Siege"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbFUSStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="The Amazing Spider-Man"
+                    android:textOff="The Amazing Spider-Man"
+                    android:textSize="15sp"
+                    android:id="@+id/tbASMStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="The Amazing Spider-Man"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbASMStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="War of Light"
+                    android:textOff="War of Light"
+                    android:textSize="15sp"
+                    android:id="@+id/tbWoLStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="War of Light"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbWoLStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Age of Ultron"
+                    android:textOff="Age of Ultron"
+                    android:textSize="15sp"
+                    android:id="@+id/tbAoUStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Age of Ultron"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbAoUStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Justice League"
+                    android:textOff="Justice League"
+                    android:textSize="15sp"
+                    android:id="@+id/tbJLStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Justice League"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbJLStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Battle for Faerûn"
+                    android:textOff="Battle for Faerûn"
+                    android:textSize="15sp"
+                    android:id="@+id/tbBFFStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Battle for Faerûn"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbBFFStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Yu-Gi-Oh! Series One"
+                    android:textOff="Yu-Gi-Oh! Series One"
+                    android:textSize="15sp"
+                    android:id="@+id/tbS1Starter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="Yu-Gi-Oh! Series One"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbS1Starter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="The Uncanny X-Men"
+                    android:textOff="The Uncanny X-Men"
+                    android:textSize="15sp"
+                    android:id="@+id/tbUXStarter" />
 
             </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_margin="10dp">
+                android:layout_margin="5dp"
+                android:gravity="center">
 
-                <TextView
+                <ToggleButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:text="The Uncanny X-Men"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbUXStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_margin="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    android:text="Avengers vs. X-Men"
-                    android:textSize="15sp" />
-
-                <CheckBox
-                    android:id="@+id/cbAvXStarter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textOn="Avengers vs. X-Men"
+                    android:textOff="Avengers vs. X-Men"
+                    android:textSize="15sp"
+                    android:id="@+id/tbAvXStarter" />
 
             </TableRow>
         </TableLayout>

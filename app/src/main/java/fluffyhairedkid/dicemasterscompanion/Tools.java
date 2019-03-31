@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 /**
  * Created by Walker on 2/21/2016.
@@ -58,34 +59,34 @@ public class Tools extends Activity {
                 Button add = (Button) dialog.findViewById(R.id.btAddCards);
                 Button cancel = (Button) dialog.findViewById(R.id.btCancelAdd);
 
-                final CheckBox jusStarter = (CheckBox) dialog.findViewById(R.id.cbJUSStarter);
-                final CheckBox doomStarter = (CheckBox) dialog.findViewById(R.id.cbDOOMStarter);
-                final CheckBox mystStarter = (CheckBox) dialog.findViewById(R.id.cbMYSTStarter);
-                final CheckBox bfuStarter = (CheckBox) dialog.findViewById(R.id.cbBFUStarter);
-                final CheckBox orkStarter = (CheckBox) dialog.findViewById(R.id.cbORKStarter);
-                final CheckBox swStarter = (CheckBox) dialog.findViewById(R.id.cbSWStarter);
-                final CheckBox aiStarter = (CheckBox) dialog.findViewById(R.id.cbAIStarter);
-                final CheckBox kiStarter = (CheckBox) dialog.findViewById(R.id.cbKIStarter);
-                final CheckBox jllStarter = (CheckBox) dialog.findViewById(R.id.cbJLLStarter);
-                final CheckBox hqStarter = (CheckBox) dialog.findViewById(R.id.cbHQStarter);
-                final CheckBox smmcStarter = (CheckBox) dialog.findViewById(R.id.cbSMMCStarter);
-                final CheckBox swwStarter = (CheckBox) dialog.findViewById(R.id.cbSWWStarter);
-                final CheckBox tdStarter = (CheckBox) dialog.findViewById(R.id.cbTDStarter);
-                final CheckBox imwmStarter = (CheckBox) dialog.findViewById(R.id.cbIMWMStarter);
-                final CheckBox hhsStarter = (CheckBox) dialog.findViewById(R.id.cbHHSStarter);
-                final CheckBox dsStarter = (CheckBox) dialog.findViewById(R.id.cbDSStarter);
-                final CheckBox tmntStarter = (CheckBox) dialog.findViewById(R.id.cbTMNTStarter);
-                final CheckBox cwStarter = (CheckBox) dialog.findViewById(R.id.cbCWStarter);
-                final CheckBox wfStarter = (CheckBox) dialog.findViewById(R.id.cbWFStarter);
-                final CheckBox fusStarter = (CheckBox) dialog.findViewById(R.id.cbFUSStarter);
-                final CheckBox asmStarter = (CheckBox) dialog.findViewById(R.id.cbASMStarter);
-                final CheckBox wolStarter = (CheckBox) dialog.findViewById(R.id.cbWoLStarter);
-                final CheckBox aouStarter = (CheckBox) dialog.findViewById(R.id.cbAoUStarter);
-                final CheckBox jlStarter = (CheckBox) dialog.findViewById(R.id.cbJLStarter);
-                final CheckBox bffStarter = (CheckBox) dialog.findViewById(R.id.cbBFFStarter);
-                final CheckBox s1Starter = (CheckBox) dialog.findViewById(R.id.cbS1Starter);
-                final CheckBox uxStarter = (CheckBox) dialog.findViewById(R.id.cbUXStarter);
-                final CheckBox avxStarter = (CheckBox) dialog.findViewById(R.id.cbAvXStarter);
+                final ToggleButton jusStarter = (ToggleButton) dialog.findViewById(R.id.tbJUSStarter);
+                final ToggleButton doomStarter = (ToggleButton) dialog.findViewById(R.id.tbDOOMStarter);
+                final ToggleButton mystStarter = (ToggleButton) dialog.findViewById(R.id.tbMYSTStarter);
+                final ToggleButton bfuStarter = (ToggleButton) dialog.findViewById(R.id.tbBFUStarter);
+                final ToggleButton orkStarter = (ToggleButton) dialog.findViewById(R.id.tbORKStarter);
+                final ToggleButton swStarter = (ToggleButton) dialog.findViewById(R.id.tbSWStarter);
+                final ToggleButton aiStarter = (ToggleButton) dialog.findViewById(R.id.tbAIStarter);
+                final ToggleButton kiStarter = (ToggleButton) dialog.findViewById(R.id.tbKIStarter);
+                final ToggleButton jllStarter = (ToggleButton) dialog.findViewById(R.id.tbJLLStarter);
+                final ToggleButton hqStarter = (ToggleButton) dialog.findViewById(R.id.tbHQStarter);
+                final ToggleButton smmcStarter = (ToggleButton) dialog.findViewById(R.id.tbSMMCStarter);
+                final ToggleButton swwStarter = (ToggleButton) dialog.findViewById(R.id.tbSWWStarter);
+                final ToggleButton tdStarter = (ToggleButton) dialog.findViewById(R.id.tbTDStarter);
+                final ToggleButton imwmStarter = (ToggleButton) dialog.findViewById(R.id.tbIMWMStarter);
+                final ToggleButton hhsStarter = (ToggleButton) dialog.findViewById(R.id.tbHHSStarter);
+                final ToggleButton dsStarter = (ToggleButton) dialog.findViewById(R.id.tbDSStarter);
+                final ToggleButton tmntStarter = (ToggleButton) dialog.findViewById(R.id.tbTMNTStarter);
+                final ToggleButton cwStarter = (ToggleButton) dialog.findViewById(R.id.tbCWStarter);
+                final ToggleButton wfStarter = (ToggleButton) dialog.findViewById(R.id.tbWFStarter);
+                final ToggleButton fusStarter = (ToggleButton) dialog.findViewById(R.id.tbFUSStarter);
+                final ToggleButton asmStarter = (ToggleButton) dialog.findViewById(R.id.tbASMStarter);
+                final ToggleButton wolStarter = (ToggleButton) dialog.findViewById(R.id.tbWoLStarter);
+                final ToggleButton aouStarter = (ToggleButton) dialog.findViewById(R.id.tbAoUStarter);
+                final ToggleButton jlStarter = (ToggleButton) dialog.findViewById(R.id.tbJLStarter);
+                final ToggleButton bffStarter = (ToggleButton) dialog.findViewById(R.id.tbBFFStarter);
+                final ToggleButton s1Starter = (ToggleButton) dialog.findViewById(R.id.tbS1Starter);
+                final ToggleButton uxStarter = (ToggleButton) dialog.findViewById(R.id.tbUXStarter);
+                final ToggleButton avxStarter = (ToggleButton) dialog.findViewById(R.id.tbAvXStarter);
 
                 datasource = new SQLDataSource(Tools.this);
 
@@ -105,7 +106,7 @@ public class Tools extends Activity {
                     public void onClick(View v) {
                         String starterCriteria = "";
                         String fullCriteria = "";
-
+                        
                         if (jusStarter.isChecked()) {
                             if (starterCriteria.equals("")) {
                                 starterCriteria = "'JUS'";
