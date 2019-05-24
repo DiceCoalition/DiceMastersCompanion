@@ -8,7 +8,7 @@ import android.util.Log;
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "tblCards.db";
-    private static final int DATABASE_VERSION = 117;
+    private static final int DATABASE_VERSION = 118;
 
     private static final String DATABASE_CREATE = "create table tblCards (_id integer not null, CharID integer not null, DieID integer not null, CardID integer not null, "
             + "Universe text not null, CardSet text not null, CharName text not null, CardName text not null, "
@@ -3298,9 +3298,138 @@ private static final String DATABASE_POPULATEJUS = "insert into tblCards "
             + "union select 3228,765,1,1,'DC Comics','MYST','Zatanna','Magical Lineage','mystzatanna','myst23','three','league','magicorg','','mask','as',3,0,0,-1 "
             + "union select 3229,765,1,1,'DC Comics','MYST','Zatanna','Master Magician''s Daughter','mystzatanna','myst24','three','league','magicorg','','mask','as',3,0,0,-1 ";
 
-    //next card 3239
-    //next BAC 226
-    //next char 766
+	private static final String DATABASE_POPULATEXMF = "insert into tblCards "
+        + "select 3239,1,1,226,'Marvel','XMF','Basic Action Card','Brave Sacrifice','basic','xmf63','three','','','','','as',3,0,0,-1 "
+        + "union select 3240,1,1,227,'Marvel','XMF','Basic Action Card','Counterstrike','basic','xmf64','two','','','','','as',3,0,0,-1 "
+        + "union select 3241,1,1,228,'Marvel','XMF','Basic Action Card','Dual Defense','basic','xmf65','two','','','','','as',3,0,0,-1 "
+        + "union select 3242,1,1,229,'Marvel','XMF','Basic Action Card','Invulnerability','basic','xmf66','two','','','','','as',3,0,0,-1 "
+        + "union select 3243,1,1,230,'Marvel','XMF','Basic Action Card','Reinforcements','basic','xmf67','three','','','','','as',3,0,0,-1 "
+        + "union select 3244,1,1,231,'Marvel','XMF','Basic Action Card','Replenish','basic','xmf68','three','','','','','as',3,0,0,-1 "
+        + "union select 3245,1,1,232,'Marvel','XMF','Basic Action Card','Teamwork','basic','xmf69','three','','','','','as',3,0,0,-1 "
+        + "union select 3246,1,1,233,'Marvel','XMF','Basic Action Card','Too Big To Fly','basic','xmf70','four','','','','','as',3,0,0,-1 "
+        + "union select 3247,1,1,234,'Marvel','XMF','Basic Action Card','Way Out West','basic','xmf71','two','','','','','as',3,0,0,-1 "
+        + "union select 3248,1,1,235,'Marvel','XMF','Basic Action Card','Whoever Assemble!','basic','xmf72','two','','','','','as',3,0,0,-1 "
+        + "union select 3249,766,1,1,'Marvel','XMF','Beast','Here, Sir!','xmfbeast','xmf1','two','xmen','','','mask','as',3,0,0,-1 "
+        + "union select 3250,766,1,1,'Marvel','XMF','Beast','Taming the Beast Within','xmfbeast','xmf2','two','xmen','','','mask','as',3,0,0,-1 "
+        + "union select 3251,766,1,1,'Marvel','XMF','Beast','Atavistic Tendencies','xmfbeast','xmf3','three','xmen','','','mask','as',3,0,0,-1 "
+        + "union select 3252,767,1,1,'Marvel','XMF','Black Tom Cassidy','White Bishop','xmfblacktomcassidy','xmf4','four','hellfire','villain','','lightning','as',3,0,0,-1 "
+        + "union select 3253,767,1,1,'Marvel','XMF','Black Tom Cassidy','Plans in Motion','xmfblacktomcassidy','xmf5','four','magnetoorg','villain','','lightning','as',3,0,0,-1 "
+        + "union select 3254,768,1,1,'Marvel','XMF','Blob','Frederick Dukes','xmfblob','xmf6','three','magnetoorg','villain','','shield','as',3,0,0,-1 "
+        + "union select 3255,768,1,1,'Marvel','XMF','Blob','Big Talkin'' Costumed Clown','xmfblob','xmf7','four','magnetoorg','villain','','shield','as',3,0,0,-1 "
+        + "union select 3256,769,1,1,'Marvel','XMF','Cerebra','Defending X-Haven','xmfcerebra','xmf8','seven','xmen','','','shield','as',3,0,0,-1 "
+        + "union select 3257,769,1,1,'Marvel','XMF','Cerebra','Mutant Detector','xmfcerebra','xmf9','six','xmen','','','shield','as',3,0,0,-1 "
+        + "union select 3258,769,1,1,'Marvel','XMF','Cerebra','Rust Bucket','xmfcerebra','xmf10','six','xmen','','','shield','as',3,0,0,-1 "
+        + "union select 3259,770,1,1,'Marvel','XMF','Cyclops','Present or Accounted For','xmfcyclops','xmf11','five','xmen','','','lightning','as',3,0,0,-1 "
+        + "union select 3260,770,1,1,'Marvel','XMF','Cyclops','Prismatic Lens','xmfcyclops','xmf12','five','xmen','','','lightning','as',3,0,0,-1 "
+        + "union select 3261,771,1,1,'Marvel','XMF','Donald Pierce','White King','xmfdonaldpierce','xmf13','five','hellfire','villain','','fist','as',3,0,0,-1 "
+        + "union select 3262,771,1,1,'Marvel','XMF','Donald Pierce','Better, Faster, Stronger','xmfdonaldpierce','xmf14','five','hellfire','villain','','fist','as',3,0,0,-1 "
+        + "union select 3263,771,1,1,'Marvel','XMF','Donald Pierce','Refocusing the Reavers','xmfdonaldpierce','xmf15','five','hellfire','villain','','fist','as',3,0,0,-1 "
+        + "union select 3264,772,1,1,'Marvel','XMF','Emma Frost','Mental Mistress','xmfemmafrost','xmf16','four',''xmen','','','shield','as',3,0,0,-1 "
+        + "union select 3265,772,1,1,'Marvel','XMF','Emma Frost','Not Always About \"Good\" or \"Evil\"','xmfemmafrost','xmf17','four','xmen','','','shield','as',3,0,0,-1 "
+        + "union select 3266,772,1,1,'Marvel','XMF','Emma Frost','As You Say, Shaw','xmfemmafrost','xmf18','four','hellfire','villain','','shield','as',3,0,0,-1 "
+        + "union select 3267,773,1,1,'Marvel','XMF','Hope Summers','Messiah Complex','xmfhopesummers','xmf19','two','xmen','','','shield','as',3,0,0,-1 "
+        + "union select 3268,773,1,1,'Marvel','XMF','Hope Summers','Pluripotent Exhopraxia','xmfhopesummers','xmf20','three','xmen','','','shield','as',3,0,0,-1 "
+        + "union select 3269,773,1,1,'Marvel','XMF','Hope Summers','All of Us','xmfhopesummers','xmf21','two','xmen','','','shield','as',3,0,0,-1 "
+        + "union select 3270,774,1,1,'Marvel','XMF','Iceman','Right on Schedule','xmficeman','xmf22','four','xmen','','','lightning','as',3,0,0,-1 "
+        + "union select 3271,774,1,1,'Marvel','XMF','Iceman','I''m Just Me','xmficeman','xmf23','four','xmen','','','lightning','as',3,0,0,-1 "
+        + "union select 3272,775,1,1,'Marvel','XMF','Jean Grey','One Love, One Life','xmfjeangrey','xmf24','five','xmen','','','lightning','as',3,0,0,-1 "
+        + "union select 3273,775,1,1,'Marvel','XMF','Jean Grey','Open Your Eyes, Scott','xmfjeangrey','xmf25','five','xmen','','','lightning','as',3,0,0,-1 "
+        + "union select 3274,776,1,1,'Marvel','XMF','Jubilee','Jubilation Lee','xmfjubilee','xmf26','three','xmen','','','lightning','as',3,0,0,-1 "
+        + "union select 3275,776,1,1,'Marvel','XMF','Jubilee','Wondra','xmfjubilee','xmf27','three','xmen','','','lightning','as',3,0,0,-1 "
+        + "union select 3276,776,1,1,'Marvel','XMF','Jubilee','Olympic Gymnast','xmfjubilee','xmf28','two','xmen','','','lightning','as',3,0,0,-1 "
+        + "union select 3277,777,1,1,'Marvel','XMF','Kitty Pryde','Professor Xavier is a Jerk!','xmfkittypryde','xmf29','four','xmen','','','mask','as',3,0,0,-1 "
+        + "union select 3278,777,1,1,'Marvel','XMF','Kitty Pryde','More Human Than You!','xmfkittypryde','xmf30','three','xmen','','','mask','as',3,0,0,-1 "
+        + "union select 3279,777,1,1,'Marvel','XMF','Kitty Pryde','Star Lord','xmfkittypryde','xmf31','three','xmen','','','mask','as',3,0,0,-1 "
+        + "union select 3280,778,1,1,'Marvel','XMF','Lady Deathstrike','Yuriko Oyama','xmfladydeathstrike','xmf32','five','magnetoorg','villain','','fist','as',3,0,0,-1 "
+        + "union select 3281,778,1,1,'Marvel','XMF','Lady Deathstrike','Honor Bound','xmfladydeathstrike','xmf33','five','magnetoorg','villain','','fist','as',3,0,0,-1 "
+        + "union select 3282,778,1,1,'Marvel','XMF','Lady Deathstrike','Bad to the Bone','xmfladydeathstrike','xmf34','six','magnetoorg','villain','','fist','as',3,0,0,-1 "
+        + "union select 3283,779,1,1,'Marvel','XMF','Madelyne Pryor','Red Queen','xmfmadelynepryor','xmf35','two','hellfire','villain','','mask','as',3,0,0,-1 "
+        + "union select 3284,779,1,1,'Marvel','XMF','Madelyne Pryor','Sinister Origin','xmfmadelynepryor','xmf36','three','hellfire','villain','','mask','as',3,0,0,-1 "
+        + "union select 3285,779,1,1,'Marvel','XMF','Madelyne Pryor','Anodyne','xmfmadelynepryor','xmf37','three','hellfire','villain','','mask','as',3,0,0,-1 "
+        + "union select 3286,780,1,1,'Marvel','XMF','Magneto','Grey King','xmfmagneto','xmf38','five','hellfire','villain','','mask','as',3,0,0,-1 "
+        + "union select 3287,780,1,1,'Marvel','XMF','Magneto','Homo Superior','xmfmagneto','xmf39','five','magnetoorg','villain','','mask','as',3,0,0,-1 "
+        + "union select 3288,781,1,1,'Marvel','XMF','Mastermind','Jason Wyngarde','xmfmastermind','xmf40','four','magnetoorg','villain','','shield','as',3,0,0,-1 "
+        + "union select 3289,781,1,1,'Marvel','XMF','Mastermind','Probationary Member','xmfmastermind','xmf41','three','hellfire','villain','','shield','as',3,0,0,-1 "
+        + "union select 3290,781,1,1,'Marvel','XMF','Mastermind','Fracturing the Phoenix','xmfmastermind','xmf42','two','magnetoorg','villain','','shield','as',3,0,0,-1 "
+        + "union select 3291,782,1,1,'Marvel','XMF','Mystique','Brotherhood of Her Own','xmfmystique','xmf43','three','magnetoorg','villain','','mask','as',3,0,0,-1 "
+        + "union select 3292,782,1,1,'Marvel','XMF','Mystique','O Bitter Victory','xmfmystique','xmf44','four','magnetoorg','villain','','mask','as',3,0,0,-1 "
+        + "union select 3293,782,1,1,'Marvel','XMF','Mystique','Hellfire Headmistress','xmfmystique','xmf45','six','hellfire','villain','','mask','as',3,0,0,-1 "
+        + "union select 3294,783,1,1,'Marvel','XMF','Professor X','To Me, My X-Men!','xmfprofessorx','xmf46','six','xmen','','','mask','as',3,0,0,-1 "
+        + "union select 3295,783,1,1,'Marvel','XMF','Professor X','To the Astral Plane','xmfprofessorx','xmf47','six','xmen','','','mask','as',3,0,0,-1 "
+        + "union select 3296,783,1,1,'Marvel','XMF','Professor X','Too Good For This World','xmfprofessorx','xmf48','five','xmen','','','mask','as',3,0,0,-1 "
+        + "union select 3297,784,1,1,'Marvel','XMF','Rachel Summers','Marvel Girl','xmfrachelsummers','xmf49','six','xmen','','','lightning','as',3,0,0,-1 "
+        + "union select 3298,784,1,1,'Marvel','XMF','Rachel Summers','Phoenix','xmfrachelsummers','xmf50','seven','xmen','','','lightning','as',3,0,0,-1 "
+        + "union select 3299,784,1,1,'Marvel','XMF','Rachel Summers','Prestige','xmfrachelsummers','xmf51','seven','xmen','','','lightning','as',3,0,0,-1 "
+        + "union select 3300,785,1,1,'Marvel','XMF','Sabretooth','Happy Birthday, Boy','xmfsabretooth','xmf52','four','magnetoorg','villain','','fist','as',3,0,0,-1 "
+        + "union select 3301,785,1,1,'Marvel','XMF','Sabretooth','Terrible Transcendent Joy','xmfsabretooth','xmf53','five','magnetoorg','villain','','fist','as',3,0,0,-1 "
+        + "union select 3302,786,1,1,'Marvel','XMF','Sebastian Shaw','The Harder You Hit Me','xmfsebastianshaw','xmf54','four','hellfire','villain','','fist','as',3,0,0,-1 "
+        + "union select 3303,786,1,1,'Marvel','XMF','Sebastian Shaw','The Stronger I Become','xmfsebastianshaw','xmf55','four','hellfire','villain','','fist','as',3,0,0,-1 "
+        + "union select 3304,787,1,1,'Marvel','XMF','Storm','Ororo Munroe','xmfstorm','xmf56','three','xmen','','','lightning','as',3,0,0,-1 "
+        + "union select 3305,787,1,1,'Marvel','XMF','Storm','Mother Nature','xmfstorm','xmf57','four','xmen','','','lightning','as',3,0,0,-1 "
+        + "union select 3306,787,1,1,'Marvel','XMF','Storm','The Storm Goddess Comes','xmfstorm','xmf58','two','xmen','','','lightning','as',3,0,0,-1 "
+        + "union select 3307,788,1,1,'Marvel','XMF','Toad','The Leader Will be Proud','xmftoad','xmf59','three','magnetoorg','villain','','fist','as',3,0,0,-1 "
+        + "union select 3308,788,1,1,'Marvel','XMF','Toad','Strange Augmentation','xmftoad','xmf60','four','magnetoorg','villain','','fist','as',3,0,0,-1 "
+        + "union select 3309,789,1,1,'Marvel','XMF','Wolverine','Good Doesn''t Always Mean Nice','xmfwolverine','xmf61','six','xmen','','','fist','as',3,0,0,-1 "
+        + "union select 3310,789,1,1,'Marvel','XMF','Wolverine','Adamantium Fury','xmfwolverine','xmf62','five','xmen','','','fist','as',3,0,0,-1 ";
+
+    private static final String DATABASE_POPULATEXFO = "insert into tblCards "
+            + "select 3312,790,1,1,'Marvel','XFO','Cable','X-Forve Team Leader','xfocable','xfo1','four','xmen','','','lightning','as',3,0,0,-1 "
+            + "union select 3313,790,1,1,'Marvel','XFO','Cable','Psionic Blasts','xfocable','xfo2','five','xmen','','','lightning','as',3,0,0,-1 "
+            + "union select 3314,790,1,1,'Marvel','XFO','Cable','Bodyslide','xfocable','xfo3','five','xmen','','','lightning','as',3,0,0,-1 "
+            + "union select 3315,791,1,1,'Marvel','XFO','Dani Moonstar','Empathic Illusion Casting','xfodanimoonstar','xfo4','two','xmen','','','mask','as',3,0,0,-1 "
+            + "union select 3316,791,1,1,'Marvel','XFO','Dani Moonstar','Cheyenne','xfodanimoonstar','xfo5','two','xmen','','','mask','as',3,0,0,-1 "
+            + "union select 3317,791,1,1,'Marvel','XFO','Dani Moonstar','Special Arrows','xfodanimoonstar','xfo6','two','xmen','','','mask','as',3,0,0,-1 "
+            + "union select 3318,792,1,1,'Marvel','XFO','Deadpool','Roll Some Energy!','xfodeadpool','xfo7','four','xmen','','','fist','as',3,0,0,-1 "
+            + "union select 3319,792,1,1,'Marvel','XFO','Deadpool','It''s a 4th Wall Thing','xfodeadpool','xfo8','five','xmen','','','fist','as',3,0,0,-1 "
+            + "union select 3320,792,1,1,'Marvel','XFO','Deadpool','We''re X-Force!','xfodeadpool','xfo9','four','xmen','','','fist','as',3,0,0,-1 "
+            + "union select 3321,793,1,1,'Marvel','XFO','Domino','Not Really A Party Girl','xfodomino','xfo10','three','xmen','','','shield','as',3,0,0,-1 "
+            + "union select 3322,793,1,1,'Marvel','XFO','Domino','It''s Not ALL Luck','xfodomino','xfo11','three','xmen','','','shield','as',3,0,0,-1 "
+            + "union select 3323,793,1,1,'Marvel','XFO','Domino','Mistress of Mischief','xfodomino','xfo12','four','xmen','','','shield','as',3,0,0,-1 "
+            + "union select 3324,794,1,1,'Marvel','XFO','Fantomex','International Art Thief','xfofantomex','xfo13','four','xmen','','','shield','as',3,0,0,-1 "
+            + "union select 3325,794,1,1,'Marvel','XFO','Fantomex','Weapon XIII','xfofantomex','xfo14','four','xmen','','','shield','as',3,0,0,-1 "
+            + "union select 3326,794,1,1,'Marvel','XFO','Fantomex','Cover Fire','xfofantomex','xfo15','five','xmen','','','shield','as',3,0,0,-1 "
+            + "union select 3327,795,1,1,'Marvel','XFO','Forge','Intuituve Genius','xfoforge','xfo16','three','xmen','','','lightning','as',3,0,0,-1 "
+            + "union select 3328,795,1,1,'Marvel','XFO','Forge','Inventor','xfoforge','xfo17','three','xmen','','','lightning','as',3,0,0,-1 "
+            + "union select 3329,795,1,1,'Marvel','XFO','Forge','Tribal Shaman','xfoforge','xfo18','three','xmen','','','lightning','as',3,0,0,-1 "
+            + "union select 3330,796,1,1,'Marvel','XFO','Magik','Energy from Limbo','xfomagik','xfo19','four','xmen','','','mask','as',3,0,0,-1 "
+            + "union select 3331,796,1,1,'Marvel','XFO','Magik','Limbo Control','xfomagik','xfo20','four','xmen','','','mask','as',3,0,0,-1 "
+            + "union select 3332,796,1,1,'Marvel','XFO','Magik','Psionic Shields','xfomagik','xfo21','four','xmen','','','mask','as',3,0,0,-1 "
+            + "union select 3333,797,1,1,'Marvel','XFO','Psylocke','Reforming X-Force','xfopsylocke','xfo22','two','xmen','','','mask','as',3,0,0,-1 "
+            + "union select 3334,797,1,1,'Marvel','XFO','Psylocke','Telekinetic Bow and Arrow','xfopsylocke','xfo23','two','xmen','','','mask','as',3,0,0,-1 "
+            + "union select 3335,797,1,1,'Marvel','XFO','Psylocke','Master Telepathic Combatant','xfopsylocke','xfo24','four','xmen','','','mask','as',3,0,0,-1 ";
+
+    private static final String DATABASE_POPULATEDXM = "insert into tblCards "
+            + "select 3336,798,1,1,'Marvel','DXM','Blink','Who''s Faster, Halfscan?','dxmblink','dxm1','four','xmen','','','mask','as',3,0,0,-1 "
+            + "union select 3337,798,1,1,'Marvel','DXM','Blink','Down the Rabbit Hole','dxmblink','dxm2','four','xmen','','','mask','as',3,0,0,-1 "
+            + "union select 3338,798,1,1,'Marvel','DXM','Blink','Biomolecular Displacement Portals','dxmblink','dxm3','four','xmen','','','mask','as',3,0,0,-1 "
+            + "union select 3339,799,1,1,'Marvel','DXM','Dark Beast','Imposter','dxmdarkbeast','dxm4','two','xmen','villain','','fist','as',3,0,0,-1 "
+            + "union select 3340,799,1,1,'Marvel','DXM','Dark Beast','Mad Scientist','dxmdarkbeast','dxm5','two','magnetoorg','villain','','fist','as',3,0,0,-1 "
+            + "union select 3341,799,1,1,'Marvel','DXM','Dark Beast','Human Experimentation','dxmdarkbeast','dxm6','two','magnetoorg','villain'','','fist','as',3,0,0,-1 "
+            + "union select 3342,800,1,1,'Marvel','DXM','Mimic','Calvin','dxmmimic','dxm7','three','xmen','','','mask','as',3,0,0,-1 "
+            + "union select 3343,800,1,1,'Marvel','DXM','Mimic','Best of the X-Men','dxmmimic','dxm8','three','xmen','','','mask','as',3,0,0,-1 "
+            + "union select 3344,800,1,1,'Marvel','DXM','Mimic','Flying, Blasting, Slashing','dxmmimic','dxm9','four','xmen','','','mask','as',3,0,0,-1 "
+            + "union select 3345,801,1,1,'Marvel','DXM','Polaris','Lorna Dane','dxmpolaris','dxm10','four','xmen','','','shield','as',3,0,0,-1 "
+            + "union select 3346,801,1,1,'Marvel','DXM','Polaris','Hail, Queen of Mutants','dxmpolaris','dxm11','four','xmen','','','shield','as',3,0,0,-1 "
+            + "union select 3347,801,1,1,'Marvel','DXM','Polaris','Strange Stirrings Within','dxmpolaris','dxm12','four','xmen','','','shield','as',3,0,0,-1 "
+            + "union select 3348,802,1,1,'Marvel','DXM','Rogue','Goodnight, Sugah!','dxmrogue','dxm13','four','magnetoorg','','','mask','as',3,0,0,-1 "
+            + "union select 3349,802,1,1,'Marvel','DXM','Rogue','Southern Comfort','dxmrogue','dxm14','four','xmen','','','mask','as',3,0,0,-1 "
+            + "union select 3350,802,1,1,'Marvel','DXM','Rogue','Mother Issues','dxmrogue','dxm15','five','xmen','','','mask','as',3,0,0,-1 "
+            + "union select 3351,803,1,1,'Marvel','DXM','Sage','Psionic Firewall','dxmsage','dxm16','three','xmen','','','shield','as',3,0,0,-1 "
+            + "union select 3352,803,1,1,'Marvel','DXM','Sage','Photographic Memory','dxmsage','dxm17','three','xmen','','','shield','as',3,0,0,-1 "
+            + "union select 3353,803,1,1,'Marvel','DXM','Sage','Xavier''s Mole','dxmsage','dxm18','three','hellfire','','','shield','as',3,0,0,-1 "
+            + "union select 3354,804,1,1,'Marvel','DXM','Sunspot','Roberto da Costa','dxmsunspot','dxm19','five','xmen','','','lightning','as',3,0,0,-1 "
+            + "union select 3355,804,1,1,'Marvel','DXM','Sunspot','Lord Imperial','dxmsunspot','dxm20','five','hellfire','','','lightning','as',3,0,0,-1 "
+            + "union select 3356,804,1,1,'Marvel','DXM','Sunspot','Black Rook','dxmsunspot','dxm21','five','hellfire','','','lightning','as',3,0,0,-1 "
+            + "union select 3357,805,1,1,'Marvel','DXM','Thunderbird','Wakinyan','dxmthunderbird','dxm22','four','xmen','','','fist','as',3,0,0,-1 "
+            + "union select 3358,805,1,1,'Marvel','DXM','Thunderbird','Son of The People','dxmthunderbird','dxm23','four','xmen','','','fist','as',3,0,0,-1 "
+            + "union select 3359,805,1,1,'Marvel','DXM','Thunderbird','Buffalo Soldier','dxmthunderbird','dxm24','four','xmen','','','fist','as',3,0,0,-1 ";
+
+//next BAC 236
+//next card 3360
+//next char 806
+
+
+		
     private static final String DATABASE_BACKUP_CREATE = "create table if not exists tblBackup (CardSet text not null, CharName text not null, CardName text not null, NumOwned tinyint not null, DiceOwned tinyint not null, NumFoilsOwned tinyint not null)";
     private static final String DATABASE_BACKUP_POPULATE = "insert into tblBackup select CardSet, CharName, CardName, NumOwned, DiceOwned, NumFoilsOwned from tblCards ";
 
@@ -3366,6 +3495,9 @@ private static final String DATABASE_POPULATEJUS = "insert into tblCards "
         database.execSQL(DATABASE_POPULATEJUS);
         database.execSQL(DATABASE_POPULATEDOOM);
         database.execSQL(DATABASE_POPULATEMYST);
+		database.execSQL(DATABASE_POPULATEXMF);
+        database.execSQL(DATABASE_POPULATEXFO);
+        database.execSQL(DATABASE_POPULATEDXM);
         database.execSQL(DATABASE_BACKUP_CREATE); //creates tblbackup for fresh installs
         database.execSQL(DATABASE_SETTINGS_CREATE);
         database.execSQL(DATABASE_SETTINGS_POPULATE);
