@@ -40,6 +40,59 @@
 
             </TableRow>
 
+<TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:gravity="center">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textOn="X-Men Forever"
+                    android:textOff="X-Men Forever"
+                    android:textSize="15sp"
+                    android:id="@+id/tbXMFStarter"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:gravity="center">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textOn="Uncanny X-Force"
+                    android:textOff="Uncanny X-Force"
+                    android:textSize="15sp"
+                    android:id="@+id/tbXFOStarter" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:gravity="center">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textOn="Dark X-Men"
+                    android:textOff="Dark X-Men"
+                    android:textSize="15sp"
+                    android:id="@+id/tbDXMStarter"/>
+
+            </TableRow>
+			
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"

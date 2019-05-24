@@ -69,6 +69,9 @@ public class Search extends Activity {
         final CheckBox setJUS = (CheckBox) findViewById(R.id.cb122);
         final CheckBox setDOOM = (CheckBox) findViewById(R.id.cb123);
         final CheckBox setMYST = (CheckBox) findViewById(R.id.cb124);
+		final CheckBox setXMF = (CheckBox) findViewById(R.id.cb126);
+        final CheckBox setXFO = (CheckBox) findViewById(R.id.cb127);
+        final CheckBox setDXM = (CheckBox) findViewById(R.id.cb128);
         final CheckBox costOne = (CheckBox) findViewById(R.id.cb1);
         final CheckBox costTwo = (CheckBox) findViewById(R.id.cb2);
         final CheckBox costThree = (CheckBox) findViewById(R.id.cb3);
@@ -153,6 +156,7 @@ public class Search extends Activity {
         final CheckBox orks = (CheckBox) findViewById(R.id.cb120);
         final CheckBox spacewolves = (CheckBox) findViewById(R.id.cb121);
         final CheckBox doompatrol = (CheckBox) findViewById(R.id.cb125);
+		final CheckBox hellfire = (CheckBox) findViewById(R.id.cb129);
 
 
         final EditText editSearch = (EditText) findViewById(R.id.etSearchText);
@@ -553,6 +557,27 @@ public class Search extends Activity {
                                                   setCriteria = setCriteria + "'MYST'";
                                               } else {
                                                   setCriteria = setCriteria + ",'MYST'";
+                                              }
+                                          }										  
+                                          if (setXMF.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'XMF'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'XMF'";
+                                              }
+                                          }
+                                          if (setXFO.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'XFO'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'XFO'";
+                                              }
+                                          }
+										  if (setDXM.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'DXM'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'DXM'";
                                               }
                                           }
                                           if (!"".equals(setCriteria)) {
@@ -1119,6 +1144,13 @@ public class Search extends Activity {
                                                   affilCriteria = affilCriteria + ",'spacewolves'";
                                               }
                                           }
+										  if (hellfire.isChecked()) {
+                                              if (affilCriteria.equals("")) {
+                                                  affilCriteria = affilCriteria + "'hellfire'";
+                                              } else {
+                                                  affilCriteria = affilCriteria + ",'hellfire'";
+                                              }
+                                          }
 
                                           if (noaffil.isChecked())
 
@@ -1539,6 +1571,10 @@ public class Search extends Activity {
                                          deathguard.setChecked(false);
                                          orks.setChecked(false);
                                          spacewolves.setChecked(false);
+										 hellfire.setChecked(false);
+										 xmf.setChecked(false);
+										 xfo.setChecked(false);
+										 dxm.setChecked(false);
 
                                          editSearch.setText("");
                                          editSearch.clearFocus();

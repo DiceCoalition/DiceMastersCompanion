@@ -31,11 +31,11 @@ public class MainActivity extends Activity {
                 MainActivity.this);
         closeAlert.setTitle("Updates");
         closeAlert
-                .setMessage("Added various OP/Promos"
+                .setMessage("Added X-men Forever"
                         + "\n" + "\n" +
-                        "Added Justice block bulk add"
+                        "Added Uncanny X-Force"
                         + "\n" + "\n" +
-                        "Fixed Orange Lantern search bug"
+                        "Added Dark X-Men"
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",

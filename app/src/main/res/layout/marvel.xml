@@ -152,6 +152,30 @@
                 android:layout_margin="5dp"
                 android:background="@drawable/custom_button"
                 android:text="Justice Like Lightning" />
+				
+			<Button
+                android:id="@+id/btXMF"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_button"
+                android:text="X-Men Forever" />
+
+            <Button
+                android:id="@+id/btXFO"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_button"
+                android:text="Uncanny X-Force" />
+
+            <Button
+                android:id="@+id/btDXM"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_button"
+                android:text="Dark X-Men" />
 
             <Button
                 android:id="@+id/btPromosMarvel"

@@ -434,6 +434,32 @@
 
 
             </LinearLayout>
+			
+			<LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb126"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="XMF" />
+
+                <CheckBox
+                    android:id="@+id/cb127"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="XFO" />
+
+                <CheckBox
+                    android:id="@+id/cb128"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DXM" />
+
+
+            </LinearLayout>
 
 
             <TextView
@@ -755,6 +781,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/exiles" />
+					
+				<CheckBox
+                    android:id="@+id/cb129"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/hellfire" />
 
             </LinearLayout>
 

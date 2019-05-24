@@ -59,6 +59,9 @@ public class Tools extends Activity {
                 Button add = (Button) dialog.findViewById(R.id.btAddCards);
                 Button cancel = (Button) dialog.findViewById(R.id.btCancelAdd);
 
+				final ToggleButton xmfStarter = (ToggleButton) dialog.findViewById(R.id.tbXMFStarter);
+                final ToggleButton xfoStarter = (ToggleButton) dialog.findViewById(R.id.tbXFOStarter);
+                final ToggleButton dxmtStarter = (ToggleButton) dialog.findViewById(R.id.tbDXMStarter);
                 final ToggleButton jusStarter = (ToggleButton) dialog.findViewById(R.id.tbJUSStarter);
                 final ToggleButton doomStarter = (ToggleButton) dialog.findViewById(R.id.tbDOOMStarter);
                 final ToggleButton mystStarter = (ToggleButton) dialog.findViewById(R.id.tbMYSTStarter);
@@ -107,6 +110,24 @@ public class Tools extends Activity {
                         String starterCriteria = "";
                         String fullCriteria = "";
                         
+						 if (xmfStarter.isChecked()) {
+                            if (starterCriteria.equals("")) {
+                                starterCriteria = "'XMF'";
+                            } else {
+                                starterCriteria = starterCriteria + ",'XMF'";
+                            }
+                        }if (xfoStarter.isChecked()) {
+                            if (starterCriteria.equals("")) {
+                                starterCriteria = "'XFO'";
+                            } else {
+                                starterCriteria = starterCriteria + ",'XFO'";
+                            }
+                        }if (dxmStarter.isChecked()) {
+                            if (starterCriteria.equals("")) {
+                                starterCriteria = "'DXM'";
+                            } else {
+                                starterCriteria = starterCriteria + ",'DXM'";
+                            }
                         if (jusStarter.isChecked()) {
                             if (starterCriteria.equals("")) {
                                 starterCriteria = "'JUS'";

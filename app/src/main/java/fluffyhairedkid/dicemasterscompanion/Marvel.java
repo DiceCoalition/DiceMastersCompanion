@@ -30,6 +30,9 @@ public class Marvel extends Activity {
         Button ai = (Button) findViewById(R.id.btAI);
         Button ki = (Button) findViewById(R.id.btKI);
         Button jll = (Button) findViewById(R.id.btJLL);
+		Button xmf = (Button) findViewById(R.id.btXMF);
+        Button xfo = (Button) findViewById(R.id.btXFO);
+        Button dxm = (Button) findViewById(R.id.btDXM);
         Button promosMarvel = (Button) findViewById(R.id.btPromosMarvel);
 
         allMarvel.setOnClickListener(new View.OnClickListener() {
@@ -219,6 +222,39 @@ public class Marvel extends Activity {
             }
         });
 
+		xmf.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Marvel.this, CardCollectorNEW.class);
+                intent.putExtra("view", "collection");
+                intent.putExtra("whereCriteria", "where CardSet='XMF'");
+                startActivity(intent);
+            }
+        });
+
+        xfo.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Marvel.this, CardCollectorNEW.class);
+                intent.putExtra("view", "collection");
+                intent.putExtra("whereCriteria", "where CardSet='XFO'");
+                startActivity(intent);
+            }
+        });
+
+        dxm.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Marvel.this, CardCollectorNEW.class);
+                intent.putExtra("view", "collection");
+                intent.putExtra("whereCriteria", "where CardSet='DXM'");
+                startActivity(intent);
+            }
+        });
+		
         promosMarvel.setOnClickListener(new View.OnClickListener() {
 
             @Override
