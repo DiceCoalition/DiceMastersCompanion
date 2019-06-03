@@ -26,6 +26,7 @@ public class CardCollectorNEW extends Activity {
     //List<String> childList;
     //List<Integer> intChild;
     Map<String, List<String>> cardCollection;
+    public static Map<String, List<String>> cardImageNames;
     Map<String, List<String>> cardsOwnedCollection;
     Map<String, List<String>> foilsOwnedCollection;
     Map<String, String> setCollection;
@@ -237,7 +238,7 @@ public class CardCollectorNEW extends Activity {
         diceOwnedCollection = datasource.sqlGetCharAttribList(this, "max(DiceOwned)", whereCriteria, orderCriteria);
         setCollection = datasource.sqlGetTableInfoList("CardSet", whereCriteria, orderCriteria);
         tblNameCollection = datasource.sqlGetTableInfoList("tblCards.CharName", whereCriteria, orderCriteria);
-
+        cardImageNames = datasource.sqlGetCardsList("CardImage", whereCriteria, orderCriteria);
         expListView = (ExpandableListView) findViewById(R.id.elvCardList);
         final ExpandableListAdapter expListAdapter;
 

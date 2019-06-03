@@ -1572,9 +1572,9 @@ public class Search extends Activity {
                                          orks.setChecked(false);
                                          spacewolves.setChecked(false);
 										 hellfire.setChecked(false);
-										 xmf.setChecked(false);
-										 xfo.setChecked(false);
-										 dxm.setChecked(false);
+										 setXMF.setChecked(false);
+										 setXFO.setChecked(false);
+										 setDXM.setChecked(false);
 
                                          editSearch.setText("");
                                          editSearch.clearFocus();

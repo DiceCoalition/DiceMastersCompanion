@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -20,12 +19,14 @@ public class MainActivity extends Activity {
     public static ArrayList<Map<String, String>> masterList = new ArrayList<Map<String, String>>();
     public static int collapseSetting = 0;
     public static String selectedTeam = "";
+    private static final int WRITE_REQUEST_CODE = 300;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //TODO: Likely need to move this.  think it is trying to access database before it's initionalize
+        //new FileDownload().execute("http://www.dicecoalition.com/cardservice/tzapp/dxm1.jpg");
         // Update this every version!!!!!
         AlertDialog.Builder closeAlert = new AlertDialog.Builder(
                 MainActivity.this);
@@ -159,6 +160,6 @@ public class MainActivity extends Activity {
             }
         });*/
 
-    }
 
+    }
 }

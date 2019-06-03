@@ -7,6 +7,10 @@ import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.media.MediaScannerConnection;
 import android.os.Environment;
 import android.widget.Toast;
@@ -117,6 +121,10 @@ public class SQLDataSource {
             cursor.moveToFirst();
             tempChar = cursor.getString(0);
             while (!cursor.isAfterLast()) {
+                //String path =  Environment.getExternalStorageDirectory() + File.separator + "TransitionZone/dxm1.jpg";
+                //Bitmap bitmap = BitmapFactory.decodeFile(path);
+                //Drawable drawable = new BitmapDrawable(bitmap);
+                //TODO: We're building up our image list here... how do we get images from not the resources?
                 if (cursor.getString(0).equals(tempChar)) {
                     tempList.add(context.getResources().getIdentifier(cursor.getString(1), "drawable", context.getPackageName()));
                 } else {

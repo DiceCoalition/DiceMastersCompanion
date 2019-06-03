@@ -413,6 +413,7 @@ public class DataManagement extends Activity {
             }
         });
     }
+
     public static void verifyStoragePermissions(Activity activity) {
         // Check if we have write permission
         int permission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
@@ -426,4 +427,19 @@ public class DataManagement extends Activity {
             );
         }
     }
+/*
+    public static void verifyInternetPermissions(Activity activity) {
+        // Check if we have write permission
+        int permission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.INTERNET);
+
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            // We don't have permission so prompt the user
+            ActivityCompat.requestPermissions(
+                    activity,
+                    Manifest.permission.INTERNET,
+                    1
+            );
+        }
+    }
+    */
 }

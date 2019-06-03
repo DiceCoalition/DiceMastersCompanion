@@ -61,7 +61,7 @@ public class Tools extends Activity {
 
 				final ToggleButton xmfStarter = (ToggleButton) dialog.findViewById(R.id.tbXMFStarter);
                 final ToggleButton xfoStarter = (ToggleButton) dialog.findViewById(R.id.tbXFOStarter);
-                final ToggleButton dxmtStarter = (ToggleButton) dialog.findViewById(R.id.tbDXMStarter);
+                final ToggleButton dxmStarter = (ToggleButton) dialog.findViewById(R.id.tbDXMStarter);
                 final ToggleButton jusStarter = (ToggleButton) dialog.findViewById(R.id.tbJUSStarter);
                 final ToggleButton doomStarter = (ToggleButton) dialog.findViewById(R.id.tbDOOMStarter);
                 final ToggleButton mystStarter = (ToggleButton) dialog.findViewById(R.id.tbMYSTStarter);
@@ -128,7 +128,7 @@ public class Tools extends Activity {
                             } else {
                                 starterCriteria = starterCriteria + ",'DXM'";
                             }
-                        if (jusStarter.isChecked()) {
+                        }if (jusStarter.isChecked()) {
                             if (starterCriteria.equals("")) {
                                 starterCriteria = "'JUS'";
                             } else {

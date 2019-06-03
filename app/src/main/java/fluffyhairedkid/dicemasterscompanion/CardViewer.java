@@ -1,10 +1,26 @@
 package fluffyhairedkid.dicemasterscompanion;
 
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import android.app.ProgressDialog;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
+import android.os.Environment;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -15,7 +31,12 @@ public class CardViewer extends Activity {
     int maxCard = 0;
     List<Integer> heroCards;
     Map<String, List<Integer>> imageCollection;
+    Map<String, List<String>> imageNameCollection;
     List<String> groupList;
+    private static final String TAG = MainActivity.class.getSimpleName();
+    private String url;
+    private final Activity dmActivity = this;
+    private final String baseurl = "http://www.dicecoalition.com/cardservice/tzapp/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +51,7 @@ public class CardViewer extends Activity {
         //groupList = CardCollector.groupList;
         imageCollection = CardCollectorNEW.imageCollection;
         groupList = CardCollectorNEW.groupList;
+        imageNameCollection = CardCollectorNEW.cardImageNames;
 
         ImageView imgView = (ImageView) findViewById(R.id.ivViewer);
 
@@ -68,8 +90,23 @@ public class CardViewer extends Activity {
             imgView.setBackgroundResource(0);
             imgView.setImageResource(cardimage);
         } else {
-            imgView.setBackgroundResource(this.getResources().getIdentifier("nopic", "drawable", this.getPackageName()));
-            imgView.setImageResource(0);
+            try {
+                imgView.setBackgroundResource(0);
+                String cardName = imageNameCollection.get(groupList.get(groupPosition)).get(childPosition);
+                String filename = cardName + ".jpg";
+                //String path = baseFileLoc + filename;
+                File f = new File(dmActivity.getFilesDir(), filename);
+                if(!f.exists())
+                    new FileDownload().execute(baseurl + filename);
+                else {
+                    Bitmap bitmap = BitmapFactory.decodeFile(f.getAbsolutePath());
+                    Drawable drawable = new BitmapDrawable(bitmap);
+                    imgView.setImageDrawable(drawable);
+                }
+            }catch(Exception ex) {
+                imgView.setBackgroundResource(this.getResources().getIdentifier("nopic", "drawable", this.getPackageName()));
+                imgView.setImageResource(0);
+            }
         }
     }
 
@@ -109,4 +146,112 @@ public class CardViewer extends Activity {
         }
     }
 
+    public class FileDownload extends AsyncTask<String, String, String> {
+
+        private ProgressDialog progressDialog;
+        private String fileName;
+        private String folder;
+        private boolean isDownloaded;
+
+        /**
+         * Before starting background thread
+         * Show Progress Bar Dialog
+         */
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            this.progressDialog = new ProgressDialog(CardViewer.this);
+            this.progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+            this.progressDialog.setCancelable(false);
+            this.progressDialog.show();
+        }
+
+        /**
+         * Downloading file in background thread
+         */
+        @Override
+        protected String doInBackground(String... f_url) {
+            int count;
+            try {
+                //DataManagement.verifyStoragePermissions(dmActivity);
+                URL url = new URL(f_url[0]);
+                URLConnection connection = url.openConnection();
+                connection.connect();
+                // getting file length
+                int lengthOfFile = connection.getContentLength();
+
+                // input stream to read file - with 8k buffer
+                InputStream input = new BufferedInputStream(url.openStream());
+
+                //Extract file name from URL
+                fileName = f_url[0].substring(f_url[0].lastIndexOf('/') + 1, f_url[0].length());
+
+                File outputFile = new File(dmActivity.getFilesDir(), fileName);
+                if(!outputFile.exists())
+                    outputFile.createNewFile();
+                // Output stream to write file
+                OutputStream output = openFileOutput(fileName, dmActivity.MODE_PRIVATE);
+
+                byte data[] = new byte[1024];
+
+                long total = 0;
+
+                while ((count = input.read(data)) != -1) {
+                    total += count;
+                    // publishing the progress....
+                    // After this onProgressUpdate will be called
+                    publishProgress("" + (int) ((total * 100) / lengthOfFile));
+                    Log.d(TAG, "Progress: " + (int) ((total * 100) / lengthOfFile));
+
+                    // writing data to file
+                    output.write(data, 0, count);
+                }
+
+                // flushing output
+                output.flush();
+
+                // closing streams
+                output.close();
+                input.close();
+                return "Downloaded to: "+ outputFile.getAbsolutePath();//outputFilePath;
+
+            } catch (Exception e) {
+                Log.e("Error: ", e.getMessage());
+            }
+
+            return "Something went wrong";
+        }
+
+        /**
+         * Updating progress bar
+         */
+        protected void onProgressUpdate(String... progress) {
+            // setting progress percentage
+            progressDialog.setProgress(Integer.parseInt(progress[0]));
+        }
+
+
+        @Override
+        protected void onPostExecute(String message) {
+            // dismiss the dialog after the file was downloaded
+            this.progressDialog.dismiss();
+
+            // Display File path after downloading
+            //Toast.makeText(getApplicationContext(),
+            //        message, Toast.LENGTH_LONG).show();
+
+            ImageView imgView = (ImageView) findViewById(R.id.ivViewer);
+            if(message.contains(": ")) {
+                String path = message.split(": ")[1];
+                Bitmap bitmap = BitmapFactory.decodeFile(path);
+                Drawable drawable = new BitmapDrawable(bitmap);
+                imgView.setImageDrawable(drawable);
+            }
+            else {
+                imgView.setBackgroundResource(dmActivity.getResources().getIdentifier("nopic", "drawable", dmActivity.getPackageName()));
+                imgView.setImageResource(0);
+            }
+
+        }
+    }
 }
