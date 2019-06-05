@@ -2369,7 +2369,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2329,36,4,8,'Marvel','SMMC','Venom','Corruptor','venommc','corruptor','four','villain','','','mask','as',3,0,0,-1 "
             + "union select 2330,36,4,9,'Marvel','SMMC','Venom','Lethal Protector','venommc','lethalprotector','four','spiderfriends','','','mask','as',3,0,0,-1 "
             + "union select 2331,36,4,10,'Marvel','SMMC','Venom','My Other','venommc','myother','four','villain','','','mask','as',3,0,0,-1 "
-            + "union select 3236,262,2,6,'Marvel','SMMC','Black Cat','Thief','blackcatmc','m2019_4','three','spiderfriends','','','shield','gp',3,0,0,-1 ";
+            + "union select 3236,262,2,6,'Marvel','SMMC','Black Cat','Thief','blackcatmc','m2019_4','three','spiderfriends','','','shield','gp',3,0,0,-1 "
+			+ "union select 3362,32,5,17,'Marvel','SMMC','Spider-Man','Sneaky Pete','spidermanmc','m2019_5','four','spiderfriends','','','fist','gp',3,0,0,-1 ";
 
     private static final String DATABASE_POPULATEGOTG = "insert into tblCards "
             + "select 2332,527,1,1,'Marvel','GotG','Adam Warlock','Standing Watch Over Infinity','adamwarlock','standingwatchoverinfinity','five','guardians','','','mask','cu',3,0,0,0 "
@@ -2496,9 +2497,10 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2453,555,1,1,'Marvel','GotG','Yondu','Ruthless Pirate','yondu','ruthlesspirate','five','guardians','','','lightning','cu',3,0,0,0 "
             + "union select 2454,555,1,2,'Marvel','GotG','Yondu','Whistle While You Kill','yondu','whistlewhileyoukill','four','guardians','','','lightning','bc',3,0,0,0 "
             + "union select 2455,555,1,3,'Marvel','GotG','Yondu','Yaka Arrows','yondu','yakaarrows','five','guardians','','','lightning','dr',3,0,0,0 "
-            + "union select 2456,213,2,8,'Marvel','GotG','Star-Lord','Let''s Dance (Alt)','starlordgg','letsdancealt','four','guardians','','','fist','halt',3,0,0,0 "
-            + "union select 2856,208,3,11,'Marvel','GotG','Rocket Raccoon','Rigging Up Destruction (Alt)','rocketraccoongg','riggingupdestructionalt','three','guardians','','','lightning','halt',3,0,0,0 "
-            + "union select 2857,197,2,7,'Marvel','GotG','Groot','I, Am, GROOOOOOOT','grootgg','iamgrooooooot','five','guardians','','','shield','gp',3,0,0,0 ";
+            + "union select 2456,213,2,8,'Marvel','GotG','Star-Lord','Let''s Dance (Alt)','starlordgg','letsdancealt','four','guardians','','','fist','halt',3,0,0,-1 "
+            + "union select 2856,208,3,11,'Marvel','GotG','Rocket Raccoon','Rigging Up Destruction (Alt)','rocketraccoongg','riggingupdestructionalt','three','guardians','','','lightning','halt',3,0,0,-1 "
+            + "union select 2857,197,2,7,'Marvel','GotG','Groot','I, Am, GROOOOOOOT','grootgg','iamgrooooooot','five','guardians','','','shield','gp',3,0,0,-1 ";
+			+ "union select 3360,547,1,1,'Marvel','GotG','Ricochet','Johnathon Gallo','ricochet','johnathongalloalt','two','spiderfriends','','','lightning','halt',3,0,0,-1 ";
 
     private static final String DATABASE_POPULATETOA = "insert into tblCards "
             + "select 2307,1,1,166,'Dungeons & Dragons','ToA','Basic Action Card','Brazen Pegasus','basic','brazenpegasus','four','neutral','','','','gp',3,0,0,-1 "
@@ -2910,10 +2912,11 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2853,651,1,2,'Marvel','TMT','Wrecker','Dirk Garthwaite','wrecker','dirkgarthwaite','four','villain','','','fist','bc',3,0,0,0 "
             + "union select 2854,651,1,3,'Marvel','TMT','Wrecker','Enchanted Crowbar','wrecker','enchantedcrowbar','four','villain','','','fist','dr',3,0,0,0 "
             + "union select 3107,633,1,1,'Marvel','TMT','Heimdall','The All-Seeing (Alt)','heimdall','heimdallalt','six','','','','mask','gp',3,0,0,-1 "
-            + "union select 3230,24,1,1,'Marvel','TMT','Nick Fury','Commanding the Commandos (Alt)','nickfurythor','commandingthecommandosalt','two','shieldorg','','','shield','gp',3,0,0,-1 "
-            + "union select 3231,205,1,1,'Marvel','TMT','Pepper Potts','Virginia (Alt)','pepperpottsthor','virginiaalt','two','starkorg','','','lightning','gp',3,0,0,-1 "
+            + "union select 3230,24,1,1,'Marvel','TMT','Nick Fury','Commanding the Commandos (Alt)','nickfurythor','commandingthecommandosalt','two','shieldorg','','','shield','halt',3,0,0,-1 "
+            + "union select 3231,205,1,1,'Marvel','TMT','Pepper Potts','Virginia (Alt)','pepperpottsthor','virginiaalt','two','starkorg','','','lightning','halt',3,0,0,-1 "
             + "union select 3234,18,5,18,'Marvel','TMT','Iron Man','Armor Supply','ironmanthor','m2019_7','four','starkorg','','','shield','gp',3,0,0,-1 "
-            + "union select 3237,639,1,1,'Marvel','TMT','Kate Bishop','Straight Shooter','katebishop','m2019_5','three','avengers','','','mask','gp',3,0,0,-1 ";
+            + "union select 3237,639,1,1,'Marvel','TMT','Kate Bishop','Straight Shooter','katebishop','m2019_5','three','avengers','','','mask','gp',3,0,0,-1 "
+			+ "union select 3361,1,1,236,'Marvel','TMT','Basic Action Card','Wallop','basic','wallop','four','','','','','gp',3,0,0,-1 ";
 
 
     private static final String DATABASE_POPULATEAI = "insert into tblCards "
@@ -2976,7 +2979,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2917,667,1,1,'Marvel','AI','Wasp','Flitting About','ai_wasp','ai47','three','avengers','','','lightning','as',3,0,0,-1 "
             + "union select 2918,667,1,1,'Marvel','AI','Wasp','Love and Loss','ai_wasp','ai48','three','avengers','','','lightning','as',3,0,0,-1 "
             + "union select 3232,655,1,1,'Marvel','AI','Black Widow','Agent','ai_blackwidow','m2019_1','three','avengers','','','fist','gp',3,0,0,-1 "
-            + "union select 3233,656,1,1,'Marvel','AI','Captain America','Trained Operative','ai_captainamerica','m2019_2','four','avengers','','','shield','gp',3,0,0,-1 ";
+            + "union select 3233,656,1,1,'Marvel','AI','Captain America','Trained Operative','ai_captainamerica','m2019_2','four','avengers','','','shield','gp',3,0,0,-1 "
+			+ "union select 3363,666,1,1,'Marvel','AI','Vision','Behold...','ai_vision','m2019_6','five','avengers','','','mask','gp',3,0,0,-1 ";
 
 
     private static final String DATABASE_POPULATEKI = "insert into tblCards "
@@ -3424,8 +3428,8 @@ private static final String DATABASE_POPULATEJUS = "insert into tblCards "
             + "union select 3358,805,1,1,'Marvel','DXM','Thunderbird','Son of The People','dxmthunderbird','dxm23','four','xmen','','','fist','as',3,0,0,-1 "
             + "union select 3359,805,1,1,'Marvel','DXM','Thunderbird','Buffalo Soldier','dxmthunderbird','dxm24','four','xmen','','','fist','as',3,0,0,-1 ";
 
-//next BAC 236
-//next card 3360
+//next BAC 237
+//next card 3364
 //next char 806
 
 
