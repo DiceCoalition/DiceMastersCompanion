@@ -96,7 +96,7 @@ public class CardViewer extends Activity {
                 String filename = cardName + ".jpg";
                 //String path = baseFileLoc + filename;
                 File f = new File(dmActivity.getFilesDir(), filename);
-                if(!f.exists())
+                if(!f.exists() || f.length() == 0)
                     new FileDownload().execute(baseurl + filename);
                 else {
                     Bitmap bitmap = BitmapFactory.decodeFile(f.getAbsolutePath());
@@ -104,6 +104,9 @@ public class CardViewer extends Activity {
                     imgView.setImageDrawable(drawable);
                 }
             }catch(Exception ex) {
+				File f = new File(dmActivity.getFilesDir(), filename);
+				if(f.exists())
+					f.delete();
                 imgView.setBackgroundResource(this.getResources().getIdentifier("nopic", "drawable", this.getPackageName()));
                 imgView.setImageResource(0);
             }
