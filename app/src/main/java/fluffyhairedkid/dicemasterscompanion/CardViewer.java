@@ -218,6 +218,11 @@ public class CardViewer extends Activity {
             } catch (Exception e) {
                 Log.e("Error: ", e.getMessage());
             }
+            //Download failed, so delete file
+            File failedFile  = new File(dmActivity.getFilesDir(), fileName);
+            if(failedFile.exists())
+                failedFile.delete();
+
 
             return "Something went wrong";
         }

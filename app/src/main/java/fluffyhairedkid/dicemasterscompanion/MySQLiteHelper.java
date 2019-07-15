@@ -8,7 +8,7 @@ import android.util.Log;
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "tblCards.db";
-    private static final int DATABASE_VERSION = 118;
+    private static final int DATABASE_VERSION = 119;
 
     private static final String DATABASE_CREATE = "create table tblCards (_id integer not null, CharID integer not null, DieID integer not null, CardID integer not null, "
             + "Universe text not null, CardSet text not null, CharName text not null, CardName text not null, "
@@ -169,7 +169,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 1012,33,1,9,'Marvel','AVX','Storm','Wind Rider (Alt)','stormavx','windrideralt','five','xmen','','','mask','gp',0,0,0,-1 "
             + "union select 1163,26,1,4,'Marvel','AVX','Nova','Nova Prime','nova','novaprime','seven','','','','lightning','gp',0,0,0,-1 "
             + "union select 1326,16,1,12,'Marvel','AVX','Hulk','Green Goliath (Alt)','hulk','greengoliathalt','six','avengers','','','fist','halt',0,0,0,-1 "
-            + "union select 1677,29,1,7,'Marvel','AVX','Punisher','Marvel Knight','punishercw','marvelknightpunisher','six','mknight','','','lightning','gp',0,0,0,-1 "
+            + "union select 1677,29,1,7,'Marvel','AVX','Punisher','Marvel Knight','punisher','marvelknightpunisher','six','mknight','','','lightning','gp',0,0,0,-1 "
             + "union select 2004,37,1,7,'Marvel','AVX','Vibranium Shield','One of a Kind (Blank)','vibraniumshield','oneofakindblank','four','','','','shield','gp',0,0,0,-1 "
             + "union select 2103,1,1,153,'Marvel','AVX','Basic Action Card','Focus Power (Alt)','basic','focuspoweralt','three','','','','','gp',3,0,0,-1 "
             + "union select 2855,1,1,191,'Marvel','AVX','Basic Action Card','Power Bolt (Alt)','basic','powerboltalt','three','','','','','gp',3,0,0,-1 ";
@@ -2499,7 +2499,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2455,555,1,3,'Marvel','GotG','Yondu','Yaka Arrows','yondu','yakaarrows','five','guardians','','','lightning','dr',3,0,0,0 "
             + "union select 2456,213,2,8,'Marvel','GotG','Star-Lord','Let''s Dance (Alt)','starlordgg','letsdancealt','four','guardians','','','fist','halt',3,0,0,-1 "
             + "union select 2856,208,3,11,'Marvel','GotG','Rocket Raccoon','Rigging Up Destruction (Alt)','rocketraccoongg','riggingupdestructionalt','three','guardians','','','lightning','halt',3,0,0,-1 "
-            + "union select 2857,197,2,7,'Marvel','GotG','Groot','I, Am, GROOOOOOOT','grootgg','iamgrooooooot','five','guardians','','','shield','gp',3,0,0,-1 ";
+            + "union select 2857,197,2,7,'Marvel','GotG','Groot','I, Am, GROOOOOOOT','grootgg','iamgrooooooot','five','guardians','','','shield','gp',3,0,0,-1 "
 			+ "union select 3360,547,1,1,'Marvel','GotG','Ricochet','Johnathon Gallo','ricochet','johnathongalloalt','two','spiderfriends','','','lightning','halt',3,0,0,-1 ";
 
     private static final String DATABASE_POPULATETOA = "insert into tblCards "

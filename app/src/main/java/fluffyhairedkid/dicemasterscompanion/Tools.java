@@ -2,13 +2,33 @@ package fluffyhairedkid.dicemasterscompanion;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import static java.lang.Integer.parseInt;
 
 /**
  * Created by Walker on 2/21/2016.
@@ -16,6 +36,8 @@ import android.widget.ToggleButton;
 public class Tools extends Activity {
 
     SQLDataSource datasource;
+    private final Activity dmActivity = this;
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +48,8 @@ public class Tools extends Activity {
         Button lifeCounter = (Button) findViewById(R.id.btLifeCounter);
         Button bulkAdd = (Button) findViewById(R.id.btBulkAdd);
         Button dataManagement = (Button) findViewById(R.id.btDataManagement);
+        Button dataDownload = (Button) findViewById(R.id.btDownload);
+
 
         teamBuilder.setOnClickListener(new View.OnClickListener() {
 
@@ -339,5 +363,157 @@ public class Tools extends Activity {
             }
         });
 
+        dataDownload.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                String baseurl = "http://www.dicecoalition.com/cardservice/tzapp/";
+                Map<String, String> offlineCards = new HashMap<String, String>();
+                offlineCards.put("xmf", "72");
+                offlineCards.put("dxm", "24");
+                offlineCards.put("xfo", "24");
+                offlineCards.put("m2019_", "8");
+                try {
+                    ArrayList<String> files = new ArrayList<String>();
+                    ArrayList<ArrayList<String>> query = new ArrayList<ArrayList<String>>();
+                   for(Map.Entry<String, String> entry : offlineCards.entrySet()){
+                       String key = entry.getKey();
+                       int cardcount = parseInt(entry.getValue());
+                       for(int i = 1; i <= cardcount; i++) {
+                           String cardName = key+i;
+                           String filename = cardName + ".jpg";
+
+                           //String path = baseFileLoc + filename;
+                           File f = new File(dmActivity.getFilesDir(), filename);
+                           if (!f.exists()){
+                               String dl_url = baseurl + filename;
+                               files.add(dl_url);
+                           }
+                       }
+                   }
+                    FileDownload f = new FileDownload();
+                   f.FileList = files;
+                   f.execute();
+
+                }catch(Exception ex) {
+
+                }
+            }
+        });
+
+    }
+
+    public class FileDownload extends AsyncTask<String, String, String> {
+
+        private ProgressDialog progressDialog;
+        private String fileName;
+        private String folder;
+        private boolean isDownloaded;
+
+        public ArrayList<String> FileList;
+        /**
+         * Before starting background thread
+         * Show Progress Bar Dialog
+         */
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            this.progressDialog = new ProgressDialog(Tools.this);
+            this.progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+            this.progressDialog.setCancelable(false);
+            this.progressDialog.show();
+        }
+
+        /**
+         * Downloading file in background thread
+         */
+        @Override
+        protected String doInBackground(String... f_url) {
+            String message = "All cards downloaded";
+            int count;
+            int fileCount = FileList.size();
+            for(int f = 0; f < fileCount; f ++) {
+                String urlString = FileList.get(f);
+                try {
+
+                    //DataManagement.verifyStoragePermissions(dmActivity);
+
+                    URL url = new URL(urlString);
+                    URLConnection connection = url.openConnection();
+                    connection.connect();
+                    // getting file length
+                    int lengthOfFile = connection.getContentLength();
+
+                    // input stream to read file - with 8k buffer
+                    InputStream input = new BufferedInputStream(url.openStream());
+
+                    //Extract file name from URL
+                    fileName = urlString.substring(urlString.lastIndexOf('/') + 1, urlString.length());
+
+                    File outputFile = new File(dmActivity.getFilesDir(), fileName);
+                    if (!outputFile.exists())
+                        outputFile.createNewFile();
+                    // Output stream to write file
+                    OutputStream output = openFileOutput(fileName, dmActivity.MODE_PRIVATE);
+
+                    byte data[] = new byte[1024];
+
+                    long total = 0;
+
+                    while ((count = input.read(data)) != -1) {
+                        total += count;
+                        // publishing the progress....
+                        // After this onProgressUpdate will be called
+                       // publishProgress("" + (int) ((total * 100) / lengthOfFile));
+                        //Log.d(TAG, "Progress: " + (int) ((total * 100) / lengthOfFile));
+
+                        // writing data to file
+                        output.write(data, 0, count);
+                    }
+                    publishProgress("" + (int) (((double)f/ (double)fileCount)*100));
+                    Log.d(TAG, "Progress: " + (int) (((double)f / (double)fileCount)*100));
+
+                    // flushing output
+                    output.flush();
+
+                    // closing streams
+                    output.close();
+                    input.close();
+                    //return "Downloaded to: "+ outputFile.getAbsolutePath();//outputFilePath;
+
+                } catch (Exception e) {
+                    Log.e("Error: ", e.getMessage());
+                    //Download failed, so delete file
+                    File failedFile = new File(dmActivity.getFilesDir(), fileName);
+                    if (failedFile.exists())
+                        failedFile.delete();
+                    message = "Failed to download all cards.";
+                }
+
+            }
+            //return "Something went wrong";
+            return message;
+        }
+
+        /**
+         * Updating progress bar
+         */
+        protected void onProgressUpdate(String... progress) {
+            // setting progress percentage
+            progressDialog.setProgress(parseInt(progress[0]));
+        }
+
+
+        @Override
+        protected void onPostExecute(String message) {
+            // dismiss the dialog after the file was downloaded
+            this.progressDialog.dismiss();
+
+            // Display File path after downloading
+            Toast.makeText(getApplicationContext(),
+                    message, Toast.LENGTH_LONG).show();
+
+        }
     }
 }
