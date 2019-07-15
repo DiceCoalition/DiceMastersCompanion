@@ -32,11 +32,9 @@ public class MainActivity extends Activity {
                 MainActivity.this);
         closeAlert.setTitle("Updates");
         closeAlert
-                .setMessage("Added X-men Forever"
+                .setMessage("Added 2019 OP Cards"
                         + "\n" + "\n" +
-                        "Added Uncanny X-Force"
-                        + "\n" + "\n" +
-                        "Added Dark X-Men"
+                        "Added Download All Cards Tool"
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",
