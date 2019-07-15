@@ -1,8 +1,10 @@
 package fluffyhairedkid.dicemasterscompanion;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -368,42 +370,64 @@ public class Tools extends Activity {
             @Override
             public void onClick(View v) {
 
-                String baseurl = "http://www.dicecoalition.com/cardservice/tzapp/";
-                Map<String, String> offlineCards = new HashMap<String, String>();
-                offlineCards.put("xmf", "72");
-                offlineCards.put("dxm", "24");
-                offlineCards.put("xfo", "24");
-                offlineCards.put("m2019_", "8");
-                try {
-                    ArrayList<String> files = new ArrayList<String>();
-                    ArrayList<ArrayList<String>> query = new ArrayList<ArrayList<String>>();
-                   for(Map.Entry<String, String> entry : offlineCards.entrySet()){
-                       String key = entry.getKey();
-                       int cardcount = parseInt(entry.getValue());
-                       for(int i = 1; i <= cardcount; i++) {
-                           String cardName = key+i;
-                           String filename = cardName + ".jpg";
+                AlertDialog.Builder builder = new AlertDialog.Builder(dmActivity);
+                builder.setTitle("WiFi Recommended");
+                builder.setMessage("You are about to download a large number of image files. A WiFi connection is recommended. Do you wish to continue?");
+                builder.setCancelable(false);
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        downloadImageFiles();
+                    }
+                });
 
-                           //String path = baseFileLoc + filename;
-                           File f = new File(dmActivity.getFilesDir(), filename);
-                           if (!f.exists()){
-                               String dl_url = baseurl + filename;
-                               files.add(dl_url);
-                           }
-                       }
-                   }
-                    FileDownload f = new FileDownload();
-                   f.FileList = files;
-                   f.execute();
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getApplicationContext(), "Download aborted.", Toast.LENGTH_SHORT).show();
+                    }
+                });
 
-                }catch(Exception ex) {
+                builder.show();
 
-                }
             }
         });
 
     }
 
+    private void downloadImageFiles(){
+        String baseurl = "http://www.dicecoalition.com/cardservice/tzapp/";
+        Map<String, String> offlineCards = new HashMap<String, String>();
+        offlineCards.put("xmf", "72");
+        offlineCards.put("dxm", "24");
+        offlineCards.put("xfo", "24");
+        offlineCards.put("m2019_", "8");
+        try {
+            ArrayList<String> files = new ArrayList<String>();
+            ArrayList<ArrayList<String>> query = new ArrayList<ArrayList<String>>();
+            for(Map.Entry<String, String> entry : offlineCards.entrySet()){
+                String key = entry.getKey();
+                int cardcount = parseInt(entry.getValue());
+                for(int i = 1; i <= cardcount; i++) {
+                    String cardName = key+i;
+                    String filename = cardName + ".jpg";
+
+                    //String path = baseFileLoc + filename;
+                    File f = new File(dmActivity.getFilesDir(), filename);
+                    if (!f.exists()){
+                        String dl_url = baseurl + filename;
+                        files.add(dl_url);
+                    }
+                }
+            }
+            FileDownload f = new FileDownload();
+            f.FileList = files;
+            f.execute();
+
+        }catch(Exception ex) {
+
+        }
+    }
     public class FileDownload extends AsyncTask<String, String, String> {
 
         private ProgressDialog progressDialog;

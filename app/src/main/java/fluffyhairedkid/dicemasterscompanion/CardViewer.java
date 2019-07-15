@@ -86,15 +86,14 @@ public class CardViewer extends Activity {
         int cardimage = heroCards.get(childPosition);
         // if it will return 0, then the resource you are looking for does not exist
         //imgView.getResources().getIdentifier(cardimage)
+        String cardName = imageNameCollection.get(groupList.get(groupPosition)).get(childPosition);
+        String filename = cardName + ".jpg";
         if (cardimage > 0) {
             imgView.setBackgroundResource(0);
             imgView.setImageResource(cardimage);
         } else {
             try {
                 imgView.setBackgroundResource(0);
-                String cardName = imageNameCollection.get(groupList.get(groupPosition)).get(childPosition);
-                String filename = cardName + ".jpg";
-                //String path = baseFileLoc + filename;
                 File f = new File(dmActivity.getFilesDir(), filename);
                 if(!f.exists() || f.length() == 0)
                     new FileDownload().execute(baseurl + filename);
