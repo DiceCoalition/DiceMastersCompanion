@@ -4,12 +4,15 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -369,27 +372,51 @@ public class Tools extends Activity {
 
             @Override
             public void onClick(View v) {
+                ConnectivityManager cm =
+                        (ConnectivityManager)dmActivity.getSystemService(Context.CONNECTIVITY_SERVICE);
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(dmActivity);
-                builder.setTitle("WiFi Recommended");
-                builder.setMessage("You are about to download a large number of image files. A WiFi connection is recommended. Do you wish to continue?");
-                builder.setCancelable(false);
-                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+                boolean isConnected = activeNetwork != null &&
+                        activeNetwork.isConnectedOrConnecting();
+                boolean isWiFi = activeNetwork.getType() == ConnectivityManager.TYPE_WIFI;
+                if(isConnected) {
+                    if(!isWiFi) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(dmActivity);
+                        builder.setTitle("WiFi Recommended");
+                        builder.setMessage("You are about to download a large number of image files. A WiFi connection is recommended. Do you wish to continue?");
+                        builder.setCancelable(false);
+                        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                downloadImageFiles();
+                            }
+                        });
+
+                        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(getApplicationContext(), "Download aborted.", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+                        builder.show();
+                    }
+                    else{
                         downloadImageFiles();
                     }
-                });
+                }
+                else{
+                    AlertDialog.Builder builder = new AlertDialog.Builder(dmActivity);
+                    builder.setTitle("Connection required.");
+                    builder.setMessage("No internet connection detected. Please check your connection settings and/or connect to WiFi and try again.");
 
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(), "Download aborted.", Toast.LENGTH_SHORT).show();
-                    }
-                });
+                    // add a button
+                    builder.setPositiveButton("OK", null);
 
-                builder.show();
-
+                    // create and show the alert dialog
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                }
             }
         });
 

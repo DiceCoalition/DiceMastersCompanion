@@ -35,6 +35,8 @@ public class MainActivity extends Activity {
                 .setMessage("Added 2019 OP Cards"
                         + "\n" + "\n" +
                         "Added 'Download All Images' Tool"
+                        + "\n" + "\n" +
+                        "Fixed download bug"
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",
