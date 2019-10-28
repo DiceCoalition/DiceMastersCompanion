@@ -2370,7 +2370,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2330,36,4,9,'Marvel','SMMC','Venom','Lethal Protector','venommc','lethalprotector','four','spiderfriends','','','mask','as',3,0,0,-1 "
             + "union select 2331,36,4,10,'Marvel','SMMC','Venom','My Other','venommc','myother','four','villain','','','mask','as',3,0,0,-1 "
             + "union select 3236,262,2,6,'Marvel','SMMC','Black Cat','Thief','blackcatmc','m2019_4','three','spiderfriends','','','shield','gp',3,0,0,-1 "
-			+ "union select 3362,32,5,17,'Marvel','SMMC','Spider-Man','Sneaky Pete','spidermanmc','m2019_5','four','spiderfriends','','','fist','gp',3,0,0,-1 ";
+            + "union select 3362,32,5,17,'Marvel','SMMC','Spider-Man','Sneaky Pete','spidermanmc','m2019_3','four','spiderfriends','','','fist','gp',3,0,0,-1 ";
 
     private static final String DATABASE_POPULATEGOTG = "insert into tblCards "
             + "select 2332,527,1,1,'Marvel','GotG','Adam Warlock','Standing Watch Over Infinity','adamwarlock','standingwatchoverinfinity','five','guardians','','','mask','cu',3,0,0,0 "
@@ -3224,7 +3224,7 @@ private static final String DATABASE_POPULATEJUS = "insert into tblCards "
         + "union select 3154,739,1,1,'DC Comics','JUS','Poison Ivy','A New Leaf','juspoisonivy','jus37','four','legion','villain','','mask','as',3,0,0,-1 "
         + "union select 3155,740,1,1,'DC Comics','JUS','Scarecrow','Fear-Based Gases','jusscarecrow','jus38','four','legion','villain','','mask','as',3,0,0,-1 "
         + "union select 3156,740,1,1,'DC Comics','JUS','Scarecrow','Professor of Psychology','jusscarecrow','jus39','four','legion','villain','','mask','as',3,0,0,-1 "
-        + "union select 3157,740,1,1,'DC Comics','JUS','Scarecrow','Chose Poorly','jusscarecrow','jus40','four','legion','villain','','mask','as',3,0,0,-1 "
+        + "union select 3157,740,1,1,'DC Comics','JUS','Scarecrow','Chose Poorly','jusscarecrow','jus40','three','legion','villain','','mask','as',3,0,0,-1 "
         + "union select 3158,741,1,1,'DC Comics','JUS','Solomon Grundy','Cannot Be Killed','jussolomongrundy','jus41','five','legion','villain','','shield','as',3,0,0,-1 "
         + "union select 3159,741,1,1,'DC Comics','JUS','Solomon Grundy','Rot of the Swamp','jussolomongrundy','jus42','five','legion','villain','','shield','as',3,0,0,-1 "
         + "union select 3160,742,1,1,'DC Comics','JUS','Superman','Bulletproof','jussuperman','jus43','six','league','','','shield','as',3,0,0,-1 "
@@ -3428,9 +3428,122 @@ private static final String DATABASE_POPULATEJUS = "insert into tblCards "
             + "union select 3358,805,1,1,'Marvel','DXM','Thunderbird','Son of The People','dxmthunderbird','dxm23','four','xmen','','','fist','as',3,0,0,-1 "
             + "union select 3359,805,1,1,'Marvel','DXM','Thunderbird','Buffalo Soldier','dxmthunderbird','dxm24','four','xmen','','','fist','as',3,0,0,-1 ";
 
-//next BAC 237
-//next card 3364
-//next char 806
+private static final String DATABASE_POPULATETIW = "insert into tblCards "
+        + "select 3364,806,1,1,'Dungeons & Dragons','TIW','Aurinax','Gold Dragon','tiwaurinax','tiw1','six','good','monster','','fist','as',3,0,0,-1 "
+        + "select 3365,806,1,1,'Dungeons & Dragons','TIW','Aurinax','Dragon of Waterdeep','tiwaurinax','tiw2','five','good','monster','','fist','as',3,0,0,-1 "
+        + "select 3366,806,1,1,'Dungeons & Dragons','TIW','Aurinax','Vault Guardian','tiwaurinax','tiw3','five','good','monster','','fist','as',3,0,0,-1 "
+        + "select 3367,807,1,1,'Dungeons & Dragons','TIW','Calliope','Charismatic Bard','tiwcalliope','tiw4','four','good','forcegrey','','shield','as',3,0,0,-1 "
+        + "select 3368,807,1,1,'Dungeons & Dragons','TIW','Calliope','Volatile Heroine','tiwcalliope','tiw5','four','good','forcegrey','','shield','as',3,0,0,-1 "
+        + "select 3369,807,1,1,'Dungeons & Dragons','TIW','Calliope','Pirate Storyteller','tiwcalliope','tiw6','four','good','forcegrey','','shield','as',3,0,0,-1 "
+        + "select 3370,808,1,1,'Dungeons & Dragons','TIW','Drow Mercenary','Hired Blade','tiwdrowmercenary','tiw7','three','neutral','monster','','lightning','as',3,0,0,-1 "
+        + "select 3371,808,1,1,'Dungeons & Dragons','TIW','Drow Mercenary','Dark Elf Assasin','tiwdrowmercenary','tiw8','three','neutral','monster','','lightning','as',3,0,0,-1 "
+        + "select 3372,808,1,1,'Dungeons & Dragons','TIW','Drow Mercenary','Bregan D''aerthe','tiwdrowmercenary','tiw9','three','neutral','monster','','lightning','as',3,0,0,-1 "
+        + "select 3373,809,1,1,'Dungeons & Dragons','TIW','Gazer','Beholder''s Dream','tiwgazer','tiw10','two','evil','monster','','shield','as',3,0,0,-1 "
+        + "select 3374,809,1,1,'Dungeons & Dragons','TIW','Gazer','Tiny Beholderkin','tiwgazer','tiw11','two','evil','monster','','shield','as',3,0,0,-1 "
+        + "select 3375,809,1,1,'Dungeons & Dragons','TIW','Gazer','Evil Familiar','tiwgazer','tiw12','two','evil','monster','','shield','as',3,0,0,-1 "
+        + "select 3376,810,1,1,'Dungeons & Dragons','TIW','Grell','Skulking Aberration','tiwgrell','tiw13','two','evil','monster','','lightning','as',3,0,0,-1 "
+        + "select 3377,810,1,1,'Dungeons & Dragons','TIW','Grell','Xanathar Guild Bodyguard','tiwgrell','tiw14','two','evil','monster','','lightning','as',3,0,0,-1 "
+        + "select 3378,810,1,1,'Dungeons & Dragons','TIW','Grell','Blind Ambusher','tiwgrell','tiw15','two','evil','monster','','lightning','as',3,0,0,-1 "
+        + "select 3379,811,1,1,'Dungeons & Dragons','TIW','Intellect Devourer','Mind Flayer''s Pet','tiwintellectdevourer','tiw16','three','evil','monster','','lightning','as',3,0,0,-1 "
+        + "select 3380,811,1,1,'Dungeons & Dragons','TIW','Intellect Devourer','Brain Eating Monster','tiwintellectdevourer','tiw17','three','evil','monster','','lightning','as',3,0,0,-1 "
+        + "select 3381,811,1,1,'Dungeons & Dragons','TIW','Intellect Devourer','Deadly Puppet Master','tiwintellectdevourer','tiw18','four','evil','monster','','lightning','as',3,0,0,-1 "
+        + "select 3382,812,1,1,'Dungeons & Dragons','TIW','Jamilah','Shipwrecked on Chult','tiwjamilah','tiw19','four','neutral','forcegrey','','fist','as',3,0,0,-1 "
+        + "select 3383,812,1,1,'Dungeons & Dragons','TIW','Jamilah','Rough and Tumble Fighter','tiwjamilah','tiw20','four','neutral','forcegrey','','fist','as',3,0,0,-1 "
+        + "select 3384,812,1,1,'Dungeons & Dragons','TIW','Jamilah','Champion Arm-Wrestler','tiwjamilah','tiw21','four','neutral','forcegrey','','fist','as',3,0,0,-1 "
+        + "select 3385,813,1,1,'Dungeons & Dragons','TIW','Joppa','Fisherman Extraordinaire','tiwjoppa','tiw22','three','good','forcegrey','','shield','as',3,0,0,-1 "
+        + "select 3386,813,1,1,'Dungeons & Dragons','TIW','Joppa','Zen','tiwjoppa','tiw23','three','good','forcegrey','','shield','as',3,0,0,-1 "
+        + "select 3387,813,1,1,'Dungeons & Dragons','TIW','Joppa','Fishing Metaphors','tiwjoppa','tiw24','three','good','forcegrey','','shield','as',3,0,0,-1 "
+        + "select 3388,814,1,1,'Dungeons & Dragons','TIW','Kuo-toa','Whip of Blibdoolpoolp','tiwkuotoa','tiw25','two','evil','monster','','fist','as',3,0,0,-1 "
+        + "select 3389,814,1,1,'Dungeons & Dragons','TIW','Kuo-toa','Underdark Raider','tiwkuotoa','tiw26','two','evil','monster','','fist','as',3,0,0,-1 "
+        + "select 3390,814,1,1,'Dungeons & Dragons','TIW','Kuo-toa','Mad Degenerate','tiwkuotoa','tiw27','three','evil','monster','','fist','as',3,0,0,-1 "
+        + "select 3391,815,1,1,'Dungeons & Dragons','TIW','Nar''l Xibrindas','Drow Advisor','tiwnarlxibrindas','tiw28','four','evil','monster','','lightning','as',3,0,0,-1 "
+        + "select 3392,815,1,1,'Dungeons & Dragons','TIW','Nar''l Xibrindas','Quiet Desperation','tiwnarlxibrindas','tiw29','four','evil','monster','','lightning','as',3,0,0,-1 "
+        + "select 3393,815,1,1,'Dungeons & Dragons','TIW','Nar''l Xibrindas','Trusted Advisor','tiwnarlxibrindas','tiw30','five','evil','monster','','lightning','as',3,0,0,-1 "
+        + "select 3394,816,1,1,'Dungeons & Dragons','TIW','Nihiloor','Mind Flayer','tiwnihiloor','tiw31','five','evil','monster','','mask','as',3,0,0,-1 "
+        + "select 3395,816,1,1,'Dungeons & Dragons','TIW','Nihiloor','Plotting','tiwnihiloor','tiw32','six','evil','monster','','mask','as',3,0,0,-1 "
+        + "select 3396,816,1,1,'Dungeons & Dragons','TIW','Nihiloor','Patient Aberration','tiwnihiloor','tiw33','six','evil','monster','','mask','as',3,0,0,-1 "
+        + "select 3397,817,1,1,'Dungeons & Dragons','TIW','Sylgar','Favored Fish','tiwfavoredfish','tiw34','one','neutral','monster','','shield','as',3,0,0,-1 "
+        + "select 3398,817,1,1,'Dungeons & Dragons','TIW','Sylgar','Innocent Fish','tiwfavoredfish','tiw35','one','neutral','monster','','shield','as',3,0,0,-1 "
+        + "select 3399,817,1,1,'Dungeons & Dragons','TIW','Sylgar','Small Bowl','tiwfavoredfish','tiw36','two','neutral','monster','','shield','as',3,0,0,-1 "
+        + "select 3400,818,1,1,'Dungeons & Dragons','TIW','The God Catcher','Mighty Construct','tiwthegodcatcher','tiw37','two','neutral','','','lightning','as',3,0,0,-1 "
+        + "select 3401,818,1,1,'Dungeons & Dragons','TIW','The God Catcher','Famous Walking Statue','tiwthegodcatcher','tiw38','three','neutral','','','lightning','as',3,0,0,-1 "
+        + "select 3402,819,1,1,'Dungeons & Dragons','TIW','The Great Drunkard','Gargantuan Construct','tiwthegreatdrunkard','tiw39','four','neutral','','','fist','as',3,0,0,-1 "
+        + "select 3403,819,1,1,'Dungeons & Dragons','TIW','The Great Drunkard','Build for Defense','tiwthegreatdrunkard','tiw40','three','neutral','','','fist','as',3,0,0,-1 "
+        + "select 3404,820,1,1,'Dungeons & Dragons','TIW','Tyril','Firbolg Druid','tiwtyril','tiw41','four','good','forcegrey','','mask','as',3,0,0,-1 "
+        + "select 3405,820,1,1,'Dungeons & Dragons','TIW','Tyril','Sword for Hire','tiwtyril','tiw42','four','good','forcegrey','','mask','as',3,0,0,-1 "
+        + "select 3406,820,1,1,'Dungeons & Dragons','TIW','Tyril','Shapeshifter of the Small','tiwtyril','tiw43','four','good','forcegrey','','mask','as',3,0,0,-1 "
+        + "select 3407,821,1,1,'Dungeons & Dragons','TIW','Volo','Guide Writer','tiwvolo','tiw44','two','good','','','lightning','as',3,0,0,-1 "
+        + "select 3408,821,1,1,'Dungeons & Dragons','TIW','Volo','Travelling Scholar','tiwvolo','tiw45','two','good','','','lightning','as',3,0,0,-1 "
+        + "select 3409,821,1,1,'Dungeons & Dragons','TIW','Volo','Edited by Elminster','tiwvolo','tiw46','two','good','','','lightning','as',3,0,0,-1 "
+        + "select 3410,822,1,1,'Dungeons & Dragons','TIW','Xanathar','Crime Lord','tiwxanathar','tiw47','six','evil','','','mask','as',3,0,0,-1 "
+        + "select 3411,822,1,1,'Dungeons & Dragons','TIW','Xanathar','Paranoid Tyrant','tiwxanathar','tiw48','six','evil','','','mask','as',3,0,0,-1 "
+        + "select 3412,822,1,1,'Dungeons & Dragons','TIW','Xanathar','Eye on Skullport','tiwxanathar','tiw49','six','evil','','','mask','as',3,0,0,-1 "
+        + "select 3413,1,1,237,'Dungeons & Dragons','TIW','Basic Action Card','Create Bonfire','basic','tiw50','four','','','','','as',3,0,0,-1 "
+        + "select 3414,1,1,238,'Dungeons & Dragons','TIW','Basic Action Card','Chain Mail Armor','basic','tiw51','three','','','','','as',3,0,0,-1 "
+        + "select 3415,1,1,239,'Dungeons & Dragons','TIW','Basic Action Card','Cloak of Elvenkind','basic','tiw52','two','','','','','as',3,0,0,-1 "
+        + "select 3416,1,1,240,'Dungeons & Dragons','TIW','Basic Action Card','Eldritch Blast','basic','tiw53','four','','','','','as',3,0,0,-1 "
+        + "select 3417,1,1,241,'Dungeons & Dragons','TIW','Basic Action Card','Heavy Armor','basic','tiw54','two','','','','','as',3,0,0,-1 "
+        + "select 3418,1,1,242,'Dungeons & Dragons','TIW','Basic Action Card','Heist','basic','tiw55','three','','','','','as',3,0,0,-1 "
+        + "select 3419,1,1,243,'Dungeons & Dragons','TIW','Basic Action Card','Shield','basic','tiw56','three','','','','','as',3,0,0,-1 "
+        + "select 3420,1,1,244,'Dungeons & Dragons','TIW','Basic Action Card','Shocking Grasp','basic','tiw57','two','','','','','as',3,0,0,-1 "
+        + "select 3421,1,1,245,'Dungeons & Dragons','TIW','Basic Action Card','Wand','basic','tiw58','three','','','','','as',3,0,0,-1 "
+        + "select 3422,1,1,246,'Dungeons & Dragons','TIW','Basic Action Card','Wild Magic','basic','tiw59','four','','','','','as',3,0,0,-1 ";
+
+        private static final String DATABASE_POPULATEAIW = "insert into tblCards "
+        + "select 3423,823,1,1,'Dungeons & Dragons','AIW','Black Viper','Scaring Nobles, Stealing Jewels','aiwblackviper','aiw1','four','neutral','','','mask','as',3,0,0,-1 "
+        + "select 3424,823,1,1,'Dungeons & Dragons','AIW','Black Viper','Notorious Bandit','aiwblackviper','aiw2','four','neutral','','','mask','as',3,0,0,-1 "
+        + "select 3425,823,1,1,'Dungeons & Dragons','AIW','Black Viper','Reviving a Legend','aiwblackviper','aiw3','four','neutral','','','mask','as',3,0,0,-1 "
+        + "select 3426,824,1,1,'Dungeons & Dragons','AIW','Brawlwin Chainminer','Hitch''s Friend','aiwbrawlwin','aiw4','three','good','forcegrey','','fist','as',3,0,0,-1 "
+        + "select 3427,824,1,1,'Dungeons & Dragons','AIW','Brawlwin Chainminer','Longing For Adventure','aiwbrawlwin','aiw5','three','good','forcegrey','','fist','as',3,0,0,-1 "
+        + "select 3428,824,1,1,'Dungeons & Dragons','AIW','Brawlwin Chainminer','Long Line of Giant-Slayers','aiwbrawlwin','aiw6','three','good','forcegrey','','fist','as',3,0,0,-1 "
+        + "select 3429,825,1,1,'Dungeons & Dragons','AIW','Jarlaxle','Drow Swashbuckler','aiwjarlaxle','aiw7','five','neutral','monster','','shield','as',3,0,0,-1 "
+        + "select 3430,825,1,1,'Dungeons & Dragons','AIW','Jarlaxle','Treasure Hunter','aiwjarlaxle','aiw8','five','neutral','monster','','shield','as',3,0,0,-1 "
+        + "select 3431,825,1,1,'Dungeons & Dragons','AIW','Jarlaxle','Shameless Flirt','aiwjarlaxle','aiw9','six','neutral','monster','','shield','as',3,0,0,-1 "
+        + "select 3432,826,1,1,'Dungeons & Dragons','AIW','Dagny','Gizmos and Gadgets','aiwdagny','aiw10','three','good','forcegrey','','shield','as',3,0,0,-1 "
+        + "select 3433,826,1,1,'Dungeons & Dragons','AIW','Dagny','Surviving on Wits','aiwdagny','aiw11','five','good','forcegrey','','shield','as',3,0,0,-1 "
+        + "select 3434,826,1,1,'Dungeons & Dragons','AIW','Dagny','Cleric of Gond','aiwdagny','aiw12','three','good','forcegrey','','shield','as',3,0,0,-1 "
+        + "select 3435,827,1,1,'Dungeons & Dragons','AIW','Durnan','Proprietor of the Yawning Portal','aiwdurnan','aiw13','five','neutral','','','fist','as',3,0,0,-1 "
+        + "select 3436,827,1,1,'Dungeons & Dragons','AIW','Durnan','\"You Need An Ale?\"','aiwdurnan','aiw14','five','neutral','','','fist','as',3,0,0,-1 "
+        + "select 3437,827,1,1,'Dungeons & Dragons','AIW','Durnan','Retired Adventurer','aiwdurnan','aiw15','four','neutral','','','fist','as',3,0,0,-1 "
+        + "select 3438,828,1,1,'Dungeons & Dragons','AIW','Stone of Golorr','Transformed Aboleth','aiwstoneofgolorr','aiw16','three','evil','','','mask','as',3,0,0,-1 "
+        + "select 3439,828,1,1,'Dungeons & Dragons','AIW','Stone of Golorr','Memory Modifier','aiwstoneofgolorr','aiw17','five','evil','','','mask','as',3,0,0,-1 "
+        + "select 3440,828,1,1,'Dungeons & Dragons','AIW','Stone of Golorr','Wondrous Item','aiwstoneofgolorr','aiw18','four','evil','','','mask','as',3,0,0,-1 "
+        + "select 3441,829,1,1,'Dungeons & Dragons','AIW','Vajra','Blackstaff of Waterdeep','aiwvajra','aiw19','three','neutral','forcegrey','','lightning','as',3,0,0,-1 "
+        + "select 3442,829,1,1,'Dungeons & Dragons','AIW','Vajra','Activating the Walking Statues','aiwvajra','aiw20','force','neutral','forcegrey','','lightning','as',3,0,0,-1 "
+        + "select 3443,829,1,1,'Dungeons & Dragons','AIW','Vajra','Commander of Force Grey','aiwvajra','aiw21','three','neutral','forcegrey','','lightning','as',3,0,0,-1 "
+        + "select 3444,830,1,1,'Dungeons & Dragons','AIW','Yawning Portal','Adventurous Clientele','aiwyawningportal','aiw22','two','neutral','','','lightning','as',3,0,0,-1 "
+        + "select 3445,830,1,1,'Dungeons & Dragons','AIW','Yawning Portal','Accessing the Undermountain','aiwyawningportal','aiw23','three','neutral','','','lightning','as',3,0,0,-1 "
+        + "select 3446,830,1,1,'Dungeons & Dragons','AIW','Yawning Portal','Comfortable Inn','aiwyawningportal','aiw24','two','neutral','','','lightning','as',3,0,0,-1 ";       
+
+        private static final String DATABASE_POPULATEZHN = "insert into tblCards "
+        + "select 3447,831,1,1,'Dungeons & Dragons','ZHN','Davil Starsong','The Elf To Know','zhndavilstarsong','zhn1','four','evil','zhentarim','','shield','as',3,0,0,-1 "
+        + "select 3448,831,1,1,'Dungeons & Dragons','ZHN','Davil Starsong','Taproom Negotiator','zhndavilstarsong','zhn2','four','evil','zhentarim','','shield','as',3,0,0,-1 "
+        + "select 3449,831,1,1,'Dungeons & Dragons','ZHN','Davil Starsong','Master of Opportunities and Negotiations','zhndavilstarsong','zhn3','four','evil','zhentarim','','shield','as',3,0,0,-1 "
+        + "select 3450,832,1,1,'Dungeons & Dragons','ZHN','Doppelganger','Monstrosity','zhndoppelganger','zhn4','three','evil','monster','','mask','as',3,0,0,-1 "
+        + "select 3451,832,1,1,'Dungeons & Dragons','ZHN','Doppelganger','Shapechanger','zhndoppelganger','zhn5','three','evil','monster','','mask','as',3,0,0,-1 "
+        + "select 3452,832,1,1,'Dungeons & Dragons','ZHN','Doppelganger','Thought Reader','zhndoppelganger','zhn6','three','evil','monster','','mask','as',3,0,0,-1 "
+        + "select 3453,833,1,1,'Dungeons & Dragons','ZHN','Hitch','Human Rogue','zhnhitch','zhn7','three','good','forcegrey','','mask','as',3,0,0,-1 "
+        + "select 3454,833,1,1,'Dungeons & Dragons','ZHN','Hitch','Shady Past','zhnhitch','zhn8','three','good','forcegrey','','mask','as',3,0,0,-1 "
+        + "select 3455,833,1,1,'Dungeons & Dragons','ZHN','Hitch','Roguish Charm','zhnhitch','zhn9','four','good','forcegrey','','mask','as',3,0,0,-1 "
+        + "select 3456,834,1,1,'Dungeons & Dragons','ZHN','Human Warlock','Seeking Hidden Knowledge','zhnhumanwarlock','zhn10','four','good','emeraldenclave','','mask','as',3,0,0,-1 "
+        + "select 3457,834,1,1,'Dungeons & Dragons','ZHN','Human Warlock','Pact of the Tome','zhnhumanwarlock','zhn11','three','good','lordsalliance','','mask','as',3,0,0,-1 "
+        + "select 3458,834,1,1,'Dungeons & Dragons','ZHN','Human Warlock','Delver of Secrets','zhnhumanwarlock','zhn12','three','good','orderofthegauntlet','','mask','as',3,0,0,-1 "
+        + "select 3459,835,1,1,'Dungeons & Dragons','ZHN','Istrid Horn','Debt Collector','zhnistridhord','zhn13','two','evil','zhentarim','','fist','as',3,0,0,-1 "
+        + "select 3460,835,1,1,'Dungeons & Dragons','ZHN','Istrid Horn','Moneylender','zhnistridhord','zhn14','two','evil','zhentarim','','fist','as',3,0,0,-1 "
+        + "select 3461,835,1,1,'Dungeons & Dragons','ZHN','Istrid Horn','Mind For Money','zhnistridhord','zhn15','two','evil','zhentarim','','fist','as',3,0,0,-1 "
+        + "select 3462,836,1,1,'Dungeons & Dragons','ZHN','Manshoon','Extradimensional Mansion','zhnmanshoon','zhn16','three','evil','zhentarim','','lightning','as',3,0,0,-1 "
+        + "select 3463,836,1,1,'Dungeons & Dragons','ZHN','Manshoon','Clone Wizard','zhnmanshoon','zhn17','four','evil','zhentarim','','lightning','as',3,0,0,-1 "
+        + "select 3464,836,1,1,'Dungeons & Dragons','ZHN','Manshoon','Rekindling the Zhentarim','zhnmanshoon','zhn18','four','evil','zhentarim','','lightning','as',3,0,0,-1 "
+        + "select 3465,837,1,1,'Dungeons & Dragons','ZHN','Tashlyn Yafeera','Master of Arms','zhntashlynyafeera','zhn19','three','neutral','zhentarim','','fist','as',3,0,0,-1 "
+        + "select 3466,837,1,1,'Dungeons & Dragons','ZHN','Tashlyn Yafeera','The Black Network','zhntashlynyafeera','zhn20','three','neutral','zhentarim','','fist','as',3,0,0,-1 "
+        + "select 3467,837,1,1,'Dungeons & Dragons','ZHN','Tashlyn Yafeera','Sword, Axe, Dagger, Boot Dagger','zhntashlynyafeera','zhn21','four','neutral','zhentarim','','fist','as',3,0,0,-1 "
+        + "select 3468,838,1,1,'Dungeons & Dragons','ZHN','Ziraj','The Hunter','zhnziraj','zhn22','three','evil','zhentarim','','fist','as',3,0,0,-1 "
+        + "select 3469,838,1,1,'Dungeons & Dragons','ZHN','Ziraj','Half-Orc Assassin','zhnziraj','zhn23','four','evil','zhentarim','','fist','as',3,0,0,-1 "
+        + "select 3470,838,1,1,'Dungeons & Dragons','ZHN','Ziraj','Hail of Black Arrows','zhnziraj','zhn24','four','evil','zhentarim','','fist','as',3,0,0,-1 ";
+
+//next BAC 247
+//next card 3471
+//next char 839
 
 
 		
@@ -3499,9 +3612,12 @@ private static final String DATABASE_POPULATEJUS = "insert into tblCards "
         database.execSQL(DATABASE_POPULATEJUS);
         database.execSQL(DATABASE_POPULATEDOOM);
         database.execSQL(DATABASE_POPULATEMYST);
-		database.execSQL(DATABASE_POPULATEXMF);
+        database.execSQL(DATABASE_POPULATEXMF);
         database.execSQL(DATABASE_POPULATEXFO);
         database.execSQL(DATABASE_POPULATEDXM);
+        database.execSQL(DATABASE_POPULATETIW);
+        database.execSQL(DATABASE_POPULATEAIW);
+        database.execSQL(DATABASE_POPULATEZHN);
         database.execSQL(DATABASE_BACKUP_CREATE); //creates tblbackup for fresh installs
         database.execSQL(DATABASE_SETTINGS_CREATE);
         database.execSQL(DATABASE_SETTINGS_POPULATE);
