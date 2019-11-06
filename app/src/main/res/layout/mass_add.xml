@@ -40,7 +40,58 @@
 
             </TableRow>
 
-<TableRow
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:gravity="center">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textOn="Trouble In Waterdeep"
+                    android:textOff="Trouble In Waterdeep"
+                    android:textSize="15sp"
+                    android:id="@+id/tbTIWStarter"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:gravity="center">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textOn="Adventurers In Waterdeep"
+                    android:textOff="Adventurers In Waterdeep"
+                    android:textSize="15sp"
+                    android:id="@+id/tbAIWStarter"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:gravity="center">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textOn="The Zhentarim"
+                    android:textOff="The Zhentarim"
+                    android:textSize="15sp"
+                    android:id="@+id/tbZHNStarter"/>
+
+            </TableRow>
+            <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"

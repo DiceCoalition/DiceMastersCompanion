@@ -20,6 +20,9 @@ public class DnD extends Activity {
         Button BFF = (Button) findViewById(R.id.btBFF);
         Button FUS = (Button) findViewById(R.id.btFUS);
         Button ToA = (Button) findViewById(R.id.btToA);
+        Button TIW = (Button) findViewById(R.id.btTIW);
+        Button AIW = (Button) findViewById(R.id.btAIW);
+        Button ZHN = (Button) findViewById(R.id.btZHN);
         Button promosDnD = (Button) findViewById(R.id.btPromosDnD);
 
         allDnD.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +65,39 @@ public class DnD extends Activity {
                 Intent intent = new Intent(DnD.this, CardCollectorNEW.class);
                 intent.putExtra("view", "collection");
                 intent.putExtra("whereCriteria", "where CardSet='ToA'");
+                startActivity(intent);
+            }
+        });
+
+        TIW.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DnD.this, CardCollectorNEW.class);
+                intent.putExtra("view", "collection");
+                intent.putExtra("whereCriteria", "where CardSet='TIW'");
+                startActivity(intent);
+            }
+        });
+
+        AIW.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DnD.this, CardCollectorNEW.class);
+                intent.putExtra("view", "collection");
+                intent.putExtra("whereCriteria", "where CardSet='AIW'");
+                startActivity(intent);
+            }
+        });
+
+        ZHN.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DnD.this, CardCollectorNEW.class);
+                intent.putExtra("view", "collection");
+                intent.putExtra("whereCriteria", "where CardSet='ZHN'");
                 startActivity(intent);
             }
         });

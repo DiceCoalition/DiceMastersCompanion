@@ -32,11 +32,11 @@ public class MainActivity extends Activity {
                 MainActivity.this);
         closeAlert.setTitle("Updates");
         closeAlert
-                .setMessage("Added 2019 OP Cards"
+                .setMessage("Added Trouble In Waterdeep"
                         + "\n" + "\n" +
-                        "Added 'Download All Images' Tool"
+                        "Added Adventurers In Waterdeep"
                         + "\n" + "\n" +
-                        "Fixed download bug"
+                        "Added The Zhentarim"
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",

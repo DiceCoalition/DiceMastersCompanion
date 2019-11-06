@@ -42,6 +42,30 @@
         android:text="Tomb of Annihilation" />
 
     <Button
+        android:id="@+id/btTIW"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/custom_button"
+        android:text="Trouble In Waterdeep" />
+
+    <Button
+        android:id="@+id/btAIW"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/custom_button"
+        android:text="Adventurers In Waterdeep" />
+
+    <Button
+        android:id="@+id/btZHN"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/custom_button"
+        android:text="The Zhentarim" />
+
+    <Button
         android:id="@+id/btPromosDnD"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

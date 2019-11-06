@@ -87,8 +87,10 @@ public class Tools extends Activity {
 
                 Button add = (Button) dialog.findViewById(R.id.btAddCards);
                 Button cancel = (Button) dialog.findViewById(R.id.btCancelAdd);
-
-				final ToggleButton xmfStarter = (ToggleButton) dialog.findViewById(R.id.tbXMFStarter);
+                final ToggleButton tiwStarter = (ToggleButton) dialog.findViewById(R.id.tbTIWStarter);
+                final ToggleButton aiwStarter = (ToggleButton) dialog.findViewById(R.id.tbAIWStarter);
+                final ToggleButton zhnStarter = (ToggleButton) dialog.findViewById(R.id.tbZHNStarter);
+                final ToggleButton xmfStarter = (ToggleButton) dialog.findViewById(R.id.tbXMFStarter);
                 final ToggleButton xfoStarter = (ToggleButton) dialog.findViewById(R.id.tbXFOStarter);
                 final ToggleButton dxmStarter = (ToggleButton) dialog.findViewById(R.id.tbDXMStarter);
                 final ToggleButton jusStarter = (ToggleButton) dialog.findViewById(R.id.tbJUSStarter);
@@ -138,8 +140,26 @@ public class Tools extends Activity {
                     public void onClick(View v) {
                         String starterCriteria = "";
                         String fullCriteria = "";
-                        
-						 if (xmfStarter.isChecked()) {
+
+                        if (tiwStarter.isChecked()) {
+                            if (starterCriteria.equals("")) {
+                                starterCriteria = "'TIW'";
+                            } else {
+                                starterCriteria = starterCriteria + ",'TIW'";
+                            }
+                        }if (aiwStarter.isChecked()) {
+                            if (starterCriteria.equals("")) {
+                                starterCriteria = "'AIW'";
+                            } else {
+                                starterCriteria = starterCriteria + ",'AIW'";
+                            }
+                        }if (zhnStarter.isChecked()) {
+                            if (starterCriteria.equals("")) {
+                                starterCriteria = "'ZHN'";
+                            } else {
+                                starterCriteria = starterCriteria + ",'ZHN'";
+                            }
+                        }if (xmfStarter.isChecked()) {
                             if (starterCriteria.equals("")) {
                                 starterCriteria = "'XMF'";
                             } else {
@@ -425,6 +445,9 @@ public class Tools extends Activity {
     private void downloadImageFiles(){
         String baseurl = "http://www.dicecoalition.com/cardservice/tzapp/";
         Map<String, String> offlineCards = new HashMap<String, String>();
+        offlineCards.put("tiw", "59");
+        offlineCards.put("aiw", "24");
+        offlineCards.put("zhn", "24");
         offlineCards.put("xmf", "72");
         offlineCards.put("dxm", "24");
         offlineCards.put("xfo", "24");
