@@ -72,6 +72,9 @@ public class Search extends Activity {
 		final CheckBox setXMF = (CheckBox) findViewById(R.id.cb126);
         final CheckBox setXFO = (CheckBox) findViewById(R.id.cb127);
         final CheckBox setDXM = (CheckBox) findViewById(R.id.cb128);
+        final CheckBox setTIW = (CheckBox) findViewById(R.id.cb130);
+        final CheckBox setAIW = (CheckBox) findViewById(R.id.cb131);
+        final CheckBox setZHN = (CheckBox) findViewById(R.id.cb132);
         final CheckBox costOne = (CheckBox) findViewById(R.id.cb1);
         final CheckBox costTwo = (CheckBox) findViewById(R.id.cb2);
         final CheckBox costThree = (CheckBox) findViewById(R.id.cb3);
@@ -157,7 +160,7 @@ public class Search extends Activity {
         final CheckBox spacewolves = (CheckBox) findViewById(R.id.cb121);
         final CheckBox doompatrol = (CheckBox) findViewById(R.id.cb125);
 		final CheckBox hellfire = (CheckBox) findViewById(R.id.cb129);
-
+        final CheckBox forcegrey = (CheckBox) findViewById(R.id.cb133);
 
         final EditText editSearch = (EditText) findViewById(R.id.etSearchText);
 
@@ -578,6 +581,27 @@ public class Search extends Activity {
                                                   setCriteria = setCriteria + "'DXM'";
                                               } else {
                                                   setCriteria = setCriteria + ",'DXM'";
+                                              }
+                                          }
+                                          if (setTIW.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'TIW'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'TIW'";
+                                              }
+                                          }
+                                          if (setAIW.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'AIW'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'AIW'";
+                                              }
+                                          }
+                                          if (setZHN.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'ZHN'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'ZHN'";
                                               }
                                           }
                                           if (!"".equals(setCriteria)) {
@@ -1151,6 +1175,13 @@ public class Search extends Activity {
                                                   affilCriteria = affilCriteria + ",'hellfire'";
                                               }
                                           }
+                                          if (forcegrey.isChecked()) {
+                                              if (affilCriteria.equals("")) {
+                                                  affilCriteria = affilCriteria + "'forcegrey'";
+                                              } else {
+                                                  affilCriteria = affilCriteria + ",'forcegrey'";
+                                              }
+                                          }
 
                                           if (noaffil.isChecked())
 
@@ -1575,7 +1606,10 @@ public class Search extends Activity {
 										 setXMF.setChecked(false);
 										 setXFO.setChecked(false);
 										 setDXM.setChecked(false);
-
+                                         setTIW.setChecked(false);
+                                         setAIW.setChecked(false);
+                                         setZHN.setChecked(false);
+                                         forcegrey.setChecked(false);
                                          editSearch.setText("");
                                          editSearch.clearFocus();
                                      }
