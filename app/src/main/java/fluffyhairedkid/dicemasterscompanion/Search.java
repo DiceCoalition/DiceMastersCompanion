@@ -1547,6 +1547,7 @@ public class Search extends Activity {
                                          uniDC.setChecked(false);
                                          uniTMNT.setChecked(false);
                                          uniW40K.setChecked(false);
+                                         uniWWE.setChecked(false);
                                          owned.setChecked(false);
                                          notOwned.setChecked(false);
                                          setAvX.setChecked(false);
@@ -1673,7 +1674,14 @@ public class Search extends Activity {
                                          setTIW.setChecked(false);
                                          setAIW.setChecked(false);
                                          setZHN.setChecked(false);
+                                         setWWE.setChecked(false);
+                                         setBIT.setChecked(false);
+                                         setTAG.setChecked(false);
                                          forcegrey.setChecked(false);
+                                         wwelegends.setChecked(false);
+                                         newday.setChecked(false);
+                                         nwo.setChecked(false);
+                                         theshield.setChecked(false);
                                          editSearch.setText("");
                                          editSearch.clearFocus();
                                      }
