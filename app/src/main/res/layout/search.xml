@@ -96,6 +96,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="W40K" />
+
+                <CheckBox
+                    android:id="@+id/cb134"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WWE" />
             </LinearLayout>
 
             <TextView
@@ -486,6 +492,31 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb135"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WWE" />
+
+                <CheckBox
+                    android:id="@+id/cb136"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BIT" />
+
+                <CheckBox
+                    android:id="@+id/cb137"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TAG" />
+
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textView2"
@@ -1104,7 +1135,36 @@
                     android:background="@drawable/spacewolves" />
 
             </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb138"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/wwelegends" />
+
+            <CheckBox
+                android:id="@+id/cb139"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/newday" />
+
+            <CheckBox
+                android:id="@+id/cb140"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nwo" />
+
+            <CheckBox
+                android:id="@+id/cb141"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/theshield" />
         </LinearLayout>
+    </LinearLayout>
 
     </ScrollView>
 

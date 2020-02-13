@@ -34,6 +34,7 @@ public class Search extends Activity {
         final CheckBox uniDC = (CheckBox) findViewById(R.id.cb23);
         final CheckBox uniTMNT = (CheckBox) findViewById(R.id.cb86);
         final CheckBox uniW40K = (CheckBox) findViewById(R.id.cb115);
+        final CheckBox uniWWE = (CheckBox) findViewById(R.id.cb134);
         final CheckBox setAvX = (CheckBox) findViewById(R.id.cb15);
         final CheckBox setUX = (CheckBox) findViewById(R.id.cb16);
         final CheckBox setS1 = (CheckBox) findViewById(R.id.cb17);
@@ -75,6 +76,9 @@ public class Search extends Activity {
         final CheckBox setTIW = (CheckBox) findViewById(R.id.cb130);
         final CheckBox setAIW = (CheckBox) findViewById(R.id.cb131);
         final CheckBox setZHN = (CheckBox) findViewById(R.id.cb132);
+        final CheckBox setWWE = (CheckBox) findViewById(R.id.cb135);
+        final CheckBox setBIT = (CheckBox) findViewById(R.id.cb136);
+        final CheckBox setTAG = (CheckBox) findViewById(R.id.cb137);
         final CheckBox costOne = (CheckBox) findViewById(R.id.cb1);
         final CheckBox costTwo = (CheckBox) findViewById(R.id.cb2);
         final CheckBox costThree = (CheckBox) findViewById(R.id.cb3);
@@ -161,6 +165,10 @@ public class Search extends Activity {
         final CheckBox doompatrol = (CheckBox) findViewById(R.id.cb125);
 		final CheckBox hellfire = (CheckBox) findViewById(R.id.cb129);
         final CheckBox forcegrey = (CheckBox) findViewById(R.id.cb133);
+        final CheckBox wwelegends = (CheckBox) findViewById(R.id.cb138);
+        final CheckBox newday = (CheckBox) findViewById(R.id.cb139);
+        final CheckBox nwo = (CheckBox) findViewById(R.id.cb140);
+        final CheckBox theshield = (CheckBox) findViewById(R.id.cb141);
 
         final EditText editSearch = (EditText) findViewById(R.id.etSearchText);
 
@@ -245,6 +253,13 @@ public class Search extends Activity {
                                                   uniCriteria = uniCriteria + "'W40K'";
                                               } else {
                                                   uniCriteria = uniCriteria + ",'W40K'";
+                                              }
+                                          }
+                                          if (uniWWE.isChecked()) {
+                                              if (uniCriteria.equals("")) {
+                                                  uniCriteria = uniCriteria + "'WWE'";
+                                              } else {
+                                                  uniCriteria = uniCriteria + ",'WWE'";
                                               }
                                           }
 
@@ -602,6 +617,27 @@ public class Search extends Activity {
                                                   setCriteria = setCriteria + "'ZHN'";
                                               } else {
                                                   setCriteria = setCriteria + ",'ZHN'";
+                                              }
+                                          }
+                                          if (setWWE.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'WWE'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'WWE'";
+                                              }
+                                          }
+                                          if (setBIT.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'BIT'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'BIT'";
+                                              }
+                                          }
+                                          if (setTAG.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'TAG'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'TAG'";
                                               }
                                           }
                                           if (!"".equals(setCriteria)) {
@@ -1180,6 +1216,34 @@ public class Search extends Activity {
                                                   affilCriteria = affilCriteria + "'forcegrey'";
                                               } else {
                                                   affilCriteria = affilCriteria + ",'forcegrey'";
+                                              }
+                                          }
+                                          if (wwelegends.isChecked()) {
+                                              if (affilCriteria.equals("")) {
+                                                  affilCriteria = affilCriteria + "'wwelegends'";
+                                              } else {
+                                                  affilCriteria = affilCriteria + ",'wwelegends'";
+                                              }
+                                          }
+                                          if (newday.isChecked()) {
+                                              if (affilCriteria.equals("")) {
+                                                  affilCriteria = affilCriteria + "'newday'";
+                                              } else {
+                                                  affilCriteria = affilCriteria + ",'newday'";
+                                              }
+                                          }
+                                          if (nwo.isChecked()) {
+                                              if (affilCriteria.equals("")) {
+                                                  affilCriteria = affilCriteria + "'nwo'";
+                                              } else {
+                                                  affilCriteria = affilCriteria + ",'nwo'";
+                                              }
+                                          }
+                                          if (theshield.isChecked()) {
+                                              if (affilCriteria.equals("")) {
+                                                  affilCriteria = affilCriteria + "'theshield'";
+                                              } else {
+                                                  affilCriteria = affilCriteria + ",'theshield'";
                                               }
                                           }
 
