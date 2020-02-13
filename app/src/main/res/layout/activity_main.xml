@@ -60,6 +60,14 @@
                 android:text="Warhammer 40K" />
 
             <Button
+                android:id="@+id/btWWE"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_button"
+                android:text="WWE" />
+
+            <Button
                 android:id="@+id/btOther"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"

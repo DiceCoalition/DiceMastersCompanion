@@ -32,11 +32,11 @@ public class MainActivity extends Activity {
                 MainActivity.this);
         closeAlert.setTitle("Updates");
         closeAlert
-                .setMessage("Added Trouble In Waterdeep"
+                .setMessage("Added WWE"
                         + "\n" + "\n" +
-                        "Added Adventurers In Waterdeep"
+                        "Added Bitter Rivals"
                         + "\n" + "\n" +
-                        "Added The Zhentarim"
+                        "Added Tag Teams"
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",
@@ -70,6 +70,7 @@ public class MainActivity extends Activity {
         Button dc = (Button) findViewById(R.id.btDC);
         Button dnd = (Button) findViewById(R.id.btDnD);
         Button w40k = (Button) findViewById(R.id.btW40K);
+        Button wwe = (Button) findViewById(R.id.btWWE);
         Button other = (Button) findViewById(R.id.btOther);
         Button tools = (Button) findViewById(R.id.btTools);
         Button credits = (Button) findViewById(R.id.btCredits);
@@ -119,6 +120,15 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
 
                 startActivity(new Intent(MainActivity.this, W40K.class));
+            }
+        });
+
+        wwe.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(MainActivity.this, WWE.class));
             }
         });
 

@@ -8,7 +8,7 @@ import android.util.Log;
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "tblCards.db";
-    private static final int DATABASE_VERSION = 120;
+    private static final int DATABASE_VERSION = 121;
 
     private static final String DATABASE_CREATE = "create table tblCards (_id integer not null, CharID integer not null, DieID integer not null, CardID integer not null, "
             + "Universe text not null, CardSet text not null, CharName text not null, CardName text not null, "
@@ -3541,9 +3541,121 @@ private static final String DATABASE_POPULATETIW = "insert into tblCards "
         + "union select 3469,838,1,1,'Dungeons & Dragons','ZHN','Ziraj','Half-Orc Assassin','zhnziraj','zhn23','four','evil','zhentarim','','fist','as',3,0,0,-1 "
         + "union select 3470,838,1,1,'Dungeons & Dragons','ZHN','Ziraj','Hail of Black Arrows','zhnziraj','zhn24','four','evil','zhentarim','','fist','as',3,0,0,-1 ";
 
-//next BAC 247
-//next card 3471
-//next char 839
+    private static final String DATABASE_POPULATEWWE = "insert into tblCards "
+            + "select 3471,839,1,1,'WWE','WWE','Aj Styles','The Face That Runs the Place','wweajstyles','wwe1','four','','','','lightning','as',3,0,0,-1 "
+            + "union select 3472,839,1,1,'WWE','WWE','Aj Styles','The Champ That Runs the Camp','wweajstyles','wwe2','four','','','','lightning','as',3,0,0,-1 "
+            + "union select 3473,839,1,1,'WWE','WWE','Aj Styles','The Phenomenal One','wweajstyles','wwe3','five','','','','lightning','as',3,0,0,-1 "
+            + "union select 3474,840,1,1,'WWE','WWE','Asuka','No One is Ready','wweasuka','wwe4','three','','','','mask','as',3,0,0,-1 "
+            + "union select 3475,840,1,1,'WWE','WWE','Asuka','The Future','wweasuka','wwe5','three','','','','mask','as',3,0,0,-1 "
+            + "union select 3476,840,1,1,'WWE','WWE','Asuka','The Empress of Tomorrow','wweasuka','wwe6','three','','','','mask','as',3,0,0,-1 "
+            + "union select 3477,841,1,1,'WWE','WWE','Becky Lynch','Maiden Ireland','wwebeckylynch','wwe7','five','','','','shield','as',3,0,0,-1 "
+            + "union select 3478,841,1,1,'WWE','WWE','Becky Lynch','Straight Fire','wwebeckylynch','wwe8','four','','','','shield','as',3,0,0,-1 "
+            + "union select 3479,841,1,1,'WWE','WWE','Becky Lynch','The Man!','wwebeckylynch','wwe9','five','','','','shield','as',3,0,0,-1 "
+            + "union select 3480,842,1,1,'WWE','WWE','Bobby Heenan','The Brain','wwebobbyheenan','wwe10','two','wwelegends','','','mask','as',3,0,0,-1 "
+            + "union select 3481,842,1,1,'WWE','WWE','Bobby Heenan','The Weasel','wwebobbyheenan','wwe11','two','wwelegends','','','mask','as',3,0,0,-1 "
+            + "union select 3482,842,1,1,'WWE','WWE','Bobby Heenan','Superior Brain Power','wwebobbyheenan','wwe12','two','wwelegends','','','mask','as',3,0,0,-1 "
+            + "union select 3483,843,1,1,'WWE','WWE','Bret \"Hit Man\" Hart','The Best There Is','wwebrethart','wwe13','five','wwelegends','','','lightning','as',3,0,0,-1 "
+            + "union select 3484,843,1,1,'WWE','WWE','Bret \"Hit Man\" Hart','The Best There Was','wwebrethart','wwe14','four','wwelegends','','','lightning','as',3,0,0,-1 "
+            + "union select 3485,843,1,1,'WWE','WWE','Bret \"Hit Man\" Hart','The Best There Ever Will Be','wwebrethart','wwe15','four','wwelegends','','','lightning','as',3,0,0,-1 "
+            + "union select 3486,844,1,1,'WWE','WWE','Charlotte Flair','The Nature Girl','wwecharlotteflair','wwe16','four','','','','lightning','as',3,0,0,-1 "
+            + "union select 3487,844,1,1,'WWE','WWE','Charlotte Flair','The Genetically Superior Athlete','wwecharlotteflair','wwe17','four','','','','lightning','as',3,0,0,-1 "
+            + "union select 3488,844,1,1,'WWE','WWE','Charlotte Flair','The Queen','wwecharlotteflair','wwe18','four','','','','lightning','as',3,0,0,-1 "
+            + "union select 3489,845,1,1,'WWE','WWE','Eddie Guerrero','I Lie','wweeddieguerrero','wwe19','two','','','','lightning','as',3,0,0,-1 "
+            + "union select 3490,845,1,1,'WWE','WWE','Eddie Guerrero','I Cheat','wweeddieguerrero','wwe20','two','','','','lightning','as',3,0,0,-1 "
+            + "union select 3491,845,1,1,'WWE','WWE','Eddie Guerrero','I Steal','wweeddieguerrero','wwe21','two','','','','lightning','as',3,0,0,-1 "
+            + "union select 3492,846,1,1,'WWE','WWE','John Cena','You Can''t See Me','wwejohncena','wwe22','four','','','','fist','as',3,0,0,-1 "
+            + "union select 3493,846,1,1,'WWE','WWE','John Cena','The Champ is Here!','wwejohncena','wwe23','four','','','','fist','as',3,0,0,-1 "
+            + "union select 3494,846,1,1,'WWE','WWE','John Cena','The Cenation Leader','wwejohncena','wwe24','four','','','','fist','as',3,0,0,-1 "
+            + "union select 3495,847,1,1,'WWE','WWE','Kurt Angle','Intensity','wwekurtangle','wwe25','six','','','','shield','as',3,0,0,-1 "
+            + "union select 3496,847,1,1,'WWE','WWE','Kurt Angle','Integrity','wwekurtangle','wwe26','six','','','','shield','as',3,0,0,-1 "
+            + "union select 3497,847,1,1,'WWE','WWE','Kurt Angle','Intelligence','wwekurtangle','wwe27','six','','','','shield','as',3,0,0,-1 "
+            + "union select 3498,848,1,1,'WWE','WWE','\"Macho Man\" Randy Savage','The Cream of the Crop','wwemachoman','wwe28','four','wwelegends','','','fist','as',3,0,0,-1 "
+            + "union select 3499,848,1,1,'WWE','WWE','\"Macho Man\" Randy Savage','Macho Madness','wwemachoman','wwe29','four','wwelegends','','','fist','as',3,0,0,-1 "
+            + "union select 3500,848,1,1,'WWE','WWE','\"Macho Man\" Randy Savage','Oooh Yeah!','wwemachoman','wwe30','four','wwelegends','','','fist','as',3,0,0,-1 "
+            + "union select 3501,849,1,1,'WWE','WWE','Mankind','The Hardcore Legend','wwemankind','wwe31','three','wwelegends','','','mask','as',3,0,0,-1 "
+            + "union select 3502,849,1,1,'WWE','WWE','Mankind','The Deranged','wwemankind','wwe32','four','wwelegends','','','mask','as',3,0,0,-1 "
+            + "union select 3503,849,1,1,'WWE','WWE','Mankind','Mrs. Foley''s Baby Boy','wwemankind','wwe33','three','wwelegends','','','mask','as',3,0,0,-1 "
+            + "union select 3504,850,1,1,'WWE','WWE','Ric Flair','The Dirtiest Player in the Game','wwericflair','wwe34','three','wwelegends','','','mask','as',3,0,0,-1 "
+            + "union select 3505,850,1,1,'WWE','WWE','Ric Flair','WOOOOOOOOO!','wwericflair','wwe35','four','wwelegends','','','mask','as',3,0,0,-1 "
+            + "union select 3506,850,1,1,'WWE','WWE','Ric Flair','The Nature Boy','wwericflair','wwe36','four','wwelegends','','','mask','as',3,0,0,-1 "
+            + "union select 3507,851,1,1,'WWE','WWE','Ronda Rousey','Rowdy','wwerondarousey','wwe37','four','','','','fist','as',3,0,0,-1 "
+            + "union select 3508,851,1,1,'WWE','WWE','Ronda Rousey','The Baddest Woman on the Planet','wwerondarousey','wwe38','four','','','','fist','as',3,0,0,-1 "
+            + "union select 3509,851,1,1,'WWE','WWE','Ronda Rousey','Bad Reputation','wwerondarousey','wwe39','four','','','','fist','as',3,0,0,-1 "
+            + "union select 3510,852,1,1,'WWE','WWE','Sasha Banks','It''s Boss Time!','wwesashabanks','wwe40','two','','','','shield','as',3,0,0,-1 "
+            + "union select 3511,852,1,1,'WWE','WWE','Sasha Banks','The Bosse','wwesashabanks','wwe41','two','','','','shield','as',3,0,0,-1 "
+            + "union select 3512,852,1,1,'WWE','WWE','Sasha Banks','The Bank Statement','wwesashabanks','wwe42','two','','','','shield','as',3,0,0,-1 "
+            + "union select 3513,853,1,1,'WWE','WWE','Shinsuke Nakamura','The Artist','wweshinsukenakamura','wwe43','two','','','','fist','as',3,0,0,-1 "
+            + "union select 3514,853,1,1,'WWE','WWE','Shinsuke Nakamura','Kinshasa','wweshinsukenakamura','wwe44','three','','','','fist','as',3,0,0,-1 "
+            + "union select 3515,853,1,1,'WWE','WWE','Shinsuke Nakamura','The King of Strong Style','wweshinsukenakamura','wwe45','four','','','','fist','as',3,0,0,-1 "
+            + "union select 3516,854,1,1,'WWE','WWE','Triple H','The Cerebral Assassin','wwetripleh','wwe46','six','','','','shield','as',3,0,0,-1 "
+            + "union select 3517,854,1,1,'WWE','WWE','Triple H','The Game','wwetripleh','wwe47','six','','','','shield','as',3,0,0,-1 "
+            + "union select 3518,854,1,1,'WWE','WWE','Triple H','Pedigree','wwetripleh','wwe48','seven','','','','shield','as',3,0,0,-1 "
+            + "union select 3519,1,1,247,'WWE','WWE','Basic Action Card','A Moment of Bliss','basic','wwe49','three','','','','','as',3,0,0,-1 "
+            + "union select 3520,1,1,248,'WWE','WWE','Basic Action Card','Jerry Lawler, Ringside Announcer','basic','wwe50','four','','','','','as',3,0,0,-1 "
+            + "union select 3521,1,1,249,'WWE','WWE','Basic Action Card','Booker T, Ringside Announcer','basic','wwe51','four','','','','','as',3,0,0,-1 "
+            + "union select 3522,1,1,250,'WWE','WWE','Basic Action Card','Chair Smash','basic','wwe52','four','','','','','as',3,0,0,-1 "
+            + "union select 3523,1,1,251,'WWE','WWE','Basic Action Card','Miz TV','basic','wwe53','four','','','','','as',3,0,0,-1 "
+            + "union select 3524,1,1,252,'WWE','WWE','Basic Action Card','Money in the Bank','basic','wwe54','four','','','','','as',3,0,0,-1 "
+            + "union select 3525,1,1,253,'WWE','WWE','Basic Action Card','Paige, Manager','basic','wwe55','five','','','','','as',3,0,0,-1 "
+            + "union select 3526,1,1,254,'WWE','WWE','Basic Action Card','Paul Heyman, Manager','basic','wwe56','three','','','','','as',3,0,0,-1 "
+            + "union select 3527,1,1,255,'WWE','WWE','Basic Action Card','The Kevin Owens Show','basic','wwe57','three','','','','','as',3,0,0,-1 "
+            + "union select 3528,1,1,256,'WWE','WWE','Basic Action Card','Walk with Elias','basic','wwe58','three','','','','','as',3,0,0,-1 ";
+
+    private static final String DATABASE_POPULATEBIT = "insert into tblCards "
+            + "select 3529,855,1,1,'WWE','BIT','Bret \"Hit Man\" Hart','Master of the Sharpshooter','bitbrethart','bit1','five','wwelegends','','','lightning','as',3,0,0,-1 "
+            + "union select 3530,855,1,1,'WWE','BIT','Bret \"Hit Man\" Hart','The Hit Man','bitbrethart','bit2','five','wwelegends','','','lightning','as',3,0,0,-1 "
+            + "union select 3531,855,1,1,'WWE','BIT','Bret \"Hit Man\" Hart','Slammy Award Winner','bitbrethart','bit3','four','wwelegends','','','lightning','as',3,0,0,-1 "
+            + "union select 3532,856,1,1,'WWE','BIT','Kane','Controlling Hellfire','bitkane','bit4','five','','','','mask','as',3,0,0,-1 "
+            + "union select 3533,856,1,1,'WWE','BIT','Kane','Brother of Destruction','bitkane','bit5','five','','','','mask','as',3,0,0,-1 "
+            + "union select 3534,856,1,1,'WWE','BIT','Kane','Big Red Monster','bitkane','bit6','six','','','','mask','as',3,0,0,-1 "
+            + "union select 3535,857,1,1,'WWE','BIT','Lita','Exhilirating','bitlita','bit7','three','wwelegends','','','lightning','as',3,0,0,-1 "
+            + "union select 3536,857,1,1,'WWE','BIT','Lita','Fan Favorite','bitlita','bit8','four','wwelegends','','','lightning','as',3,0,0,-1 "
+            + "union select 3537,857,1,1,'WWE','BIT','Lita','Team Xtreme','bitlita','bit9','three','wwelegends','','','lightning','as',3,0,0,-1 "
+            + "union select 3538,858,1,1,'WWE','BIT','Shawn Michaels','The Heartbreak Kid','bitshawnmichaels','bit10','four','wwelegends','','','fist','as',3,0,0,-1 "
+            + "union select 3539,858,1,1,'WWE','BIT','Shawn Michaels','Sweet Chin Music','bitshawnmichaels','bit11','five','wwelegends','','','fist','as',3,0,0,-1 "
+            + "union select 3540,858,1,1,'WWE','BIT','Shawn Michaels','\"Sexy Boy\"','bitshawnmichaels','bit12','five','wwelegends','','','fist','as',3,0,0,-1 "
+            + "union select 3541,859,1,1,'WWE','BIT','Stone Cold Steve Austin','Austin 3:16','bitsteveaustin','bit13','six','wwelegends','','','fist','as',3,0,0,-1 "
+            + "union select 3542,859,1,1,'WWE','BIT','Stone Cold Steve Austin','The Texas Rattlesnake','bitsteveaustin','bit14','five','wwelegends','','','fist','as',3,0,0,-1 "
+            + "union select 3543,859,1,1,'WWE','BIT','Stone Cold Steve Austin','The Bionic Redneck','bitsteveaustin','bit15','six','wwelegends','','','fist','as',3,0,0,-1 "
+            + "union select 3544,860,1,1,'WWE','BIT','The Rock','The Great One','bittherock','bit16','six','','','','mask','as',3,0,0,-1 "
+            + "union select 3545,860,1,1,'WWE','BIT','The Rock','\"Know Your Role\"','bittherock','bit17','six','','','','mask','as',3,0,0,-1 "
+            + "union select 3546,860,1,1,'WWE','BIT','The Rock','Attitude Era Icon','bittherock','bit18','seven','','','','mask','as',3,0,0,-1 "
+            + "union select 3547,861,1,1,'WWE','BIT','Trish Stratus','Stratusfaction Guaranteed','bittrishstratus','bit19','four','wwelegends','','','shield','as',3,0,0,-1 "
+            + "union select 3548,861,1,1,'WWE','BIT','Trish Stratus','More Than A Manager','bittrishstratus','bit20','four','wwelegends','','','shield','as',3,0,0,-1 "
+            + "union select 3549,861,1,1,'WWE','BIT','Trish Stratus','The Greatest Ever','bittrishstratus','bit21','four','wwelegends','','','shield','as',3,0,0,-1 "
+            + "union select 3550,862,1,1,'WWE','BIT','Undertaker','The Deadman','bitundertaker','bit22','six','wwelegends','','','shield','as',3,0,0,-1 "
+            + "union select 3551,862,1,1,'WWE','BIT','Undertaker','Managed by Paul Bearer','bitundertaker','bit22','six','wwelegends','','','shield','as',3,0,0,-1 "
+            + "union select 3552,862,1,1,'WWE','BIT','Undertaker','Last Ride','bitundertaker','bit22','six','wwelegends','','','shield','as',3,0,0,-1 ";
+
+    private static final String DATABASE_POPULATETAG = "insert into tblCards "
+            + "select 3553,863,1,1,'WWE','TAG','Big E','Talking Smack','tagbige','tag1','four','newday','','','ms','as',3,0,0,-1 "
+            + "union select 3554,863,1,1,'WWE','TAG','Big E','Powerlifter''s Physique','tagbige','tag2','four','newday','','','ms','as',3,0,0,-1 "
+            + "union select 3555,863,1,1,'WWE','TAG','Big E','Tag Team Champion','tagbige','tag3','four','newday','','','ms','as',3,0,0,-1 "
+            + "union select 3556,864,1,1,'WWE','TAG','Kevin Nash','nWo Wolfpac','tagkevinnash','tag4','five','nwo','','','bf','as',3,0,0,-1 "
+            + "union select 3557,864,1,1,'WWE','TAG','Kevin Nash','nWo Founder','tagkevinnash','tag5','four','nwo','','','bf','as',3,0,0,-1 "
+            + "union select 3558,864,1,1,'WWE','TAG','Kevin Nash','WWE Hall of Famer','tagkevinnash','tag6','five','nwo','','','bf','as',3,0,0,-1 "
+            + "union select 3559,865,1,1,'WWE','TAG','Kofi Kingston','Fueled by Booty-O''s','tagkofikingston','tag7','four','newday','','','fm','as',3,0,0,-1 "
+            + "union select 3560,865,1,1,'WWE','TAG','Kofi Kingston','Immune to Negativity','tagkofikingston','tag8','four','newday','','','fm','as',3,0,0,-1 "
+            + "union select 3561,865,1,1,'WWE','TAG','Kofi Kingston','Stunning Defense','tagkofikingston','tag9','four','newday','','','fm','as',3,0,0,-1 "
+            + "union select 3562,866,1,1,'WWE','TAG','Roman Reigns','It''s My Yard','tagromanreigns','tag10','six','theshield','','','fs','as',3,0,0,-1 "
+            + "union select 3563,866,1,1,'WWE','TAG','Roman Reigns','The Big Dog','tagromanreigns','tag11','six','theshield','','','fs','as',3,0,0,-1 "
+            + "union select 3564,866,1,1,'WWE','TAG','Roman Reigns','Proving Naysayers Wrong','tagromanreigns','tag12','six','theshield','','','fs','as',3,0,0,-1 "
+            + "union select 3565,867,1,1,'WWE','TAG','Scott Hall','nWo Founder','tagscotthall','tag13','four','nwo','','','bf','as',3,0,0,-1 "
+            + "union select 3566,867,1,1,'WWE','TAG','Scott Hall','nWo Wolfpac','tagscotthall','tag14','four','nwo','','','bf','as',3,0,0,-1 "
+            + "union select 3567,867,1,1,'WWE','TAG','Scott Hall','WWE Hall of Famer','tagscotthall','tag15','five','nwo','','','bf','as',3,0,0,-1 "
+            + "union select 3568,868,1,1,'WWE','TAG','Seth Rollins','Seth \"Freakin\" Rollins','tagsethrollins','tag16','four','theshield','','','bs','as',3,0,0,-1 "
+            + "union select 3569,868,1,1,'WWE','TAG','Seth Rollins','Money in the Bank Legend','tagsethrollins','tag17','four','theshield','','','bs','as',3,0,0,-1 "
+            + "union select 3570,868,1,1,'WWE','TAG','Seth Rollins','Hybrid Athlete','tagsethrollins','tag18','four','theshield','','','bs','as',3,0,0,-1 "
+            + "union select 3571,869,1,1,'WWE','TAG','Sting','The Vigilante','tagsting','tag19','three','nwo','','','ms','as',3,0,0,-1 "
+            + "union select 3572,869,1,1,'WWE','TAG','Sting','Stinger Splash','tagsting','tag20','two','nwo','','','ms','as',3,0,0,-1 "
+            + "union select 3573,869,1,1,'WWE','TAG','Sting','Scorpion Deathlock','tagsting','tag21','three','nwo','','','ms','as',3,0,0,-1 "
+            + "union select 3574,870,1,1,'WWE','TAG','Xavier Woods','Pancake Power','tagxavierwoods','tag22','four','newday','','','bm','as',3,0,0,-1 "
+            + "union select 3575,870,1,1,'WWE','TAG','Xavier Woods','Time for Francesca!','tagxavierwoods','tag23','three','newday','','','bm','as',3,0,0,-1 "
+            + "union select 3576,870,1,1,'WWE','TAG','Xavier Woods','Unicorn Horn','tagxavierwoods','tag24','three','newday','','','bm','as',3,0,0,-1 ";
+
+    //next BAC 257
+//next card 3577
+//next char 871
 
 
 		
@@ -3618,6 +3730,9 @@ private static final String DATABASE_POPULATETIW = "insert into tblCards "
         database.execSQL(DATABASE_POPULATETIW);
         database.execSQL(DATABASE_POPULATEAIW);
         database.execSQL(DATABASE_POPULATEZHN);
+        database.execSQL(DATABASE_POPULATEWWE);
+        database.execSQL(DATABASE_POPULATEBIT);
+        database.execSQL(DATABASE_POPULATETAG);
         database.execSQL(DATABASE_BACKUP_CREATE); //creates tblbackup for fresh installs
         database.execSQL(DATABASE_SETTINGS_CREATE);
         database.execSQL(DATABASE_SETTINGS_POPULATE);

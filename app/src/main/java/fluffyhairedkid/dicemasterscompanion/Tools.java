@@ -87,6 +87,9 @@ public class Tools extends Activity {
 
                 Button add = (Button) dialog.findViewById(R.id.btAddCards);
                 Button cancel = (Button) dialog.findViewById(R.id.btCancelAdd);
+                final ToggleButton wweStarter = (ToggleButton) dialog.findViewById(R.id.tbWWEStarter);
+                final ToggleButton bitStarter = (ToggleButton) dialog.findViewById(R.id.tbBITStarter);
+                final ToggleButton tagStarter = (ToggleButton) dialog.findViewById(R.id.tbTAGStarter);
                 final ToggleButton tiwStarter = (ToggleButton) dialog.findViewById(R.id.tbTIWStarter);
                 final ToggleButton aiwStarter = (ToggleButton) dialog.findViewById(R.id.tbAIWStarter);
                 final ToggleButton zhnStarter = (ToggleButton) dialog.findViewById(R.id.tbZHNStarter);
@@ -141,11 +144,23 @@ public class Tools extends Activity {
                         String starterCriteria = "";
                         String fullCriteria = "";
 
-                        if (tiwStarter.isChecked()) {
+                        if (wweStarter.isChecked()) {
                             if (starterCriteria.equals("")) {
-                                starterCriteria = "'TIW'";
+                                starterCriteria = "'WWE'";
                             } else {
-                                starterCriteria = starterCriteria + ",'TIW'";
+                                starterCriteria = starterCriteria + ",'WWE'";
+                            }
+                        }if (bitStarter.isChecked()) {
+                            if (starterCriteria.equals("")) {
+                                starterCriteria = "'BIT'";
+                            } else {
+                                starterCriteria = starterCriteria + ",'BIT'";
+                            }
+                        }if (tagStarter.isChecked()) {
+                            if (starterCriteria.equals("")) {
+                                starterCriteria = "'TAG'";
+                            } else {
+                                starterCriteria = starterCriteria + ",'TAG'";
                             }
                         }if (aiwStarter.isChecked()) {
                             if (starterCriteria.equals("")) {
@@ -445,6 +460,9 @@ public class Tools extends Activity {
     private void downloadImageFiles(){
         String baseurl = "http://www.dicecoalition.com/cardservice/tzapp/";
         Map<String, String> offlineCards = new HashMap<String, String>();
+        offlineCards.put("wwe", "58");
+        offlineCards.put("bit", "24");
+        offlineCards.put("tag", "24");
         offlineCards.put("tiw", "59");
         offlineCards.put("aiw", "24");
         offlineCards.put("zhn", "24");
