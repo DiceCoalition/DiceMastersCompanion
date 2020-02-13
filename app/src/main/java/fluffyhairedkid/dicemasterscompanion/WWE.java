@@ -61,7 +61,7 @@ public class WWE extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(WWE.this, CardCollectorNEW.class);
                 intent.putExtra("view", "collection");
-                intent.putExtra("whereCriteria", "where CardSet='TAG");
+                intent.putExtra("whereCriteria", "where CardSet='TAG'");
                 startActivity(intent);
             }
         });
