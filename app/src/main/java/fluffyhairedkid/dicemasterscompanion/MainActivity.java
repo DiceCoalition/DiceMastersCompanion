@@ -32,11 +32,11 @@ public class MainActivity extends Activity {
                 MainActivity.this);
         closeAlert.setTitle("Updates");
         closeAlert
-                .setMessage("Added WWE"
+                .setMessage("Added X-men Animated Series promos"
                         + "\n" + "\n" +
-                        "Added Bitter Rivals"
+                        "Fixed Ricochet promo"
                         + "\n" + "\n" +
-                        "Added Tag Teams"
+                        "Added Download Clear Tool"
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",

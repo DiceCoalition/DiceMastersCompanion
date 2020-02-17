@@ -8,7 +8,7 @@ import android.util.Log;
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "tblCards.db";
-    private static final int DATABASE_VERSION = 121;
+    private static final int DATABASE_VERSION = 123;
 
     private static final String DATABASE_CREATE = "create table tblCards (_id integer not null, CharID integer not null, DieID integer not null, CardID integer not null, "
             + "Universe text not null, CardSet text not null, CharName text not null, CardName text not null, "
@@ -2500,7 +2500,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2456,213,2,8,'Marvel','GotG','Star-Lord','Let''s Dance (Alt)','starlordgg','letsdancealt','four','guardians','','','fist','halt',3,0,0,-1 "
             + "union select 2856,208,3,11,'Marvel','GotG','Rocket Raccoon','Rigging Up Destruction (Alt)','rocketraccoongg','riggingupdestructionalt','three','guardians','','','lightning','halt',3,0,0,-1 "
             + "union select 2857,197,2,7,'Marvel','GotG','Groot','I, Am, GROOOOOOOT','grootgg','iamgrooooooot','five','guardians','','','shield','gp',3,0,0,-1 "
-			+ "union select 3360,547,1,1,'Marvel','GotG','Ricochet','Johnathon Gallo','ricochet','johnathongalloalt','two','spiderfriends','','','lightning','halt',3,0,0,-1 ";
+			+ "union select 3360,547,1,1,'Marvel','GotG','Ricochet','Johnathon Gallo (Alt)','ricochet','johnathongalloalt','two','spiderfriends','','','lightning','halt',3,0,0,-1 ";
 
     private static final String DATABASE_POPULATETOA = "insert into tblCards "
             + "select 2307,1,1,166,'Dungeons & Dragons','ToA','Basic Action Card','Brazen Pegasus','basic','brazenpegasus','four','neutral','','','','gp',3,0,0,-1 "
@@ -2772,7 +2772,14 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 3102,566,1,1,'Marvel','XMFC','Morph','Exile','morph','morphexile','four','exiles','','','mask','gp',3,0,0,-1 "
             + "union select 3103,59,2,4,'Marvel','XMFC','Sabretooth','Exile','sabretooth','sabretoothexile','four','magnetoorg','villain','','fist','gp',3,0,0,-1 "
             + "union select 3104,49,2,5,'Marvel','XMFC','Juggernaut','Get Outta My Head Charles! (Alt)','juggernautxmfc','juggernautalt','six','magnetoorg','villain','','shield','halt',3,0,0,-1 "
-            + "union select 3105,20,4,11,'Marvel','XMFC','Magneto','The Brotherhood','magnetoxmfc','magnetobro','six','magnetoorg','','','mask','gp',3,0,0,-1 ";
+            + "union select 3105,20,4,11,'Marvel','XMFC','Magneto','The Brotherhood','magnetoxmfc','magnetobro','six','magnetoorg','','','mask','gp',3,0,0,-1 "
+            + "union select 3577,574,1,2,'Marvel','XMFC','The Blackbird','Under the Radar (Alt)','theblackbird','xmfc76alt','two','','','','shield','gp',3,0,0,-1 "
+            + "union select 3578,33,4,15,'Marvel','XMFC','Storm','Misspent Youth (Alt)','stormfc','xmfc74alt','two','xmen','','','lightning','gp',3,0,0,-1 "
+            + "union select 3579,33,4,16,'Marvel','XMFC','Storm','Morlock Champion (Alt)','stormfc','xmfc110alt','three','xmen','','','lightning','gp',3,0,0,-1 "
+            + "union select 3580,28,3,11,'Marvel','XMFC','Professor X','No More, Magnus! (Alt)','professorxfc','xmfc102alt','five','xmen','','','mask','gp',3,0,0,-1 "
+            + "union select 3581,564,1,3,'Marvel','XMFC','Jubilee','Mallrat (Alt)','jubilee','xmfc119alt','two','xmen','','','lightning','gp',3,0,0,-1 "
+            + "union select 3582,563,1,2,'Marvel','XMFC','Jean Grey','Professor''s Protégé (Alt)','jeangrey','xmfc56alt','six','xmen','','','lightning','gp',3,0,0,-1 "
+            + "union select 3583,559,1,1,'Marvel','XMFC','Boom Boom','Time Bomb','boomboom','xmfc8alt','two','xmen','','','lightning','gp',3,0,0,0 ";
 
     private static final String DATABASE_POPULATETMT = "insert into tblCards "
             + "select 2719,1,1,179,'Marvel','TMT','Basic Action Card','Archnemesis!','basic','archnemesisthor','four','','','','','as',3,0,0,0 "
@@ -3624,8 +3631,8 @@ private static final String DATABASE_POPULATETIW = "insert into tblCards "
             + "union select 3548,861,1,1,'WWE','BIT','Trish Stratus','More Than A Manager','bittrishstratus','bit20','four','wwelegends','','','shield','as',3,0,0,-1 "
             + "union select 3549,861,1,1,'WWE','BIT','Trish Stratus','The Greatest Ever','bittrishstratus','bit21','four','wwelegends','','','shield','as',3,0,0,-1 "
             + "union select 3550,862,1,1,'WWE','BIT','Undertaker','The Deadman','bitundertaker','bit22','six','wwelegends','','','shield','as',3,0,0,-1 "
-            + "union select 3551,862,1,1,'WWE','BIT','Undertaker','Managed by Paul Bearer','bitundertaker','bit22','six','wwelegends','','','shield','as',3,0,0,-1 "
-            + "union select 3552,862,1,1,'WWE','BIT','Undertaker','Last Ride','bitundertaker','bit22','six','wwelegends','','','shield','as',3,0,0,-1 ";
+            + "union select 3551,862,1,1,'WWE','BIT','Undertaker','Managed by Paul Bearer','bitundertaker','bit23','six','wwelegends','','','shield','as',3,0,0,-1 "
+            + "union select 3552,862,1,1,'WWE','BIT','Undertaker','Last Ride','bitundertaker','bit24','six','wwelegends','','','shield','as',3,0,0,-1 ";
 
     private static final String DATABASE_POPULATETAG = "insert into tblCards "
             + "select 3553,863,1,1,'WWE','TAG','Big E','Talking Smack','tagbige','tag1','four','newday','','','ms','as',3,0,0,-1 "

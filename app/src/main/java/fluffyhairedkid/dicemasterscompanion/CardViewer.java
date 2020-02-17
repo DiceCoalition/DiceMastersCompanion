@@ -12,10 +12,12 @@ import java.util.List;
 import java.util.Map;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
@@ -175,6 +177,9 @@ public class CardViewer extends Activity {
         protected String doInBackground(String... f_url) {
             int count;
             try {
+                if(!isNetworkConnected()){
+                    return "Please connect to the internet to download offline cards.";
+                }
                 //DataManagement.verifyStoragePermissions(dmActivity);
                 URL url = new URL(f_url[0]);
                 URLConnection connection = url.openConnection();
@@ -221,14 +226,20 @@ public class CardViewer extends Activity {
                 Log.e("Error: ", e.getMessage());
             }
             //Download failed, so delete file
-            File failedFile  = new File(dmActivity.getFilesDir(), fileName);
-            if(failedFile.exists())
-                failedFile.delete();
-
+            if(fileName != null && !fileName.trim().isEmpty()) {
+                File failedFile = new File(dmActivity.getFilesDir(), fileName);
+                if (failedFile.exists())
+                    failedFile.delete();
+            }
 
             return "Something went wrong";
         }
 
+        private boolean isNetworkConnected() {
+            ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+
+            return cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnected();
+        }
         /**
          * Updating progress bar
          */
@@ -257,6 +268,7 @@ public class CardViewer extends Activity {
             else {
                 imgView.setBackgroundResource(dmActivity.getResources().getIdentifier("nopic", "drawable", dmActivity.getPackageName()));
                 imgView.setImageResource(0);
+                Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
             }
 
         }

@@ -25,6 +25,7 @@ import android.widget.ToggleButton;
 
 import java.io.BufferedInputStream;
 import java.io.File;
+import java.io.FilenameFilter;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
@@ -54,7 +55,7 @@ public class Tools extends Activity {
         Button bulkAdd = (Button) findViewById(R.id.btBulkAdd);
         Button dataManagement = (Button) findViewById(R.id.btDataManagement);
         Button dataDownload = (Button) findViewById(R.id.btDownload);
-
+        Button dataClearDownload = (Button) findViewById(R.id.btClearDownload);
 
         teamBuilder.setOnClickListener(new View.OnClickListener() {
 
@@ -413,8 +414,8 @@ public class Tools extends Activity {
                 NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
                 boolean isConnected = activeNetwork != null &&
                         activeNetwork.isConnectedOrConnecting();
-                boolean isWiFi = activeNetwork.getType() == ConnectivityManager.TYPE_WIFI;
                 if(isConnected) {
+                    boolean isWiFi = activeNetwork.getType() == ConnectivityManager.TYPE_WIFI;
                     if(!isWiFi) {
                         AlertDialog.Builder builder = new AlertDialog.Builder(dmActivity);
                         builder.setTitle("WiFi Recommended");
@@ -455,6 +456,48 @@ public class Tools extends Activity {
             }
         });
 
+        dataClearDownload.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(dmActivity);
+                builder.setTitle("Clear downloaded files?");
+                builder.setMessage("This will clear all previously downloaded card images.  Continue?");
+                builder.setCancelable(false);
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //loop through jpg files in directory and delete
+                        File[] files = dmActivity.getFilesDir().listFiles(new FilenameFilter() {
+                            public boolean accept(File dir, String name) {
+                                return name.toLowerCase().endsWith(".jpg");
+                            }
+                        });
+                        for(File f : files){
+                            f.delete();
+                        }
+                        Toast.makeText(getApplicationContext(), "All downloaded cards removed.", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getApplicationContext(), "Delete aborted.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
+    }
+
+    private boolean isNetworkConnected() {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        return cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnected();
     }
 
     private void downloadImageFiles(){
