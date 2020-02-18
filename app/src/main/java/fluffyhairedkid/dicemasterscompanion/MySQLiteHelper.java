@@ -8,7 +8,7 @@ import android.util.Log;
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "tblCards.db";
-    private static final int DATABASE_VERSION = 123;
+    private static final int DATABASE_VERSION = 124;
 
     private static final String DATABASE_CREATE = "create table tblCards (_id integer not null, CharID integer not null, DieID integer not null, CardID integer not null, "
             + "Universe text not null, CardSet text not null, CharName text not null, CardName text not null, "
@@ -1882,7 +1882,9 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2101,433,1,4,'DC Comics','GATF','Professor Zoom','Thief','professorzoom','thief','seven','villain','','','fist','gp',3,0,0,-1 "
             + "union select 2102,434,1,4,'DC Comics','GATF','Roy Harper','Adolescent Archer','royharper','adolescentarcher','five','greenarroworg','','','fist','gp',4,0,0,-1 "
             + "union select 2859,411,1,4,'DC Comics','GATF','Rip Hunter''s Chalkboard','''''Only Zatara Can Reach The POINT'''' (Alt)','riphunterschalkboard','onlyzataracanreachthepointa','four','','','','ms','halt',3,0,0,0 "
-            + "union select 2860,163,2,10,'DC Comics','GATF','Green Arrow','Robin Hood (Blank)','greenarrowga','robinhoodblank','five','greenarroworg','','','ms','halt',3,0,0,-1 ";
+            + "union select 2860,163,2,10,'DC Comics','GATF','Green Arrow','Robin Hood (Blank)','greenarrowga','robinhoodblank','five','greenarroworg','','','ms','halt',3,0,0,-1 "
+            + "union select 3588,412,1,3,'DC Comics','GATF','Clayface','The Clayface of Tragedy','clayface','gatf48alt','six','villain','','','mask','halt',0,0,0,0 "
+            + "union select 3589,426,1,2,'DC Comics','GATF','Gorilla Grodd','Force of Mind','gorillagrodd','gatf58alt','seven','legion','villain','','fist','halt',0,0,0,0 ";
 //removed items
 /*
 + "union select 2296,434,1,5,'DC Comics','GATF','Roy Harper','Don''t Call Me Speedy (Alt)','royharper','nopic','four','greenarroworg','','','fist','halt',3,0,0,-1 "
@@ -2047,7 +2049,10 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2295,33,3,13,'Marvel','DP','Storm','Thunderclap (Blank)','stormdp','thunderclapblank','two','xmen','','','lightning','gp',3,0,0,-1 "
             + "union select 3098,724,1,1,'Marvel','DP','Black Bolt','… (Alt)','blackbolt','blackboltalt','four','inhumans','','','mask','halt',0,0,0,-1 "
             + "union select 3099,725,1,1,'Marvel','DP','Lockjaw','LJ','lockjaw','lockjawlj','four','inhumans','','','shield','gp',0,0,0,-1 "
-            + "union select 3100,726,1,1,'Marvel','DP','Medusa','Devoted Wife','medusa','medusadwife','four','inhumans','','','mask','gp',0,0,0,-1 ";
+            + "union select 3100,726,1,1,'Marvel','DP','Medusa','Devoted Wife','medusa','medusadwife','four','inhumans','','','mask','gp',0,0,0,-1 "
+            + "union select 3585,469,1,3,'Marvel','DP','Multiple Man','Pile On! (Alt)','multipleman','dp119alt','two','xmen','','','mask','halt',0,0,0,0 "
+            + "union select 3586,454,1,3,'Marvel','DP','Elektra','Way of the Stick (Alt)','elektra','dp92alt','two','thunderbolts','','','mask','halt',0,0,0,0 "
+            + "union select 3587,464,1,2,'Marvel','DP','M.O.D.O.K.','Most Powerful Brain Alive (Alt)','modok','dp23alt','four','hydra','','','shield','halt',0,0,0,0 ";
 
 
     private static final String DATABASE_POPULATEHHS = "insert into tblCards "
@@ -2500,7 +2505,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2456,213,2,8,'Marvel','GotG','Star-Lord','Let''s Dance (Alt)','starlordgg','letsdancealt','four','guardians','','','fist','halt',3,0,0,-1 "
             + "union select 2856,208,3,11,'Marvel','GotG','Rocket Raccoon','Rigging Up Destruction (Alt)','rocketraccoongg','riggingupdestructionalt','three','guardians','','','lightning','halt',3,0,0,-1 "
             + "union select 2857,197,2,7,'Marvel','GotG','Groot','I, Am, GROOOOOOOT','grootgg','iamgrooooooot','five','guardians','','','shield','gp',3,0,0,-1 "
-			+ "union select 3360,547,1,1,'Marvel','GotG','Ricochet','Johnathon Gallo (Alt)','ricochet','johnathongalloalt','two','spiderfriends','','','lightning','halt',3,0,0,-1 ";
+			+ "union select 3360,547,1,1,'Marvel','GotG','Ricochet','Johnathon Gallo (Alt)','ricochet','johnathongalloalt','two','spiderfriends','','','lightning','halt',3,0,0,-1 "
+            + "union select 3584,406,2,2,'Marvel','GotG','Squirrel Girl','Nutty Nanny (Alt)','squirrelgirlgg','gotg72alt','four','avengers','','','fist','halt',3,0,0,0 ";
 
     private static final String DATABASE_POPULATETOA = "insert into tblCards "
             + "select 2307,1,1,166,'Dungeons & Dragons','ToA','Basic Action Card','Brazen Pegasus','basic','brazenpegasus','four','neutral','','','','gp',3,0,0,-1 "
@@ -2779,7 +2785,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 3580,28,3,11,'Marvel','XMFC','Professor X','No More, Magnus! (Alt)','professorxfc','xmfc102alt','five','xmen','','','mask','gp',3,0,0,-1 "
             + "union select 3581,564,1,3,'Marvel','XMFC','Jubilee','Mallrat (Alt)','jubilee','xmfc119alt','two','xmen','','','lightning','gp',3,0,0,-1 "
             + "union select 3582,563,1,2,'Marvel','XMFC','Jean Grey','Professor''s Protégé (Alt)','jeangrey','xmfc56alt','six','xmen','','','lightning','gp',3,0,0,-1 "
-            + "union select 3583,559,1,1,'Marvel','XMFC','Boom Boom','Time Bomb','boomboom','xmfc8alt','two','xmen','','','lightning','gp',3,0,0,0 ";
+            + "union select 3583,559,1,1,'Marvel','XMFC','Boom Boom','Time Bomb','boomboom','xmfc8alt','two','xmen','','','lightning','gp',3,0,0,0 "
+            + "union select 3590,567,1,2,'Marvel','XMFC','Nocturne','T.J.','nocturne','xmfc63alt','four','exiles','','','mask','halt',3,0,0,0 ";
 
     private static final String DATABASE_POPULATETMT = "insert into tblCards "
             + "select 2719,1,1,179,'Marvel','TMT','Basic Action Card','Archnemesis!','basic','archnemesisthor','four','','','','','as',3,0,0,0 "
@@ -3658,12 +3665,15 @@ private static final String DATABASE_POPULATETIW = "insert into tblCards "
             + "union select 3573,869,1,1,'WWE','TAG','Sting','Scorpion Deathlock','tagsting','tag21','three','nwo','','','ms','as',3,0,0,-1 "
             + "union select 3574,870,1,1,'WWE','TAG','Xavier Woods','Pancake Power','tagxavierwoods','tag22','four','newday','','','bm','as',3,0,0,-1 "
             + "union select 3575,870,1,1,'WWE','TAG','Xavier Woods','Time for Francesca!','tagxavierwoods','tag23','three','newday','','','bm','as',3,0,0,-1 "
-            + "union select 3576,870,1,1,'WWE','TAG','Xavier Woods','Unicorn Horn','tagxavierwoods','tag24','three','newday','','','bm','as',3,0,0,-1 ";
+            + "union select 3576,870,1,1,'WWE','TAG','Xavier Woods','Unicorn Horn','tagxavierwoods','tag24','three','newday','','','bm','as',3,0,0,-1 "
+            + "union select 3591,871,1,1,'','','Rigorous Training','Sidekick Card','sksides','rigoroustraining','','','','','','gp',3,0,0,-1 ";
 
     //next BAC 257
-//next card 3577
-//next char 871
+//next card 3592
+//next char 872
 
+//TODO: Currnently Rigorous Training is loaded with the WWE TAG set but has no set and only appears in searches.
+//+ "union select 3591,871,1,1,'','','Rigorous Training','Sidekick Card','sksides','rigoroustraining','','','','','','gp',3,0,0,-1 ";
 
 		
     private static final String DATABASE_BACKUP_CREATE = "create table if not exists tblBackup (CardSet text not null, CharName text not null, CardName text not null, NumOwned tinyint not null, DiceOwned tinyint not null, NumFoilsOwned tinyint not null)";
