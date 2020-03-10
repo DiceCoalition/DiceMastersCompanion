@@ -83,7 +83,7 @@ public class CardViewer extends Activity {
     }
 
     public void setImageView() {
-        //TODO: Can we download images as needed instead of including them in the initial download?
+
         ImageView imgView = (ImageView) findViewById(R.id.ivViewer);
         int cardimage = heroCards.get(childPosition);
         // if it will return 0, then the resource you are looking for does not exist
@@ -192,7 +192,17 @@ public class CardViewer extends Activity {
 
                 //Extract file name from URL
                 fileName = f_url[0].substring(f_url[0].lastIndexOf('/') + 1, f_url[0].length());
-
+                if(fileName.startsWith("Img.php")){
+                    int setStart = fileName.indexOf("set=");
+                    setStart += 4;
+                    int setEnd = fileName.indexOf("&", setStart);
+                    int numStart =  fileName.indexOf("cardnum=");
+                    numStart +=8;
+                    int numEnd = fileName.indexOf("&", numStart);
+                    String set = fileName.substring(setStart, setEnd);
+                    String num = fileName.substring(numStart, numEnd);
+                    fileName = set+num+".jpg";
+                }
                 File outputFile = new File(dmActivity.getFilesDir(), fileName);
                 if(!outputFile.exists())
                     outputFile.createNewFile();

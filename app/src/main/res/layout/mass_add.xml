@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
-    tools:ignore="HardcodedText">
+    tools:ignore="HardcodedText"
+    android:background="@drawable/background">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -43,7 +44,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -60,7 +62,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -77,7 +80,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -94,7 +98,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -111,7 +116,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -128,7 +134,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -145,7 +152,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -162,7 +170,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -180,7 +189,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -198,7 +208,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -215,7 +226,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -233,7 +245,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -251,7 +264,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -269,7 +283,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -287,7 +302,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -305,7 +321,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -323,7 +340,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -341,7 +359,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -359,7 +378,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -377,7 +397,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -395,7 +416,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -413,7 +435,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -431,7 +454,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -449,7 +473,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -467,7 +492,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -485,7 +511,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -503,7 +530,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -521,7 +549,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -539,7 +568,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -557,7 +587,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -575,7 +606,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -593,7 +625,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -611,7 +644,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -629,7 +663,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -647,7 +682,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -665,7 +701,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"
@@ -683,7 +720,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
-                android:gravity="center">
+                android:gravity="center" 
+                android:background="@color/grey">
 
                 <ToggleButton
                     android:layout_width="wrap_content"

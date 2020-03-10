@@ -25,8 +25,6 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //TODO: Likely need to move this.  think it is trying to access database before it's initionalize
-        //new FileDownload().execute("http://www.dicecoalition.com/cardservice/tzapp/dxm1.jpg");
         // Update this every version!!!!!
         AlertDialog.Builder closeAlert = new AlertDialog.Builder(
                 MainActivity.this);
@@ -36,7 +34,9 @@ public class MainActivity extends Activity {
                         + "\n" + "\n" +
                         "Fixed Ricochet promo"
                         + "\n" + "\n" +
-                        "Added Download Clear Tool"
+                        "Moved Download Tools to Data Management"
+                        + "\n" + "\n" +
+                        "Added Download Manager"
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",

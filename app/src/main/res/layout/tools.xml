@@ -41,19 +41,5 @@
         android:background="@drawable/custom_button"
         android:text="Data Management" />
 
-    <Button
-        android:id="@+id/btDownload"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:background="@drawable/custom_button"
-        android:text="Download All Images" />
 
-    <Button
-        android:id="@+id/btClearDownload"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:background="@drawable/custom_button"
-        android:text="Clear Downloaded Images" />
 </LinearLayout>

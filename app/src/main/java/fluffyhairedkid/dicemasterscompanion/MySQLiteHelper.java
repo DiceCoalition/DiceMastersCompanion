@@ -8,7 +8,7 @@ import android.util.Log;
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "tblCards.db";
-    private static final int DATABASE_VERSION = 124;
+    private static final int DATABASE_VERSION = 125;
 
     private static final String DATABASE_CREATE = "create table tblCards (_id integer not null, CharID integer not null, DieID integer not null, CardID integer not null, "
             + "Universe text not null, CardSet text not null, CharName text not null, CardName text not null, "
@@ -3542,9 +3542,9 @@ private static final String DATABASE_POPULATETIW = "insert into tblCards "
         + "union select 3456,834,1,1,'Dungeons & Dragons','ZHN','Human Warlock','Seeking Hidden Knowledge','zhnhumanwarlock','zhn10','four','good','emeraldenclave','','mask','as',3,0,0,-1 "
         + "union select 3457,834,1,1,'Dungeons & Dragons','ZHN','Human Warlock','Pact of the Tome','zhnhumanwarlock','zhn11','three','good','lordsalliance','','mask','as',3,0,0,-1 "
         + "union select 3458,834,1,1,'Dungeons & Dragons','ZHN','Human Warlock','Delver of Secrets','zhnhumanwarlock','zhn12','three','good','orderofthegauntlet','','mask','as',3,0,0,-1 "
-        + "union select 3459,835,1,1,'Dungeons & Dragons','ZHN','Istrid Horn','Debt Collector','zhnistridhord','zhn13','two','evil','zhentarim','','fist','as',3,0,0,-1 "
-        + "union select 3460,835,1,1,'Dungeons & Dragons','ZHN','Istrid Horn','Moneylender','zhnistridhord','zhn14','two','evil','zhentarim','','fist','as',3,0,0,-1 "
-        + "union select 3461,835,1,1,'Dungeons & Dragons','ZHN','Istrid Horn','Mind For Money','zhnistridhord','zhn15','two','evil','zhentarim','','fist','as',3,0,0,-1 "
+        + "union select 3459,835,1,1,'Dungeons & Dragons','ZHN','Istrid Horn','Debt Collector','zhnistridhorn','zhn13','two','evil','zhentarim','','fist','as',3,0,0,-1 "
+        + "union select 3460,835,1,1,'Dungeons & Dragons','ZHN','Istrid Horn','Moneylender','zhnistridhorn','zhn14','two','evil','zhentarim','','fist','as',3,0,0,-1 "
+        + "union select 3461,835,1,1,'Dungeons & Dragons','ZHN','Istrid Horn','Mind For Money','zhnistridhorn','zhn15','two','evil','zhentarim','','fist','as',3,0,0,-1 "
         + "union select 3462,836,1,1,'Dungeons & Dragons','ZHN','Manshoon','Extradimensional Mansion','zhnmanshoon','zhn16','three','evil','zhentarim','','lightning','as',3,0,0,-1 "
         + "union select 3463,836,1,1,'Dungeons & Dragons','ZHN','Manshoon','Clone Wizard','zhnmanshoon','zhn17','four','evil','zhentarim','','lightning','as',3,0,0,-1 "
         + "union select 3464,836,1,1,'Dungeons & Dragons','ZHN','Manshoon','Rekindling the Zhentarim','zhnmanshoon','zhn18','four','evil','zhentarim','','lightning','as',3,0,0,-1 "
