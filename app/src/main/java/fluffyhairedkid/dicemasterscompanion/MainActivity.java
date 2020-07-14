@@ -30,13 +30,9 @@ public class MainActivity extends Activity {
                 MainActivity.this);
         closeAlert.setTitle("Updates");
         closeAlert
-                .setMessage("Added X-men Animated Series promos"
+                .setMessage("Added Infinity Gauntlet set"
                         + "\n" + "\n" +
-                        "Fixed Ricochet promo"
-                        + "\n" + "\n" +
-                        "Moved Download Tools to Data Management"
-                        + "\n" + "\n" +
-                        "Added Download Manager"
+                        "Added Collection Stats"
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",

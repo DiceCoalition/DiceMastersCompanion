@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fluffyhairedkid.dicemasterscompanion"
     android:installLocation="auto"
-    android:versionCode="54"
-    android:versionName="1.13.7">
+    android:versionCode="55"
+    android:versionName="1.13.8">
 
     <uses-sdk />
 
@@ -102,6 +102,9 @@
         <activity
             android:name=".DownloadManager"
             android:label="@string/app_name"/>
+        <activity
+            android:name=".CollectionStats"
+            android:label="Transition Zone"/>
     </application>
 
 </manifest>

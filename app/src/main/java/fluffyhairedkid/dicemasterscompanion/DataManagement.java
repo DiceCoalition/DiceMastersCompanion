@@ -543,8 +543,10 @@ public class DataManagement extends Activity {
     }
 
     private void downloadImageFiles(){
-        String baseurl = "http://www.dicecoalition.com/cardservice/tzapp/";
+        //String baseurl = "http://www.dicecoalition.com/cardservice/tzapp/";
+        String baseurl = "http://www.dicecoalition.com/cardservice/Img.php?set=";
         Map<String, String> offlineCards = new HashMap<String, String>();
+        offlineCards.put("ig", "152");
         offlineCards.put("wwe", "58");
         offlineCards.put("bit", "24");
         offlineCards.put("tag", "24");
@@ -568,8 +570,10 @@ public class DataManagement extends Activity {
                     //String path = baseFileLoc + filename;
                     File f = new File(dmActivity.getFilesDir(), filename);
                     if (!f.exists()){
-                        String dl_url = baseurl + filename;
-                        files.add(dl_url);
+                        //String dl_url = baseurl + filename;
+                        //files.add(dl_url);
+                        String url2 = baseurl + key+"&cardnum="+i+"&res=l";
+                        files.add(url2);
                     }
                 }
             }

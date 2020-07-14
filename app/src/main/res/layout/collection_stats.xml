@@ -1,0 +1,160 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".CollectionStats">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transwhite" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvCardsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:textAlignment="center"
+                    android:text="Cards Owned"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/tvDmLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:textAlignment="center"
+                    android:text="All Cards"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/tvDmStats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="All"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvMarvelLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:textAlignment="center"
+                    android:text="Marvel Cards"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/tvMarvelStats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Marvel"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvDcLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:textAlignment="center"
+                    android:text="DC Cards"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/tvDCStats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="DC"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvDnDLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:textAlignment="center"
+                    android:text="Dungeons and Dragons Cards"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/tvDnDStats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="DnD"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvYuGiOhLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:textAlignment="center"
+                    android:text="YuGiOh Cards"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/tvYuGiOhStats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="YuGiOh"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvtmntLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:paddingTop="20dp"
+                    android:text="TMNT Cards"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/tvtmntStats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="TMNT"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvw40kLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:paddingTop="20dp"
+                    android:text="Warhammer 40K Cards"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/tvw40kStats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="w40k"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvwweLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:paddingTop="20dp"
+                    android:text="WWE Cards"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/tvwweStats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="wwe"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </ScrollView>
+</RelativeLayout>

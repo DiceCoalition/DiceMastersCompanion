@@ -41,5 +41,13 @@
         android:background="@drawable/custom_button"
         android:text="Data Management" />
 
+    <Button
+        android:id="@+id/btCollectionStats"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/custom_button"
+        android:text="Collection Stats" />
+
 
 </LinearLayout>

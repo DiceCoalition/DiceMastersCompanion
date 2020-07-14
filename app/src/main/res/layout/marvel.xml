@@ -178,6 +178,14 @@
                 android:text="Dark X-Men" />
 
             <Button
+                android:id="@+id/btIG"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_button"
+                android:text="Infinity Gauntlet" />
+
+            <Button
                 android:id="@+id/btPromosMarvel"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"

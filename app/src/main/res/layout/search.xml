@@ -412,7 +412,6 @@
                     android:layout_height="wrap_content"
                     android:text="SW" />
 
-
             </LinearLayout>
 
             <LinearLayout
@@ -515,9 +514,20 @@
                     android:layout_height="wrap_content"
                     android:text="TAG" />
 
-
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb142"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IG" />
+
+            </LinearLayout>
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
@@ -843,6 +853,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/hellfire" />
+
+                <CheckBox
+                    android:id="@+id/cb143"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/infinitywatch" />
+
+                 <CheckBox
+                    android:id="@+id/cb144"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/blackorder" />
+
+                <CheckBox
+                    android:id="@+id/cb145"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/thehand" />
 
             </LinearLayout>
 

@@ -54,6 +54,7 @@ public class Tools extends Activity {
         Button lifeCounter = (Button) findViewById(R.id.btLifeCounter);
         Button bulkAdd = (Button) findViewById(R.id.btBulkAdd);
         Button dataManagement = (Button) findViewById(R.id.btDataManagement);
+        Button collStats = (Button) findViewById(R.id.btCollectionStats);
 
 
         teamBuilder.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +72,16 @@ public class Tools extends Activity {
             public void onClick(View v) {
 
                 startActivity(new Intent(Tools.this, LifeCounter.class));
+
+            }
+        });
+
+        collStats.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(Tools.this, CollectionStats.class));
 
             }
         });

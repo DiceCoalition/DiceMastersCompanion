@@ -79,6 +79,7 @@ public class Search extends Activity {
         final CheckBox setWWE = (CheckBox) findViewById(R.id.cb135);
         final CheckBox setBIT = (CheckBox) findViewById(R.id.cb136);
         final CheckBox setTAG = (CheckBox) findViewById(R.id.cb137);
+        final CheckBox setIG = (CheckBox) findViewById(R.id.cb142);
         final CheckBox costOne = (CheckBox) findViewById(R.id.cb1);
         final CheckBox costTwo = (CheckBox) findViewById(R.id.cb2);
         final CheckBox costThree = (CheckBox) findViewById(R.id.cb3);
@@ -169,7 +170,9 @@ public class Search extends Activity {
         final CheckBox newday = (CheckBox) findViewById(R.id.cb139);
         final CheckBox nwo = (CheckBox) findViewById(R.id.cb140);
         final CheckBox theshield = (CheckBox) findViewById(R.id.cb141);
-
+        final CheckBox infinitywatch = (CheckBox) findViewById(R.id.cb143);
+        final CheckBox blackorder = (CheckBox) findViewById(R.id.cb144);
+        final CheckBox thehand= (CheckBox) findViewById(R.id.cb145);
         final EditText editSearch = (EditText) findViewById(R.id.etSearchText);
 
         Button search = (Button) findViewById(R.id.btSearch);
@@ -638,6 +641,13 @@ public class Search extends Activity {
                                                   setCriteria = setCriteria + "'TAG'";
                                               } else {
                                                   setCriteria = setCriteria + ",'TAG'";
+                                              }
+                                          }
+                                          if (setIG.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'IG'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'IG'";
                                               }
                                           }
                                           if (!"".equals(setCriteria)) {
@@ -1246,7 +1256,27 @@ public class Search extends Activity {
                                                   affilCriteria = affilCriteria + ",'theshield'";
                                               }
                                           }
-
+                                          if (infinitywatch.isChecked()) {
+                                              if (affilCriteria.equals("")) {
+                                                  affilCriteria = affilCriteria + "'infinitywatch'";
+                                              } else {
+                                                  affilCriteria = affilCriteria + ",'infinitywatch'";
+                                              }
+                                          }
+                                          if (blackorder.isChecked()) {
+                                              if (affilCriteria.equals("")) {
+                                                  affilCriteria = affilCriteria + "'blackorder'";
+                                              } else {
+                                                  affilCriteria = affilCriteria + ",'blackorder'";
+                                              }
+                                          }
+                                          if (thehand.isChecked()) {
+                                              if (affilCriteria.equals("")) {
+                                                  affilCriteria = affilCriteria + "'thehand'";
+                                              } else {
+                                                  affilCriteria = affilCriteria + ",'thehand'";
+                                              }
+                                          }
                                           if (noaffil.isChecked())
 
                                           {

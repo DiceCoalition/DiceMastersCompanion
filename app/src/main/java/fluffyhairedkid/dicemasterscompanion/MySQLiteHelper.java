@@ -8,7 +8,7 @@ import android.util.Log;
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "tblCards.db";
-    private static final int DATABASE_VERSION = 125;
+    private static final int DATABASE_VERSION = 126;
 
     private static final String DATABASE_CREATE = "create table tblCards (_id integer not null, CharID integer not null, DieID integer not null, CardID integer not null, "
             + "Universe text not null, CardSet text not null, CharName text not null, CardName text not null, "
@@ -1101,7 +1101,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 1039,10,2,4,'Marvel','ASM','Doctor Octopus','8 Dangers','doctoroctopusspider','eightdangers','seven','sinistersix','hydra','','shield','cu',0,0,0,-1 "
             + "union select 1040,10,2,5,'Marvel','ASM','Doctor Octopus','Otto','doctoroctopusspider','otto','seven','sinistersix','hydra','','shield','dr',0,0,0,-1 "
             + "union select 1041,268,1,1,'Marvel','ASM','Drax','Pained','drax','pained','three','guardians','','','shield','as',0,0,0,-1 "
-            + "union select 1042,268,1,2,'Marvel','ASM','Drax','Infinity Watch','drax','infinitywatch','four','guardians','','','shield','bc',0,0,0,-1 "
+            + "union select 1042,268,1,2,'Marvel','ASM','Drax','Infinity Watch','drax','asm46','four','guardians','','','shield','bc',0,0,0,-1 "
             + "union select 1043,192,2,3,'Marvel','ASM','Electro','Sinister','electro','sinisterelectro','five','sinistersix','hydra','','lightning','bc',0,0,0,-1 "
             + "union select 1044,269,1,1,'Marvel','ASM','Firestar','New Warrior','firestar','newwarrior','four','spiderfriends','','','lightning','cu',0,0,0,-1 "
             + "union select 1045,13,2,4,'Marvel','ASM','Ghost Rider','Alejandra','ghostriderspider','alejandra','four','spiderfriends','','','lightning','as',0,0,0,-1 "
@@ -1883,8 +1883,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2102,434,1,4,'DC Comics','GATF','Roy Harper','Adolescent Archer','royharper','adolescentarcher','five','greenarroworg','','','fist','gp',4,0,0,-1 "
             + "union select 2859,411,1,4,'DC Comics','GATF','Rip Hunter''s Chalkboard','''''Only Zatara Can Reach The POINT'''' (Alt)','riphunterschalkboard','onlyzataracanreachthepointa','four','','','','ms','halt',3,0,0,0 "
             + "union select 2860,163,2,10,'DC Comics','GATF','Green Arrow','Robin Hood (Blank)','greenarrowga','robinhoodblank','five','greenarroworg','','','ms','halt',3,0,0,-1 "
-            + "union select 3588,412,1,3,'DC Comics','GATF','Clayface','The Clayface of Tragedy','clayface','gatf48alt','six','villain','','','mask','halt',0,0,0,0 "
-            + "union select 3589,426,1,2,'DC Comics','GATF','Gorilla Grodd','Force of Mind','gorillagrodd','gatf58alt','seven','legion','villain','','fist','halt',0,0,0,0 ";
+            + "union select 3588,412,1,3,'DC Comics','GATF','Clayface','The Clayface of Tragedy (Alt)','clayface','gatf48alt','six','villain','','','mask','halt',0,0,0,0 "
+            + "union select 3589,426,1,2,'DC Comics','GATF','Gorilla Grodd','Force of Mind (Alt)','gorillagrodd','gatf58alt','seven','legion','villain','','fist','halt',0,0,0,0 ";
 //removed items
 /*
 + "union select 2296,434,1,5,'DC Comics','GATF','Roy Harper','Don''t Call Me Speedy (Alt)','royharper','nopic','four','greenarroworg','','','fist','halt',3,0,0,-1 "
@@ -2052,7 +2052,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 3100,726,1,1,'Marvel','DP','Medusa','Devoted Wife','medusa','medusadwife','four','inhumans','','','mask','gp',0,0,0,-1 "
             + "union select 3585,469,1,3,'Marvel','DP','Multiple Man','Pile On! (Alt)','multipleman','dp119alt','two','xmen','','','mask','halt',0,0,0,0 "
             + "union select 3586,454,1,3,'Marvel','DP','Elektra','Way of the Stick (Alt)','elektra','dp92alt','two','thunderbolts','','','mask','halt',0,0,0,0 "
-            + "union select 3587,464,1,2,'Marvel','DP','M.O.D.O.K.','Most Powerful Brain Alive (Alt)','modok','dp23alt','four','hydra','','','shield','halt',0,0,0,0 ";
+            + "union select 3587,464,1,2,'Marvel','DP','M.O.D.O.K.','Most Powerful Brain Alive (Alt)','modok','dp23alt','four','hydra','','','shield','halt',0,0,0,0 "
+            + "union select 3744,8,2,4,'Marvel','DP','Deadpool','My Set. My Rules. (Blank)','deadpooldp','dp10s','five','deadpoolorg','','','fist','gp',0,0,0,-1 ";
 
 
     private static final String DATABASE_POPULATEHHS = "insert into tblCards "
@@ -2309,7 +2310,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2302,360,2,7,'DC Comics','BM','The Riddler','If You''re So Smart, Why Aren''t You Rich?','theriddler','ifyouresosmartwhyarentyouri','four','villain','','','lightning','gp',3,0,0,-1 "
             + "union select 2303,181,3,11,'DC Comics','BM','The Joker','The Laughing Fish','thejoker','thelaughingfish','four','villain','batmanorg','','shield','gp',3,0,0,-1 "
             + "union select 2304,513,1,4,'DC Comics','BM','Talia al Ghul','Off-Balance','taliaalghul','offbalance','four','villain','batmanorg','','shield','gp',3,0,0,-1 "
-            + "union select 2305,155,3,11,'DC Comics','BM','Catwoman','The Cat and The Claw','catwomanbm','thecatandtheclaw','three','batmanorg','villain','','mask','gp',3,0,0,-1 ";
+            + "union select 2305,155,3,11,'DC Comics','BM','Catwoman','The Cat and The Claw','catwomanbm','thecatandtheclaw','three','batmanorg','villain','','mask','gp',3,0,0,-1 "
+            + "union select 3745,335,3,10,'DC Comics','BM','Batgirl','Carrying the Mantle (Blank)','batgirlbm','bat5s','two','batmanorg','','','fist','gp',3,0,0,-1 ";
 
     private static final String DATABASE_POPULATESWW = "insert into tblCards "
             + "select 2255,1,1,154,'DC Comics','SWW','Basic Action Card','Dimension Door','basic','dimensiondoorbm','four','','','','','as',3,0,0,-1 "
@@ -2375,7 +2377,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 2330,36,4,9,'Marvel','SMMC','Venom','Lethal Protector','venommc','lethalprotector','four','spiderfriends','','','mask','as',3,0,0,-1 "
             + "union select 2331,36,4,10,'Marvel','SMMC','Venom','My Other','venommc','myother','four','villain','','','mask','as',3,0,0,-1 "
             + "union select 3236,262,2,6,'Marvel','SMMC','Black Cat','Thief','blackcatmc','m2019_4','three','spiderfriends','','','shield','gp',3,0,0,-1 "
-            + "union select 3362,32,5,17,'Marvel','SMMC','Spider-Man','Sneaky Pete','spidermanmc','m2019_3','four','spiderfriends','','','fist','gp',3,0,0,-1 ";
+            + "union select 3362,32,5,17,'Marvel','SMMC','Spider-Man','Sneaky Pete','spidermanmc','m2019_3','four','spiderfriends','','','fist','gp',3,0,0,-1 "
+            + "union select 3746,526,1,1,'Marvel','SMMC','Shriek','Dark Empathy (Alt)','shriek','smc17a','four','villain','','','lightning','gp',3,0,0,-1 ";
 
     private static final String DATABASE_POPULATEGOTG = "insert into tblCards "
             + "select 2332,527,1,1,'Marvel','GotG','Adam Warlock','Standing Watch Over Infinity','adamwarlock','standingwatchoverinfinity','five','guardians','','','mask','cu',3,0,0,0 "
@@ -2785,8 +2788,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 3580,28,3,11,'Marvel','XMFC','Professor X','No More, Magnus! (Alt)','professorxfc','xmfc102alt','five','xmen','','','mask','gp',3,0,0,-1 "
             + "union select 3581,564,1,3,'Marvel','XMFC','Jubilee','Mallrat (Alt)','jubilee','xmfc119alt','two','xmen','','','lightning','gp',3,0,0,-1 "
             + "union select 3582,563,1,2,'Marvel','XMFC','Jean Grey','Professor''s Protégé (Alt)','jeangrey','xmfc56alt','six','xmen','','','lightning','gp',3,0,0,-1 "
-            + "union select 3583,559,1,1,'Marvel','XMFC','Boom Boom','Time Bomb','boomboom','xmfc8alt','two','xmen','','','lightning','gp',3,0,0,0 "
-            + "union select 3590,567,1,2,'Marvel','XMFC','Nocturne','T.J.','nocturne','xmfc63alt','four','exiles','','','mask','halt',3,0,0,0 ";
+            + "union select 3583,559,1,1,'Marvel','XMFC','Boom Boom','Time Bomb (Alt)','boomboom','xmfc8alt','two','xmen','','','lightning','gp',3,0,0,0 "
+            + "union select 3590,567,1,2,'Marvel','XMFC','Nocturne','T.J. (Alt)','nocturne','xmfc63alt','four','exiles','','','mask','halt',3,0,0,0 ";
 
     private static final String DATABASE_POPULATETMT = "insert into tblCards "
             + "select 2719,1,1,179,'Marvel','TMT','Basic Action Card','Archnemesis!','basic','archnemesisthor','four','','','','','as',3,0,0,0 "
@@ -3476,9 +3479,9 @@ private static final String DATABASE_POPULATETIW = "insert into tblCards "
         + "union select 3394,816,1,1,'Dungeons & Dragons','TIW','Nihiloor','Mind Flayer','tiwnihiloor','tiw31','five','evil','monster','','mask','as',3,0,0,-1 "
         + "union select 3395,816,1,1,'Dungeons & Dragons','TIW','Nihiloor','Plotting','tiwnihiloor','tiw32','six','evil','monster','','mask','as',3,0,0,-1 "
         + "union select 3396,816,1,1,'Dungeons & Dragons','TIW','Nihiloor','Patient Aberration','tiwnihiloor','tiw33','six','evil','monster','','mask','as',3,0,0,-1 "
-        + "union select 3397,817,1,1,'Dungeons & Dragons','TIW','Sylgar','Favored Fish','tiwfavoredfish','tiw34','one','neutral','monster','','shield','as',3,0,0,-1 "
-        + "union select 3398,817,1,1,'Dungeons & Dragons','TIW','Sylgar','Innocent Fish','tiwfavoredfish','tiw35','one','neutral','monster','','shield','as',3,0,0,-1 "
-        + "union select 3399,817,1,1,'Dungeons & Dragons','TIW','Sylgar','Small Bowl','tiwfavoredfish','tiw36','two','neutral','monster','','shield','as',3,0,0,-1 "
+        + "union select 3397,817,1,1,'Dungeons & Dragons','TIW','Sylgar','Favored Fish','tiwsylgar','tiw34','one','neutral','monster','','shield','as',3,0,0,-1 "
+        + "union select 3398,817,1,1,'Dungeons & Dragons','TIW','Sylgar','Innocent Fish','tiwsylgar','tiw35','one','neutral','monster','','shield','as',3,0,0,-1 "
+        + "union select 3399,817,1,1,'Dungeons & Dragons','TIW','Sylgar','Small Bowl','tiwsylgar','tiw36','two','neutral','monster','','shield','as',3,0,0,-1 "
         + "union select 3400,818,1,1,'Dungeons & Dragons','TIW','The God Catcher','Mighty Construct','tiwthegodcatcher','tiw37','two','neutral','','','lightning','as',3,0,0,-1 "
         + "union select 3401,818,1,1,'Dungeons & Dragons','TIW','The God Catcher','Famous Walking Statue','tiwthegodcatcher','tiw38','three','neutral','','','lightning','as',3,0,0,-1 "
         + "union select 3402,819,1,1,'Dungeons & Dragons','TIW','The Great Drunkard','Gargantuan Construct','tiwthegreatdrunkard','tiw39','four','neutral','','','fist','as',3,0,0,-1 "
@@ -3668,10 +3671,165 @@ private static final String DATABASE_POPULATETIW = "insert into tblCards "
             + "union select 3576,870,1,1,'WWE','TAG','Xavier Woods','Unicorn Horn','tagxavierwoods','tag24','three','newday','','','bm','as',3,0,0,-1 "
             + "union select 3591,871,1,1,'','','Rigorous Training','Sidekick Card','sksides','rigoroustraining','','','','','','gp',3,0,0,-1 ";
 
-    //next BAC 257
-//next card 3592
-//next char 872
+    private static final String DATABASE_POPULATEIG = "insert into tblCards "
+            + "select 3592,1,1,257,'Marvel','IG','Basic Action Card','Anger Issues','basic','ig1','four','','','','','bc',3,0,0,0 "
+            + "union select 3593,1,1,258,'Marvel','IG','Basic Action Card','Besmirch','basic','ig2','four','','','','','bc',3,0,0,0 "
+            + "union select 3594,1,1,259,'Marvel','IG','Basic Action Card','Big Entrance','basic','ig3','three','','','','','bc',3,0,0,0 "
+            + "union select 3595,1,1,260,'Marvel','IG','Basic Action Card','Counterstrike','basic','ig4','two','','','','','bc',3,0,0,0 "
+            + "union select 3596,1,1,261,'Marvel','IG','Basic Action Card','Focus','basic','ig5','three','','','','','bc',3,0,0,0 "
+            + "union select 3597,1,1,262,'Marvel','IG','Basic Action Card','Inspiring','basic','ig6','four','','','','','bc',3,0,0,0 "
+            + "union select 3598,1,1,263,'Marvel','IG','Basic Action Card','Investigation','basic','ig7','three','','','','','bc',3,0,0,0 "
+            + "union select 3599,1,1,264,'Marvel','IG','Basic Action Card','Nefarious Broadcast','basic','ig8','two','','','','','bc',3,0,0,0 "
+            + "union select 3600,1,1,265,'Marvel','IG','Basic Action Card','Pizza','basic','ig9','one','','','','','bc',3,0,0,0 "
+            + "union select 3601,1,1,266,'Marvel','IG','Basic Action Card','Poker Night','basic','ig10','three','','','','','bc',3,0,0,0 "
+            + "union select 3602,1,1,267,'Marvel','IG','Basic Action Card','Power Surge','basic','ig11','four','','','','','bc',3,0,0,0 "
+            + "union select 3603,1,1,268,'Marvel','IG','Basic Action Card','Rally!','basic','ig12','three','','','','','bc',3,0,0,0 "
+            + "union select 3604,1,1,269,'Marvel','IG','Basic Action Card','Retribution','basic','ig13','two','','','','','bc',3,0,0,0 "
+            + "union select 3605,1,1,270,'Marvel','IG','Basic Action Card','Surprise Attack','basic','ig14','two','','','','','bc',3,0,0,0 "
+            + "union select 3606,1,1,271,'Marvel','IG','Basic Action Card','True Believer','basic','ig15','two','','','','','bc',3,0,0,0 "
+            + "union select 3607,1,1,272,'Marvel','IG','Basic Action Card','Villainous Pact','basic','ig16','four','','','','','bc',3,0,0,0 "
+            + "union select 3608,872,1,1,'Marvel','IG','Adam Warlock','Golden Gladiator','igadamwarlock','ig17','five','infinitywatch','','','mask','bc',3,0,0,0 "
+            + "union select 3609,872,1,1,'Marvel','IG','Adam Warlock','Hero of Counter Earth','igadamwarlock','ig57','four','infinitywatch','','','mask','cu',3,0,0,0 "
+            + "union select 3610,872,1,1,'Marvel','IG','Adam Warlock','Soul Gem','igadamwarlock','ig97','five','infinitywatch','','','mask','dr',3,0,0,0 "
+            + "union select 3611,872,1,1,'Marvel','IG','Adam Warlock','Leader of the Infinity Watch','igadamwarlock','ig137','six','infinitywatch','','','mask','esr',3,0,0,0 "
+            + "union select 3612,873,1,1,'Marvel','IG','Angela','Demon Hunter','igangela','ig18','four','guardians','','','lightning','bc',3,0,0,0 "
+            + "union select 3613,873,1,1,'Marvel','IG','Angela','Odinsdottir','igangela','ig58','four','guardians','','','lightning','cu',3,0,0,0 "
+            + "union select 3614,873,1,1,'Marvel','IG','Angela','Asgardian of the Galaxy','igangela','ig98','four','guardians','','','lightning','dr',3,0,0,0 "
+            + "union select 3615,874,1,1,'Marvel','IG','Black Dwarf','Powerhouse','igblackdwarf','ig19','five','blackorder','','','fist','bc',3,0,0,0 "
+            + "union select 3616,874,1,1,'Marvel','IG','Black Dwarf','The Black Order','igblackdwarf','ig59','five','blackorder','','','fist','cu',3,0,0,0 "
+            + "union select 3617,874,1,1,'Marvel','IG','Black Dwarf','Giant Axe','igblackdwarf','ig99','five','blackorder','','','fist','dr',3,0,0,0 "
+            + "union select 3618,875,1,1,'Marvel','IG','Black Panther','Stealthy Adversary','igblackpanther','ig20','five','avengers','','','fist','bc',3,0,0,0 "
+            + "union select 3619,875,1,1,'Marvel','IG','Black Panther','Cunning Strategist','igblackpanther','ig60','five','avengers','','','fist','cu',3,0,0,0 "
+            + "union select 3620,875,1,1,'Marvel','IG','Black Panther','Might of Wakanda','igblackpanther','ig100','five','avengers','','','fist','dr',3,0,0,0 "
+            + "union select 3621,876,1,1,'Marvel','IG','Black Swan','The Cabal','igblackswan','ig21','four','blackorder','','','lightning','bc',3,0,0,0 "
+            + "union select 3622,876,1,1,'Marvel','IG','Black Swan','Our Lady of the Apocalypse','igblackswan','ig61','five','blackorder','','','lightning','cu',3,0,0,0 "
+            + "union select 3623,876,1,1,'Marvel','IG','Black Swan','Yabbat Ummon Turru','igblackswan','ig101','five','blackorder','','','lightning','dr',3,0,0,0 "
+            + "union select 3624,877,1,1,'Marvel','IG','Black Widow','Space Gem','igblackwidow','ig22','two','avengers','','','mask','bc',3,0,0,0 "
+            + "union select 3625,877,1,1,'Marvel','IG','Black Widow','Running in the Shadows','igblackwidow','ig62','three','infinitywatch','','','mask','cu',3,0,0,0 "
+            + "union select 3626,877,1,1,'Marvel','IG','Black Widow','Widow''s Hunt','igblackwidow','ig102','two','infinitywatch','','','mask','dr',3,0,0,0 "
+            + "union select 3627,877,1,1,'Marvel','IG','Black Widow','Intelligence Assets','igblackwidow','ig138','four','infinitywatch','','','mask','esr',3,0,0,0 "
+            + "union select 3628,878,1,1,'Marvel','IG','Bullseye','Imposter Hawkeye','igbullseye','ig23','five','villain','','','lightning','bc',3,0,0,0 "
+            + "union select 3629,878,1,1,'Marvel','IG','Bullseye','Lester','igbullseye','ig63','four','villain','','','lightning','cu',3,0,0,0 "
+            + "union select 3630,878,1,1,'Marvel','IG','Bullseye','Efficiency','igbullseye','ig103','four','villain','','','lightning','dr',3,0,0,0 "
+            + "union select 3631,878,1,1,'Marvel','IG','Bullseye','Accuracy','igbullseye','ig139','five','villain','','','lightning','esr',3,0,0,0 "
+            + "union select 3632,879,1,1,'Marvel','IG','Captain Marvel','Captain Whiz','igcaptainmarvel','ig24','five','avengers','','','shield','bc',3,0,0,0 "
+            + "union select 3633,879,1,1,'Marvel','IG','Captain Marvel','Maj. Carol Danvers','igcaptainmarvel','ig64','five','avengers','','','shield','cu',3,0,0,0 "
+            + "union select 3634,879,1,1,'Marvel','IG','Captain Marvel','Inspirational Avenger','igcaptainmarvel','ig104','six','avengers','','','shield','dr',3,0,0,0 "
+            + "union select 3635,879,1,1,'Marvel','IG','Captain Marvel','Reality Gem','igcaptainmarvel','ig140','seven','avengers','','','shield','esr',3,0,0,0 "
+            + "union select 3636,880,1,1,'Marvel','IG','Corvus Glaive','Madness','igcorvusglaive','ig25','two','blackorder','','','fist','bc',3,0,0,0 "
+            + "union select 3637,880,1,1,'Marvel','IG','Corvus Glaive','Wanton Violence','igcorvusglaive','ig65','three','blackorder','','','fist','cu',3,0,0,0 "
+            + "union select 3638,880,1,1,'Marvel','IG','Corvus Glaive','GrimLieutenant','igcorvusglaive','ig105','three','blackorder','','','fist','dr',3,0,0,0 "
+            + "union select 3639,881,1,1,'Marvel','IG','Doctor Strange','Time Gem','igdoctorstrange','ig26','four','infinitywatch','','','mask','bc',3,0,0,0 "
+            + "union select 3640,881,1,1,'Marvel','IG','Doctor Strange','Worthy Sorcerer','igdoctorstrange','ig66','six','infinitywatch','','','mask','cu',3,0,0,0 "
+            + "union select 3641,881,1,1,'Marvel','IG','Doctor Strange','Celebrated Neurosurgeon','igdoctorstrange','ig106','six','infinitywatch','','','mask','dr',3,0,0,0 "
+            + "union select 3642,881,1,1,'Marvel','IG','Doctor Strange','Trusting in Destiny','igdoctorstrange','ig141','six','infinitywatch','','','mask','esr',3,0,0,0 "
+            + "union select 3643,882,1,1,'Marvel','IG','Drax','The Warrior','igdrax','ig27','two','infinitywatch','','','shield','bc',3,0,0,0 "
+            + "union select 3644,882,1,1,'Marvel','IG','Drax','The Meditator','igdrax','ig67','four','infinitywatch','','','shield','cu',3,0,0,0 "
+            + "union select 3645,882,1,1,'Marvel','IG','Drax','The Pacifist','igdrax','ig107','three','infinitywatch','','','shield','dr',3,0,0,0 "
+            + "union select 3646,883,1,1,'Marvel','IG','Ebony Maw','Gleeful Killer','igebonymaw','ig28','four','blackorder','','','mask','bc',3,0,0,0 "
+            + "union select 3647,883,1,1,'Marvel','IG','Ebony Maw','Twisted Brilliance','igebonymaw','ig68','four','blackorder','','','mask','cu',3,0,0,0 "
+            + "union select 3648,883,1,1,'Marvel','IG','Ebony Maw','Supernatural Persuasion','igebonymaw','ig108','five','blackorder','','','mask','dr',3,0,0,0 "
+            + "union select 3649,884,1,1,'Marvel','IG','Gamora','Genius Trainer','iggamora','ig29','four','guardians','','','fist','bc',3,0,0,0 "
+            + "union select 3650,884,1,1,'Marvel','IG','Gamora','Adventurer','iggamora','ig69','three','guardians','','','fist','cu',3,0,0,0 "
+            + "union select 3651,884,1,1,'Marvel','IG','Gamora','Angela''s Ally','iggamora','ig109','four','guardians','','','fist','dr',3,0,0,0 "
+            + "union select 3652,884,1,1,'Marvel','IG','Gamora','Requiem','iggamora','ig142','five','guardians','','','fist','esr',3,0,0,0 "
+            + "union select 3653,885,1,1,'Marvel','IG','Ghost Rider','Hellfire','igghostrider','ig30','three','','','','lightning','bc',3,0,0,0 "
+            + "union select 3654,885,1,1,'Marvel','IG','Ghost Rider','Brimstone','igghostrider','ig70','three','','','','lightning','cu',3,0,0,0 "
+            + "union select 3655,885,1,1,'Marvel','IG','Ghost Rider','Pyrokinesis','igghostrider','ig110','four','','','','lightning','dr',3,0,0,0 "
+            + "union select 3656,886,1,1,'Marvel','IG','Groot','Highly Intelligent','iggroot','ig31','four','guardians','','','shield','bc',3,0,0,0 "
+            + "union select 3657,886,1,1,'Marvel','IG','Groot','Quasi-Dimensional Super-Positional Engineer','iggroot','ig71','four','guardians','','','shield','cu',3,0,0,0 "
+            + "union select 3658,886,1,1,'Marvel','IG','Groot','Jolly Protector','iggroot','ig111','five','guardians','','','shield','dr',3,0,0,0 "
+            + "union select 3659,887,1,1,'Marvel','IG','Hela','Asgardian','ighela','ig32','six','villain','','','mask','bc',3,0,0,0 "
+            + "union select 3660,887,1,1,'Marvel','IG','Hela','Vengeful','ighela','ig72','six','villain','','','mask','cu',3,0,0,0 "
+            + "union select 3661,887,1,1,'Marvel','IG','Hela','Death','ighela','ig112','six','villain','','','mask','dr',3,0,0,0 "
+            + "union select 3662,888,1,1,'Marvel','IG','Hulk','Immortal','ighulk','ig33','five','avengers','','','fist','bc',3,0,0,0 "
+            + "union select 3663,888,1,1,'Marvel','IG','Hulk','Professor','ighulk','ig73','six','avengers','','','fist','cy',3,0,0,0 "
+            + "union select 3664,888,1,1,'Marvel','IG','Hulk','Hunter Green','ighulk','ig113','five','avengers','','','fist','dr',3,0,0,0 "
+            + "union select 3665,888,1,1,'Marvel','IG','Hulk','Unchecked Anger','ighulk','ig143','six','avengers','','','fist','esr',3,0,0,0 "
+            + "union select 3666,889,1,1,'Marvel','IG','Iron Lad','Fractured Time Stream','igironlad','ig34','four','avengers','','','lightning','bc',3,0,0,0 "
+            + "union select 3667,889,1,1,'Marvel','IG','Iron Lad','Becoming Kang','igironlad','ig74','four','avengers','','','lightning','cu',3,0,0,0 "
+            + "union select 3668,889,1,1,'Marvel','IG','Iron Lad','Slaying Kang','igironlad','ig114','four','avengers','','','lightning','dr',3,0,0,0 "
+            + "union select 3669,890,1,1,'Marvel','IG','Iron Man','Ordinary PhDs','igironman','ig35','four','avengers','','','shield','bc',3,0,0,0 "
+            + "union select 3670,890,1,1,'Marvel','IG','Iron Man','Multi-Billionaire','igironman','ig75','four','avengers','','','shield','cu',3,0,0,0 "
+            + "union select 3671,890,1,1,'Marvel','IG','Iron Man','Smart Guy on Earth','igironman','ig115','four','guardians','','','shield','dr',3,0,0,0 "
+            + "union select 3672,890,1,1,'Marvel','IG','Iron Man','Humble','igironman','ig144','five','avengers','','','shield','esr',3,0,0,0 "
+            + "union select 3673,891,1,1,'Marvel','IG','Kang','Council of Kangs','igkang','ig36','three','villain','','','mask','bc',3,0,0,0 "
+            + "union select 3674,891,1,1,'Marvel','IG','Kang','Time Duplicates','igkang','ig76','four','villain','','','mask','cu',3,0,0,0 "
+            + "union select 3675,891,1,1,'Marvel','IG','Kang','Peerless General','igkang','ig116','five','villain','','','mask','dr',3,0,0,0 "
+            + "union select 3676,892,1,1,'Marvel','IG','Loki','Powerful Magic','igloki','ig37','five','villain','','','lightning','bc',3,0,0,0 "
+            + "union select 3677,892,1,1,'Marvel','IG','Loki','Illusions Abound','igloki','ig77','five','villain','','','lightning','cu',3,0,0,0 "
+            + "union select 3678,892,1,1,'Marvel','IG','Loki','Preventative Measures','igloki','ig117','six','villain','','','lightning','dr',3,0,0,0 "
+            + "union select 3679,892,1,1,'Marvel','IG','Loki','Hero','igloki','ig145','six','','','','lightning','esr',3,0,0,0 "
+            + "union select 3680,893,1,1,'Marvel','IG','Moon Knight','Stronger than 10 Men','igmoonknight','ig38','four','','','','mask','bc',3,0,0,0 "
+            + "union select 3681,893,1,1,'Marvel','IG','Moon Knight','Imagining Help','igmoonknight','ig78','four','','','','mask','cu',3,0,0,0 "
+            + "union select 3682,893,1,1,'Marvel','IG','Moon Knight','One-Man Avenger','igmoonknight','ig118','five','','','','mask','dr',3,0,0,0 "
+            + "union select 3683,894,1,1,'Marvel','IG','Ms. Marvel','NJ Native','igmsmarvel','ig39','three','avengers','','','shield','bc',3,0,0,0 "
+            + "union select 3684,894,1,1,'Marvel','IG','Ms. Marvel','Inhuman Lineage','igmsmarvel','ig79','five','avengers','','','shield','cu',3,0,0,0 "
+            + "union select 3685,894,1,1,'Marvel','IG','Ms. Marvel','Standing Against Hate','igmsmarvel','ig119','five','avengers','','','shield','dr',3,0,0,0 "
+            + "union select 3686,894,1,1,'Marvel','IG','Ms. Marvel','Leader of the Champions','igmsmarvel','ig146','five','avengers','','','shield','esr',3,0,0,0 "
+            + "union select 3687,895,1,1,'Marvel','IG','Nebula','Sister to Gamora','ignebula','ig40','four','guardians','','','mask','bc',3,0,0,0 "
+            + "union select 3688,895,1,1,'Marvel','IG','Nebula','Cold-Blooded','ignebula','ig80','four','guardians','','','mask','cu',3,0,0,0 "
+            + "union select 3689,895,1,1,'Marvel','IG','Nebula','Space Pirate','ignebula','ig120','five','guardians','','','mask','dr',3,0,0,0 "
+            + "union select 3690,896,1,1,'Marvel','IG','Pip the Troll','In Search of Warlock','igpipthetroll','ig41','two','infinitywatch','','','shield','bc',3,0,0,0 "
+            + "union select 3691,896,1,1,'Marvel','IG','Pip the Troll','Prince Gofern','igpipthetroll','ig81','four','infinitywatch','','','shield','cu',3,0,0,0 "
+            + "union select 3691,896,1,1,'Marvel','IG','Pip the Troll','Contagious Debauchery','igpipthetroll','ig121','five','infinitywatch','','','shield','dr',3,0,0,0 "
+            + "union select 3693,897,1,1,'Marvel','IG','Proxima Midnight','The Black Order','igproximamidnight','ig42','three','blackorder','','','shield','bc',3,0,0,0 "
+            + "union select 3694,897,1,1,'Marvel','IG','Proxima Midnight','Tip of the Spear','igproximamidnight','ig82','four','blackorder','','','shield','cu',3,0,0,0 "
+            + "union select 3695,897,1,1,'Marvel','IG','Proxima Midnight','Killer for Hire','igproximamidnight','ig122','six','blackorder','','','shield','dr',3,0,0,0 "
+            + "union select 3696,898,1,1,'Marvel','IG','Rocket Raccoon','I''m the Baddest!','igrocketraccoon','ig43','three','guardians','','','lightning','bc',3,0,0,0 "
+            + "union select 3697,898,1,1,'Marvel','IG','Rocket Raccoon','Make Like a Tree','igrocketraccoon','ig83','two','guardians','','','lightning','cu',3,0,0,0 "
+            + "union select 3698,898,1,1,'Marvel','IG','Rocket Raccoon','and Grow!','igrocketraccoon','ig123','three','guardians','','','lightning','dr',3,0,0,0 "
+            + "union select 3699,899,1,1,'Marvel','IG','Sandman','Frightful','igsandman','ig44','three','villain','','','fist','bc',3,0,0,0 "
+            + "union select 3700,899,1,1,'Marvel','IG','Sandman','Sandilicious!','igsandman','ig84','three','villain','','','fist','cu',3,0,0,0 "
+            + "union select 3701,899,1,1,'Marvel','IG','Sandman','Sinister','igsandman','ig124','three','villain','','','fist','dr',3,0,0,0 "
+            + "union select 3702,900,1,1,'Marvel','IG','She-Hulk','Greeny','igshehulk','ig45','six','avengers','','','shield','bc',3,0,0,0 "
+            + "union select 3703,900,1,1,'Marvel','IG','She-Hulk','Just Who You Needed!','igshehulk','ig85','eight','avengers','','','shield','cu',3,0,0,0 "
+            + "union select 3704,900,1,1,'Marvel','IG','She-Hulk','Los Angeles Native','igshehulk','ig125','six','avengers','','','shield','dr',3,0,0,0 "
+            + "union select 3705,900,1,1,'Marvel','IG','She-Hulk','Astral Planar','igshehulk','ig147','six','avengers','','','shield','esr',3,0,0,0 "
+            + "union select 3706,901,1,1,'Marvel','IG','Spider-Man','Back to Basics','igspiderman','ig46','four','','','','fist','bc',3,0,0,0 "
+            + "union select 3707,901,1,1,'Marvel','IG','Spider-Man','Responsibility','igspiderman','ig86','five','','','','fist','cu',3,0,0,0 "
+            + "union select 3708,901,1,1,'Marvel','IG','Spider-Man','Public Menace','igspiderman','ig126','four','','','','fist','dr',3,0,0,0 "
+            + "union select 3709,901,1,1,'Marvel','IG','Spider-Man','Superior Team-Up','igspiderman','ig148','three','','','','fist','esr',3,0,0,0 "
+            + "union select 3710,902,1,1,'Marvel','IG','Star-Lord','Legendary','igstarlord','ig47','five','guardians','','','fist','bc',3,0,0,0 "
+            + "union select 3711,902,1,1,'Marvel','IG','Star-Lord','Former NASA Mechanic','igstarlord','ig87','four','guardians','','','fist','cu',3,0,0,0 "
+            + "union select 3712,902,1,1,'Marvel','IG','Star-Lord','King of Spartax','igstarlord','ig127','four','guardians','','','fist','dr',3,0,0,0 "
+            + "union select 3713,902,1,1,'Marvel','IG','Star-Lord','Power Gem','igstarlord','ig149','four','guardians','','','fist','esr',3,0,0,0 "
+            + "union select 3714,903,1,1,'Marvel','IG','Supergiant','Intangibility','igsupergiant','ig48','three','blackorder','','','shield','bc',3,0,0,0 "
+            + "union select 3715,903,1,1,'Marvel','IG','Supergiant','Remote Possession','igsupergiant','ig88','five','blackorder','','','shield','cu',3,0,0,0 "
+            + "union select 3716,903,1,1,'Marvel','IG','Supergiant','Mind Control','igsupergiant','ig128','four','blackorder','','','shield','dr',3,0,0,0 "
+            + "union select 3717,904,1,1,'Marvel','IG','Thanos','Courting Death','igthanos','ig49','seven','blackorder','','','mask','bc',3,0,0,0 "
+            + "union select 3718,904,1,1,'Marvel','IG','Thanos','Overpowering Strength','igthanos','ig89','seven','blackorder','','','mask','cu',3,0,0,0 "
+            + "union select 3719,904,1,1,'Marvel','IG','Thanos','Enemy of Life','igthanos','ig129','eight','blackorder','','','mask','dr',3,0,0,0 "
+            + "union select 3720,904,1,1,'Marvel','IG','Thanos','Preparing the Way','igthanos','ig150','seven','blackorder','','','mask','esr',3,0,0,0 "
+            + "union select 3721,905,1,1,'Marvel','IG','The Collector','Stolen Cosmic Cube','igcollector','ig50','five','villain','','','mask','bc',3,0,0,0 "
+            + "union select 3722,905,1,1,'Marvel','IG','The Collector','Behind the Scenes','igcollector','ig90','six','villain','','','mask','cu',3,0,0,0 "
+            + "union select 3723,905,1,1,'Marvel','IG','The Collector','Driven by Purpose','igcollector','ig130','five','villain','','','mask','dr',3,0,0,0 "
+            + "union select 3724,906,1,1,'Marvel','IG','The Spot','Dr. Jonathan Ohnn','igspot','ig51','two','villain','','','shield','bc',3,0,0,0 "
+            + "union select 3725,906,1,1,'Marvel','IG','The Spot','Phase Shift','igspot','ig91','two','villain','','','shield','cu',3,0,0,0 "
+            + "union select 3726,906,1,1,'Marvel','IG','The Spot','Sinister Sixteen','igspot','ig131','five','villain','','','shield','dr',3,0,0,0 "
+            + "union select 3727,907,1,1,'Marvel','IG','Thor','Scion of All Asgard','igthor','ig52','five','','','','lightning','bc',3,0,0,0 "
+            + "union select 3728,907,1,1,'Marvel','IG','Thor','I am Mighty!','igthor','ig92','six','','','','lightning','cu',3,0,0,0 "
+            + "union select 3729,907,1,1,'Marvel','IG','Thor','The Golden Avenger','igthor','ig132','six','','','','lightning','dr',3,0,0,0 "
+            + "union select 3730,907,1,1,'Marvel','IG','Thor','Jormungand''s Fear','igthor','ig151','six','','','','lightning','esr',3,0,0,0 "
+            + "union select 3731,908,1,1,'Marvel','IG','Tombstone','Eliminating the Competition','igtombstone','ig53','four','villain','','','fist','bc',3,0,0,0 "
+            + "union select 3732,908,1,1,'Marvel','IG','Tombstone','Recruitment Oriented','igtombstone','ig93','five','villain','','','fist','cu',3,0,0,0 "
+            + "union select 3733,908,1,1,'Marvel','IG','Tombstone','Witness Intimidation','igtombstone','ig133','four','villain','','','fist','dr',3,0,0,0 "
+            + "union select 3734,909,1,1,'Marvel','IG','Turk Barrett','Small-Time Crook','igturkbarrett','ig54','four','infinitywatch','','','lightning','bc',3,0,0,0 "
+            + "union select 3735,909,1,1,'Marvel','IG','Turk Barrett','Aspiring Criminal','igturkbarrett','ig94','three','infinitywatch','','','lightning','cu',3,0,0,0 "
+            + "union select 3736,909,1,1,'Marvel','IG','Turk Barrett','Infinity Watch','igturkbarrett','ig134','three','infinitywatch','','','lightning','dr',3,0,0,0 "
+            + "union select 3737,909,1,1,'Marvel','IG','Turk Barrett','Mind Gem','igturkbarrett','ig152','three','infinitywatch','','','lightning','esr',3,0,0,0 "
+            + "union select 3738,910,1,1,'Marvel','IG','Typhoid Mary','Charming','igtyphoidmary','ig55','four','thehand','','','bm','bc',3,0,0,0 "
+            + "union select 3739,910,1,1,'Marvel','IG','Typhoid Mary','Dissociative Identity Disorder','igtyphoidmary','ig95','four','thehand','','','bm','cu',3,0,0,0 "
+            + "union select 3740,910,1,1,'Marvel','IG','Typhoid Mary','Red Rubber Boots','igtyphoidmary','ig135','four','thehand','','','bm','dr',3,0,0,0 "
+            + "union select 3741,911,1,1,'Marvel','IG','Wong','Stephen Strange Memorial Insitute','igwong','ig56','two','mystic','','','fist','bc',3,0,0,0 "
+            + "union select 3742,911,1,1,'Marvel','IG','Wong','Arcane Powerhouse','igwong','ig96','two','mystic','','','fist','cu',3,0,0,0 "
+            + "union select 3743,911,1,1,'Marvel','IG','Wong','Second Rate Jarvis','igwong','ig136','two','mystic','','','fist','dr',3,0,0,0 ";
 
+    //next BAC 273
+//next card 3747
+//next char 912
+
+//TODO: Reports of xls export of collection ot matching what's in the DB
 //TODO: Currnently Rigorous Training is loaded with the WWE TAG set but has no set and only appears in searches.
 //+ "union select 3591,871,1,1,'','','Rigorous Training','Sidekick Card','sksides','rigoroustraining','','','','','','gp',3,0,0,-1 ";
 
@@ -3750,6 +3908,7 @@ private static final String DATABASE_POPULATETIW = "insert into tblCards "
         database.execSQL(DATABASE_POPULATEWWE);
         database.execSQL(DATABASE_POPULATEBIT);
         database.execSQL(DATABASE_POPULATETAG);
+        database.execSQL(DATABASE_POPULATEIG);
         database.execSQL(DATABASE_BACKUP_CREATE); //creates tblbackup for fresh installs
         database.execSQL(DATABASE_SETTINGS_CREATE);
         database.execSQL(DATABASE_SETTINGS_POPULATE);

@@ -43,7 +43,7 @@ public class DownloadManager extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        offlineCards.put("ig", "152");
         offlineCards.put("wwe", "58");
         offlineCards.put("bit", "24");
         offlineCards.put("tag", "24");
@@ -151,6 +151,9 @@ public class DownloadManager extends Activity {
 
     private ArrayList getSelectedSets(){
         ArrayList<String> sets = new ArrayList<String>();
+        final ToggleButton igStarter = (ToggleButton) findViewById(R.id.tbDLIG);
+        if(igStarter.isChecked())
+            sets.add("IG");
         final ToggleButton wweStarter = (ToggleButton) findViewById(R.id.tbDLWWE);
         if(wweStarter.isChecked())
             sets.add("WWE");
@@ -191,8 +194,11 @@ public class DownloadManager extends Activity {
     }
 
     private void updateButtonText(){
+        final ToggleButton igStarter = (ToggleButton) findViewById(R.id.tbDLIG);
+        String text = "Infinity Gauntlet " + getOfflineCardCountForSet("IG")+ "/152";
+        setToggleButtonText(igStarter, text);
         final ToggleButton wweStarter = (ToggleButton) findViewById(R.id.tbDLWWE);
-        String text = "WWE " + getOfflineCardCountForSet("WWE")+ "/58";
+        text = "WWE " + getOfflineCardCountForSet("WWE")+ "/58";
         setToggleButtonText(wweStarter, text);
         final ToggleButton bitStarter = (ToggleButton) findViewById(R.id.tbDLBIT);
         text = "Bitter Rivals " + getOfflineCardCountForSet("BIT")+ "/24";
