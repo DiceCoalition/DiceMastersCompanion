@@ -1707,11 +1707,15 @@ public class Search extends Activity {
                                          setWWE.setChecked(false);
                                          setBIT.setChecked(false);
                                          setTAG.setChecked(false);
+                                         setIG.setChecked(false);
                                          forcegrey.setChecked(false);
                                          wwelegends.setChecked(false);
                                          newday.setChecked(false);
                                          nwo.setChecked(false);
                                          theshield.setChecked(false);
+                                         blackorder.setChecked(false);
+                                         thehand.setChecked(false);
+                                         infinitywatch.setChecked(false);
                                          editSearch.setText("");
                                          editSearch.clearFocus();
                                      }

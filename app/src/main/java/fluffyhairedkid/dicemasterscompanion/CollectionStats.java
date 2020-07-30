@@ -16,6 +16,8 @@ public class CollectionStats extends Activity {
     SQLDataSource datasource;
     String ownedCriteria = " where NumOwned>0 ";
     String notOwnedCriteria = " where NumOwned=0 ";
+    String foilOwnedCriteria = " where NumFoilsOwned>0 ";
+    String foilNotOwnedCriteria = " where NumFoilsOwned=0 ";
     String marvelCriteria = " and Universe='Marvel'";
     String dcCriteria = " and Universe='DC Comics'";
     String dndCriteria = " and Universe='Dungeons & Dragons'";
@@ -168,6 +170,92 @@ public class CollectionStats extends Activity {
         percent = (((double)ownedNum)/((double)total))*100.0;
 
         wweStats.setText(ownedNum + "/" + total + "\n"+df.format(percent)+"%");
+
+        //begin FOIL stats
+        result = datasource.sqlGetCardsList("_id", foilOwnedCriteria, orderCriteria);
+        ownedNum = 0;
+        for(String n : result.keySet()){
+            ownedNum += result.get(n).size();
+        }
+        result = datasource.sqlGetCardsList("_id",foilNotOwnedCriteria , orderCriteria);
+        notOwned = 0;
+        for(String n : result.keySet()){
+            notOwned += result.get(n).size();
+        }
+        final TextView dmFoilStats = (TextView) findViewById(R.id.tvDmFoilStats);
+         total = ownedNum+notOwned;
+         percent = (((double)ownedNum)/((double)total))*100.0;
+        dmFoilStats.setText(ownedNum + "/" + total + "\n"+df.format(percent)+"%");
+
+        //begin Foil Marvel stats
+        result = datasource.sqlGetCardsList("_id", foilOwnedCriteria + marvelCriteria, orderCriteria);
+        ownedNum = 0;
+        for(String n : result.keySet()){
+            ownedNum += result.get(n).size();
+        }
+        result = datasource.sqlGetCardsList("_id",foilNotOwnedCriteria + marvelCriteria , orderCriteria);
+        notOwned = 0;
+        for(String n : result.keySet()){
+            notOwned += result.get(n).size();
+        }
+        final TextView marvelFoilStats = (TextView) findViewById(R.id.tvMarvelFoilStats);
+        total = ownedNum+notOwned;
+        percent = (((double)ownedNum)/((double)total))*100.0;
+
+        marvelFoilStats.setText(ownedNum + "/" + total + "\n"+df.format(percent)+"%");
+
+
+        //begin Foil DC stats
+        result = datasource.sqlGetCardsList("_id", foilOwnedCriteria + dcCriteria, orderCriteria);
+        ownedNum = 0;
+        for(String n : result.keySet()){
+            ownedNum += result.get(n).size();
+        }
+        result = datasource.sqlGetCardsList("_id",foilNotOwnedCriteria + dcCriteria , orderCriteria);
+        notOwned = 0;
+        for(String n : result.keySet()){
+            notOwned += result.get(n).size();
+        }
+        final TextView dcFoilStats = (TextView) findViewById(R.id.tvDCFoilStats);
+        total = ownedNum+notOwned;
+        percent = (((double)ownedNum)/((double)total))*100.0;
+
+        dcFoilStats.setText(ownedNum + "/" + total + "\n"+df.format(percent)+"%");
+
+        //begin Foil D&D stats
+        result = datasource.sqlGetCardsList("_id", foilOwnedCriteria + dndCriteria, orderCriteria);
+        ownedNum = 0;
+        for(String n : result.keySet()){
+            ownedNum += result.get(n).size();
+        }
+        result = datasource.sqlGetCardsList("_id",foilNotOwnedCriteria + dndCriteria , orderCriteria);
+        notOwned = 0;
+        for(String n : result.keySet()){
+            notOwned += result.get(n).size();
+        }
+        final TextView dndFoilStats = (TextView) findViewById(R.id.tvDnDFoilStats);
+        total = ownedNum+notOwned;
+        percent = (((double)ownedNum)/((double)total))*100.0;
+
+        dndFoilStats.setText(ownedNum + "/" + total + "\n"+df.format(percent)+"%");
+
+        //begin TMNT stats
+        result = datasource.sqlGetCardsList("_id", foilOwnedCriteria + tmntCriteria, orderCriteria);
+        ownedNum = 0;
+        for(String n : result.keySet()){
+            ownedNum += result.get(n).size();
+        }
+        result = datasource.sqlGetCardsList("_id",foilNotOwnedCriteria + tmntCriteria , orderCriteria);
+        notOwned = 0;
+        for(String n : result.keySet()){
+            notOwned += result.get(n).size();
+        }
+        final TextView tmntFoilStats = (TextView) findViewById(R.id.tvtmntFoilStats);
+        total = ownedNum+notOwned;
+        percent = (((double)ownedNum)/((double)total))*100.0;
+
+        tmntFoilStats.setText(ownedNum + "/" + total + "\n"+df.format(percent)+"%");
+
     }
 
 

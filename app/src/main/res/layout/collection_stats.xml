@@ -155,6 +155,87 @@
                     android:textAlignment="center"
                     android:text="wwe"
                     android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvFoilsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:textAlignment="center"
+                    android:text="Foil Cards Owned"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/tvDmFoilStats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="All"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvMarvelFoilLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:textAlignment="center"
+                    android:text="Marvel Foils"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/tvMarvelFoilStats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Marvel"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvDcFoilLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:textAlignment="center"
+                    android:text="DC Foils"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/tvDCFoilStats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="DC"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvDnDFoilLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:textAlignment="center"
+                    android:text="Dungeons and Dragons Foils"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/tvDnDFoilStats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="DnD"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tvtmntFoilLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:paddingTop="20dp"
+                    android:text="TMNT Foils"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/tvtmntFoilStats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="TMNT"
+                    android:textSize="20dp" />
             </LinearLayout>
         </ScrollView>
 </RelativeLayout>

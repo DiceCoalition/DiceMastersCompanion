@@ -30,9 +30,11 @@ public class MainActivity extends Activity {
                 MainActivity.this);
         closeAlert.setTitle("Updates");
         closeAlert
-                .setMessage("Added Infinity Gauntlet set"
+                .setMessage("Added various prize, promo, foil, and alt-art cards to database"
                         + "\n" + "\n" +
-                        "Added Collection Stats"
+                        "Added Foil Collection Stats"
+                        + "\n" + "\n" +
+                        "Long-press of Collection buttons now auto-increments by 1"
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",

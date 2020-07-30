@@ -119,7 +119,15 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             numCards.setText(String.valueOf("Del"));
             numFoils.setVisibility(View.GONE);
         } else {
-            numCards.setText(String.valueOf(tempInt));
+            if(tempInt >= 0) {
+                numCards.setText(String.valueOf(tempInt));
+            }else{
+                //Hiding the button caused layout issues
+                numCards.setVisibility(View.INVISIBLE);
+                //RelativeLayout.LayoutParams rel_bottone = new RelativeLayout.LayoutParams(0, 30);
+                //numCards.setLayoutParams(rel_bottone);
+                //numCards.setWidth(0);
+            }
             if (foilsInt >= 0) {
                 numFoils.setText(String.valueOf(foilsInt));
             } else {
@@ -138,6 +146,19 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         ImageView energyImage = (ImageView) convertView
                 .findViewById(R.id.ivEnergy);
 
+        numCards.setOnLongClickListener(new View.OnLongClickListener(){
+            @Override
+            public boolean onLongClick(View v) {
+
+                int tempInt = Integer.valueOf(numCards.getText().toString());
+                if (tempInt >= 0) {
+                    int newc = tempInt + 1;
+                    updateCards(groupPosition, childPosition, card, newc, newc);
+                    numCards.setText(String.valueOf(newc));
+                }
+                return true;
+            }
+        });
         numCards.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -285,6 +306,18 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             }
         });
 
+        numFoils.setOnLongClickListener(new View.OnLongClickListener(){
+            @Override
+            public boolean onLongClick(View v) {
+                int tempIntF = Integer.valueOf(numFoils.getText().toString());
+                if (tempIntF >= 0) {
+                    int newF = tempIntF + 1;
+                    updateFoils(groupPosition, childPosition, card, newF, newF);
+                    numFoils.setText(String.valueOf(newF));
+                }
+                return true;
+            }
+        });
         numFoils.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -465,6 +498,18 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         item.setTypeface(null, Typeface.BOLD);
         item.setText(cardName);
 
+        numDice.setOnLongClickListener(new View.OnLongClickListener(){
+            @Override
+            public boolean onLongClick(View v) {
+                int tempIntF = Integer.valueOf(numDice.getText().toString());
+                if (tempIntF >= 0) {
+                    int newF = tempIntF + 1;
+                    updateDice(groupPosition, newF);
+                    numDice.setText(String.valueOf(newF));
+                }
+                return true;
+            }
+        });
         numDice.setOnClickListener(new View.OnClickListener() {
 
             @Override

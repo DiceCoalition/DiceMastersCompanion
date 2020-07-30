@@ -3,7 +3,7 @@
     package="fluffyhairedkid.dicemasterscompanion"
     android:installLocation="auto"
     android:versionCode="55"
-    android:versionName="1.13.8">
+    android:versionName="1.13.9">
 
     <uses-sdk />
 
