@@ -85,6 +85,8 @@ public class CardViewer extends Activity {
     public void setImageView() {
 
         ImageView imgView = (ImageView) findViewById(R.id.ivViewer);
+        if(heroCards == null)
+            return;
         int cardimage = heroCards.get(childPosition);
         // if it will return 0, then the resource you are looking for does not exist
         //imgView.getResources().getIdentifier(cardimage)

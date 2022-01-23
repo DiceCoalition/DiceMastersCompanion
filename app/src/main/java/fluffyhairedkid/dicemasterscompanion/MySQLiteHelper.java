@@ -8,7 +8,7 @@ import android.util.Log;
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "tblCards.db";
-    private static final int DATABASE_VERSION = 127;
+    private static final int DATABASE_VERSION = 129;
 
     private static final String DATABASE_CREATE = "create table tblCards (_id integer not null, CharID integer not null, DieID integer not null, CardID integer not null, "
             + "Universe text not null, CardSet text not null, CharName text not null, CardName text not null, "
@@ -499,7 +499,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 457,118,1,3,'Dungeons & Dragons','BFF','Half-Orc Fighter','Paragon Zhentarim','halforcfighter','halforcfighterparagon','three','evil','zhentarim','','fist','dr',0,0,0,-1 "
             + "union select 458,119,1,1,'Dungeons & Dragons','BFF','Human Paladin','Apprentice Harper','humanpaladin','humanpaladinapprentice','three','good','harpers','','shield','as',0,0,0,-1 "
             + "union select 459,119,1,2,'Dungeons & Dragons','BFF','Human Paladin','Lesser Emerald Enclave','humanpaladin','humanpaladinlesser','four','good','emeraldenclave','','shield','bc',0,0,0,-1 "
-            + "union select 460,119,1,3,'Dungeons & Dragons','BFF','Human Paladin','Master Lords'' Alliance','humanpaladin','humanpaladinmaster','four','good','lordsalliance','','shield','as',0,0,0,0 "
+            + "union select 460,119,1,3,'Dungeons & Dragons','BFF','Human Paladin','Master Lords'' Alliance','humanpaladin','humanpaladinmaster','four','good','lordsalliance','','shield','as',0,0,0,-1 "
             + "union select 461,119,1,4,'Dungeons & Dragons','BFF','Human Paladin','Minion Order of the Gauntlet','humanpaladin','humanpaladinminion','three','good','orderofthegauntlet','','shield','as',0,0,0,-1 "
             + "union select 462,120,1,1,'Dungeons & Dragons','BFF','Invisible Stalker','Greater Elemental','invisiblestalker','invisiblestalkergreater','four','neutral','monster','','shield','cu',0,0,0,-1 "
             + "union select 463,120,1,2,'Dungeons & Dragons','BFF','Invisible Stalker','Lesser Elemental','invisiblestalker','invisiblestalkerlesser','five','neutral','monster','','shield','bc',0,0,0,-1 "
@@ -1162,10 +1162,10 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "union select 1099,4,3,10,'Marvel','ASM','Black Widow','Professional','blackwidowspider','professional','three','avengers','','','shield','dr',0,0,0,-1 "
             + "union select 1100,283,1,2,'Marvel','ASM','Spider-Girl','May Parker','spidergirl','mayparker','three','spiderfriends','','','lightning','esr',0,0,0,-1 "
             + "union select 1101,287,1,1,'Marvel','ASM','Morbius','Unliving Vampire','morbiuszombie','unlivingvampire','seven','zombieorg','','','fist','esr',0,0,0,-1 "
-            + "union select 1102,724,2,3,'Marvel','ASM','Kingpin','Cerebral Crime Boss','kingpinzombie','cerebralcrimeboss','six','zombieorg','','','lightning','esr',0,0,0,-1 "
+            + "union select 1102,724,2,3,'Marvel','ASM','Kingpin (Zombie)','Cerebral Crime Boss','kingpinzombie','cerebralcrimeboss','six','zombieorg','','','lightning','esr',0,0,0,-1 "
             + "union select 1103,273,1,3,'Marvel','ASM','Iron Spidey','Armored Arachnid','ironspidey','armoredarachnid','six','spiderfriends','','','shield','esr',0,0,0,-1 "
             + "union select 1104,16,3,11,'Marvel','ASM','Hulk','Warbound','hulkspider','warbound','eight','','','','shield','esr',0,0,0,-1 "
-            + "union select 1105,725,3,6,'Marvel','ASM','Green Goblin','Rotting Goblin','greengoblinzombie','rottinggoblin','three','zombieorg','','','shield','esr',0,0,0,-1 "
+            + "union select 1105,725,3,6,'Marvel','ASM','Green Goblin (Zombie)','Rotting Goblin','greengoblinzombie','rottinggoblin','three','zombieorg','','','shield','esr',0,0,0,-1 "
             + "union select 1106,192,2,5,'Marvel','ASM','Electro','Supercharged','electro','supercharged','six','sinistersix','hydra','','lightning','cu',0,0,0,-1 "
             + "union select 1107,191,2,6,'Marvel','ASM','Daredevil','Radar Sense','daredevilspider','radarsense','four','spiderfriends','','','fist','cu',0,0,0,-1 "
             + "union select 1108,266,1,3,'Marvel','ASM','Cloak','Secret Defender','cloak','secretdefendercloak','five','spiderfriends','','','mask','cu',0,0,0,-1 "
@@ -3833,10 +3833,13 @@ private static final String DATABASE_POPULATETIW = "insert into tblCards "
             + "union select 3753,1,1,257,'Marvel','IG','Basic Action Card','Anger Issues (Alt)','basic','ig1alt','four','','','','','fz',3,0,0,0 "
             + "union select 3754,1,1,259,'Marvel','IG','Basic Action Card','Big Entrance (Alt)','basic','ig3alt','three','','','','','fz',3,0,0,0 "
             + "union select 3755,1,1,263,'Marvel','IG','Basic Action Card','Investigation (Alt)','basic','ig7alt','three','','','','','fz',3,0,0,0 "
-            + "union select 3756,1,1,272,'Marvel','IG','Basic Action Card','Villainous Pact (Alt)','basic','ig16alt','four','','','','','fz',3,0,0,0 ";
+            + "union select 3756,1,1,272,'Marvel','IG','Basic Action Card','Villainous Pact (Alt)','basic','ig16alt','four','','','','','fz',3,0,0,0 "
+            + "union select 3757,901,1,1,'Marvel','IG','Typhoid Mary','Violent Tendencies','igtyphoidmary','m2020_2','five','thehand','','','bm','gp',3,0,0,-1 "
+            + "union select 3758,910,1,1,'Marvel','IG','Spider-Man','Wall-Crawler of Forest Hills','igspiderman','m2020_4','four','spiderfriends','','','fist','gp',3,0,0,-1 "
+            + "union select 3759,1,1,273,'Marvel','IG','Basic Action Card','Slingers','basic','m2020_6','five','','','','','gp',3,0,0,-1 ";
 
-    //next BAC 273
-//next card 3753
+    //next BAC 274
+//next card 3760
 //next char 912
 //TODO: Add The Front Line prize alt art,
 //TODO: Reports of xls export of collection ot matching what's in the DB
