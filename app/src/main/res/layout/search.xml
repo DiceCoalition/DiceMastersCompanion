@@ -527,6 +527,12 @@
                     android:layout_height="wrap_content"
                     android:text="IG" />
 
+                <CheckBox
+                    android:id="@+id/cb146"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DPS" />
+
             </LinearLayout>
             <TextView
                 android:id="@+id/textView2"
@@ -871,6 +877,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/thehand" />
+
+                <CheckBox
+                    android:id="@+id/cb147"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shiar" />
+
 
             </LinearLayout>
 

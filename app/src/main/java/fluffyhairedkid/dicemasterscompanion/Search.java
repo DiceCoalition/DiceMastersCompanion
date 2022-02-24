@@ -80,6 +80,7 @@ public class Search extends Activity {
         final CheckBox setBIT = (CheckBox) findViewById(R.id.cb136);
         final CheckBox setTAG = (CheckBox) findViewById(R.id.cb137);
         final CheckBox setIG = (CheckBox) findViewById(R.id.cb142);
+        final CheckBox setDPS = (CheckBox) findViewById(R.id.cb146);
         final CheckBox costOne = (CheckBox) findViewById(R.id.cb1);
         final CheckBox costTwo = (CheckBox) findViewById(R.id.cb2);
         final CheckBox costThree = (CheckBox) findViewById(R.id.cb3);
@@ -173,6 +174,7 @@ public class Search extends Activity {
         final CheckBox infinitywatch = (CheckBox) findViewById(R.id.cb143);
         final CheckBox blackorder = (CheckBox) findViewById(R.id.cb144);
         final CheckBox thehand= (CheckBox) findViewById(R.id.cb145);
+        final CheckBox shiar= (CheckBox) findViewById(R.id.cb147);
         final EditText editSearch = (EditText) findViewById(R.id.etSearchText);
 
         Button search = (Button) findViewById(R.id.btSearch);
@@ -648,6 +650,13 @@ public class Search extends Activity {
                                                   setCriteria = setCriteria + "'IG'";
                                               } else {
                                                   setCriteria = setCriteria + ",'IG'";
+                                              }
+                                          }
+                                          if (setDPS.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'DPS'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'DPS'";
                                               }
                                           }
                                           if (!"".equals(setCriteria)) {
@@ -1277,6 +1286,13 @@ public class Search extends Activity {
                                                   affilCriteria = affilCriteria + ",'thehand'";
                                               }
                                           }
+                                          if (shiar.isChecked()) {
+                                              if (affilCriteria.equals("")) {
+                                                  affilCriteria = affilCriteria + "'shiar'";
+                                              } else {
+                                                  affilCriteria = affilCriteria + ",'shiar'";
+                                              }
+                                          }
                                           if (noaffil.isChecked())
 
                                           {
@@ -1708,6 +1724,7 @@ public class Search extends Activity {
                                          setBIT.setChecked(false);
                                          setTAG.setChecked(false);
                                          setIG.setChecked(false);
+                                         setDPS.setChecked(false);
                                          forcegrey.setChecked(false);
                                          wwelegends.setChecked(false);
                                          newday.setChecked(false);
@@ -1716,6 +1733,7 @@ public class Search extends Activity {
                                          blackorder.setChecked(false);
                                          thehand.setChecked(false);
                                          infinitywatch.setChecked(false);
+                                         shiar.setChecked(false);
                                          editSearch.setText("");
                                          editSearch.clearFocus();
                                      }

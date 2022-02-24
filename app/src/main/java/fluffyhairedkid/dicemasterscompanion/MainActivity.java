@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
                 MainActivity.this);
         closeAlert.setTitle("Updates");
         closeAlert
-                .setMessage("Added OP-at-home cards"
+                .setMessage("Added Dark Phoenix Saga cards"
                         // + "\n" + "\n" +
                         // "Added Foil Collection Stats"
                         // + "\n" + "\n" +
