@@ -3979,8 +3979,8 @@ private static final String DATABASE_POPULATETIW = "insert into tblCards "
             + "union select 3897,947,1,1,'Marvel','DPS','Storm','Cloud Cover','dpsstorm','dps92','four','xmen','','','lightning','cu',3,0,0,0 "
             + "union select 3898,947,1,1,'Marvel','DPS','Storm','Queen','dpsstorm','dps132','seven','xmen','','','lightning','dr',3,0,0,0 "
             + "union select 3899,948,1,1,'Marvel','DPS','Supreme Intelligence','Kree Science Council','dpssupremeintelligence','dps53','six','','','','mask','bc',3,0,0,0 "
-            + "union select 3900,948,1,1,'Marvel','DPS','Supreme Intelligence','Psionic Collective','dpssupremeintelligene','dps93','seven','','','','mask','cu',3,0,0,0 "
-            + "union select 3901,948,1,1,'Marvel','DPS','Supreme Intelligence','Merciless','dpssupremeintelligene','dps133','twelve','','','','mask','dr',3,0,0,0 "
+            + "union select 3900,948,1,1,'Marvel','DPS','Supreme Intelligence','Psionic Collective','dpssupremeintelligence','dps93','seven','','','','mask','cu',3,0,0,0 "
+            + "union select 3901,948,1,1,'Marvel','DPS','Supreme Intelligence','Merciless','dpssupremeintelligence','dps133','twelve','','','','mask','dr',3,0,0,0 "
             + "union select 3902,949,1,1,'Marvel','DPS','Toad','Secondary Mutation','dpstoad','dps54','three','magnetoorg','','','fist','bc',3,0,0,0 "
             + "union select 3903,949,1,1,'Marvel','DPS','Toad','Looking for Comradery','dpstoad','dps94','three','magnetoorg','','','fist','cu',3,0,0,0 "
             + "union select 3904,949,1,1,'Marvel','DPS','Toad','Journey Into Misery','dpstoad','dps134','four','magnetoorg','','','fist','dr',3,0,0,0 "
@@ -3993,8 +3993,8 @@ private static final String DATABASE_POPULATETIW = "insert into tblCards "
             + "union select 3911,951,1,1,'Marvel','DPS','Wolverine','Tough for the Kids','dpswolverine','dps152','five','xmen','','','fist','esr',3,0,0,0 ";
 
     //next BAC 290
-//next card 3760
-//next char 912
+//next card 3912
+//next char 952
 //TODO: Add The Front Line prize alt art,
 //TODO: Reports of xls export of collection ot matching what's in the DB
 //TODO: Currnently Rigorous Training is loaded with the WWE TAG set but has no set and only appears in searches.

@@ -181,9 +181,9 @@ public class DownloadManager extends Activity {
         final ToggleButton dxmStarter = (ToggleButton) findViewById(R.id.tbDLDXM);
         if(dxmStarter.isChecked())
             sets.add("DXM");
-       // final ToggleButton asmStarter = (ToggleButton) findViewById(R.id.tbDLASM);
-       // if(asmStarter.isChecked())
-       //     sets.add("ASM");
+        final ToggleButton asmStarter = (ToggleButton) findViewById(R.id.tbDLASM);
+        if(asmStarter.isChecked())
+            sets.add("ASM");
        final ToggleButton dlOP = (ToggleButton) findViewById(R.id.tbDLOP);
        if(dlOP.isChecked())
             sets.add("m2019_");
@@ -224,9 +224,9 @@ public class DownloadManager extends Activity {
         final ToggleButton dxmStarter = (ToggleButton) findViewById(R.id.tbDLDXM);
         text = "Dark X-Men " + getOfflineCardCountForSet("DXM")+ "/24";
         setToggleButtonText(dxmStarter, text);
-        //final ToggleButton asmStarter = (ToggleButton) findViewById(R.id.tbDLASM);
-        //text = "Amazing Spider-Man " + getOfflineCardCountForSet("ASM")+ "/154";
-        //setToggleButtonText(asmStarter, text);
+        final ToggleButton asmStarter = (ToggleButton) findViewById(R.id.tbDLASM);
+        text = "Amazing Spider-Man " + getOfflineCardCountForSet("ASM")+ "/142";
+        setToggleButtonText(asmStarter, text);
         //TODO: removing MarvelOP because "_" in name is causing some problems.
         final ToggleButton dlOP = (ToggleButton) findViewById(R.id.tbDLOP);
         text = "Marvel OP 2019 " + getOfflineCardCountForSet("m2019_")+ "/8";
