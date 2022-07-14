@@ -31,10 +31,10 @@ public class MainActivity extends Activity {
         closeAlert.setTitle("Updates");
         closeAlert
                 .setMessage("Added Dark Phoenix Saga cards"
-                        // + "\n" + "\n" +
-                        // "Added Foil Collection Stats"
-                        // + "\n" + "\n" +
-                        // "Long-press of Collection buttons now auto-increments by 1"
+                         + "\n" + "\n" +
+                         "Added Dark Phoenix OP cards"
+                         + "\n" + "\n" +
+                         "DPS Full Art BAC Images Coming Soon..."
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",

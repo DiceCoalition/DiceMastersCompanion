@@ -8,7 +8,7 @@ import android.util.Log;
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "tblCards.db";
-    private static final int DATABASE_VERSION = 130; //increased for DPS addition
+    private static final int DATABASE_VERSION = 131; //increased for DPS OP kit and full art BACs
 
     private static final String DATABASE_CREATE = "create table tblCards (_id integer not null, CharID integer not null, DieID integer not null, CardID integer not null, "
             + "Universe text not null, CardSet text not null, CharName text not null, CardName text not null, "
@@ -3990,10 +3990,28 @@ private static final String DATABASE_POPULATETIW = "insert into tblCards "
             + "union select 3908,951,1,1,'Marvel','DPS','Wolverine','Pure of Heart','dpswolverine','dps56','four','xmen','','','fist','bc',3,0,0,0 "
             + "union select 3909,951,1,1,'Marvel','DPS','Wolverine','Hardened by Mardipoor','dpswolverine','dps96','five','xmen','','','fist','cu',3,0,0,0 "
             + "union select 3910,951,1,1,'Marvel','DPS','Wolverine','Trainer','dpswolverine','dps136','four','xmen','','','fist','dr',3,0,0,0 "
-            + "union select 3911,951,1,1,'Marvel','DPS','Wolverine','Tough for the Kids','dpswolverine','dps152','five','xmen','','','fist','esr',3,0,0,0 ";
+            + "union select 3911,951,1,1,'Marvel','DPS','Wolverine','Tough for the Kids','dpswolverine','dps152','five','xmen','','','fist','esr',3,0,0,0 "
+            + "union select 3912,1,1,282,'Marvel','DPS','Basic Action Card','Mutation (Alt)','basic','dps9alt','three','','','','','fz',3,0,0,0 "
+            + "union select 3913,1,1,284,'Marvel','DPS','Basic Action Card','Power Bolt (Alt)','basic','dps11alt','three','','','','','fz',3,0,0,0 "
+            + "union select 3914,1,1,286,'Marvel','DPS','Basic Action Card','Rally! (Alt)','basic','dps13alt','three','','','','','fz',3,0,0,0 "
+            + "union select 3915,1,1,288,'Marvel','DPS','Basic Action Card','The Front Line (Alt)','basic','dps15alt','five','','','','','fz',3,0,0,0 "
+            + "union select 3916,1,1,276,'Marvel','DPS','Basic Action Card','Explosion (OP Alt)','basic','dps3opalt','four','','','','','gp',3,0,0,-1 "
+            + "union select 3917,1,1,284,'Marvel','DPS','Basic Action Card','Power Bolt (OP Alt)','basic','dps11opalt','three','','','','','gp',3,0,0,-1 "
+            + "union select 3918,1,1,290,'Marvel','DPS','Basic Action Card','Hellfire Gala','basic','dpsop1','six','','','','','gp',3,0,0,-1 "
+            + "union select 3919,1,1,290,'Marvel','DPS','Basic Action Card','Hellfire Gala (Alt)','basic','dpsop1alt','six','','','','','gp',3,0,0,-1 "
+            + "union select 3920,1,1,291,'Marvel','DPS','Basic Action Card','Mutant Armor','basic','dpsop2','three','','','','','gp',3,0,0,-1 "
+            + "union select 3921,1,1,292,'Marvel','DPS','Basic Action Card','Focus','basic','dpsop3','three','','','','','gp',3,0,0,-1 "
+            + "union select 3922,932,1,1,'Marvel','DPS','Kitty Pryde','Right of Passage (Alt)','dpskittypryde','dps37alt','three','xmen','','','mask','gp',3,0,0,-1 "
+            + "union select 3923,932,1,1,'Marvel','DPS','Kitty Pryde','Headmistress (Alt)','dpskittypryde','dps77alt','three','xmen','','','mask','gp',3,0,0,-1 "
+            + "union select 3924,932,1,1,'Marvel','DPS','Kitty Pryde','Just Passing Through (Alt)','dpskittypryde','dps117alt','two','xmen','hellfire','','mask','gp',3,0,0,-1 "
+            + "union select 3925,932,1,1,'Marvel','DPS','Kitty Pryde','Experienced Leader (Alt)','dpskittypryde','dps144alt','four','xmen','','','mask','gp',3,0,0,-1 "
+            + "union select 3926,936,1,1,'Marvel','DPS','Magneto','Idealist (Alt)','dpsmagneto','dps41alt','six','magnetoorg','','','mask','gp',3,0,0,-1 "
+            + "union select 3927,936,1,1,'Marvel','DPS','Magneto','Visionary (Alt)','dpsmagneto','dps81alt','five','magnetoorg','','','mask','gp',3,0,0,-1 "
+            + "union select 3928,936,1,1,'Marvel','DPS','Magneto','Master of Magnetism (Alt)','dpsmagneto','dps121alt','five','magnetoorg','','','mask','gp',3,0,0,-1 "
+            + "union select 3929,936,1,1,'Marvel','DPS','Magneto','Founder of the Brotherhood (Alt)','dpsmagneto','dps146alt','six','magnetoorg','','','mask','gp',3,0,0,-1 ";
 
-    //next BAC 290
-//next card 3912
+    //next BAC 293
+//next card 3930
 //next char 952
 //TODO: Add The Front Line prize alt art,
 //TODO: Reports of xls export of collection ot matching what's in the DB
