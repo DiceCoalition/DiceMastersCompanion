@@ -382,9 +382,9 @@ public class Tools extends Activity {
                         }
                         if (uxStarter.isChecked()) {
                             if (starterCriteria.equals("")) {
-                                starterCriteria = "'UX'";
+                                starterCriteria = "'UXM'";
                             } else {
-                                starterCriteria = starterCriteria + ",'UX'";
+                                starterCriteria = starterCriteria + ",'UXM'";
                             }
                         }
                         if (avxStarter.isChecked()) {

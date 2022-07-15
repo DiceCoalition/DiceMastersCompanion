@@ -106,6 +106,14 @@
                 android:text="Mystics" />
 
             <Button
+                android:id="@+id/btSKC"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_button"
+                android:text="Superman Kryptonite Crisis" />
+
+            <Button
                 android:id="@+id/btPromosDC"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"

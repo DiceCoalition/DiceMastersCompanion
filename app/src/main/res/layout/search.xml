@@ -533,6 +533,12 @@
                     android:layout_height="wrap_content"
                     android:text="DPS" />
 
+                <CheckBox
+                    android:id="@+id/cb148"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SKC" />
+
             </LinearLayout>
             <TextView
                 android:id="@+id/textView2"

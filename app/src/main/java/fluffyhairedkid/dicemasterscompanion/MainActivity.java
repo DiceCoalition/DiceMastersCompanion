@@ -30,11 +30,11 @@ public class MainActivity extends Activity {
                 MainActivity.this);
         closeAlert.setTitle("Updates");
         closeAlert
-                .setMessage("Added Dark Phoenix Saga cards"
+                .setMessage("Added Superman Kryptonite Crisis cards"
+                         /*+ "\n" + "\n" +
+                         "Added Dark Phoenix OP cards"*/
                          + "\n" + "\n" +
-                         "Added Dark Phoenix OP cards"
-                         + "\n" + "\n" +
-                         "DPS Full Art BAC Images Coming Soon..."
+                         "SKC Full Art BAC Images Coming Soon..."
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",

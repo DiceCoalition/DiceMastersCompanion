@@ -81,6 +81,7 @@ public class Search extends Activity {
         final CheckBox setTAG = (CheckBox) findViewById(R.id.cb137);
         final CheckBox setIG = (CheckBox) findViewById(R.id.cb142);
         final CheckBox setDPS = (CheckBox) findViewById(R.id.cb146);
+        final CheckBox setSKC = (CheckBox) findViewById(R.id.cb148);
         final CheckBox costOne = (CheckBox) findViewById(R.id.cb1);
         final CheckBox costTwo = (CheckBox) findViewById(R.id.cb2);
         final CheckBox costThree = (CheckBox) findViewById(R.id.cb3);
@@ -336,9 +337,9 @@ public class Search extends Activity {
                                           }
                                           if (setUX.isChecked()) {
                                               if (setCriteria.equals("")) {
-                                                  setCriteria = setCriteria + "'UX'";
+                                                  setCriteria = setCriteria + "'UXM'";
                                               } else {
-                                                  setCriteria = setCriteria + ",'UX'";
+                                                  setCriteria = setCriteria + ",'UXM'";
                                               }
 
                                           }
@@ -657,6 +658,13 @@ public class Search extends Activity {
                                                   setCriteria = setCriteria + "'DPS'";
                                               } else {
                                                   setCriteria = setCriteria + ",'DPS'";
+                                              }
+                                          }
+                                          if (setSKC.isChecked()) {
+                                              if (setCriteria.equals("")) {
+                                                  setCriteria = setCriteria + "'SKC'";
+                                              } else {
+                                                  setCriteria = setCriteria + ",'SKC'";
                                               }
                                           }
                                           if (!"".equals(setCriteria)) {
