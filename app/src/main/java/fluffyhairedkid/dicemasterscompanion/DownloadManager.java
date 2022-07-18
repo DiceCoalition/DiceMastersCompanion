@@ -184,6 +184,18 @@ public class DownloadManager extends Activity {
         final ToggleButton asmStarter = (ToggleButton) findViewById(R.id.tbDLASM);
         if(asmStarter.isChecked())
             sets.add("ASM");
+        final ToggleButton avxStarter = (ToggleButton) findViewById(R.id.tbDLAVX);
+        if(avxStarter.isChecked())
+            sets.add("AVX");
+        final ToggleButton bfuStarter = (ToggleButton) findViewById(R.id.tbDLBFU);
+        if(bfuStarter.isChecked())
+            sets.add("BFU");
+        final ToggleButton orkStarter = (ToggleButton) findViewById(R.id.tbDLORK);
+        if(orkStarter.isChecked())
+            sets.add("ORK");
+        final ToggleButton swStarter = (ToggleButton) findViewById(R.id.tbDLSW);
+        if(swStarter.isChecked())
+            sets.add("SW");
        final ToggleButton dlOP = (ToggleButton) findViewById(R.id.tbDLOP);
        if(dlOP.isChecked())
             sets.add("m2019_");
@@ -227,6 +239,18 @@ public class DownloadManager extends Activity {
         final ToggleButton asmStarter = (ToggleButton) findViewById(R.id.tbDLASM);
         text = "Amazing Spider-Man " + getOfflineCardCountForSet("ASM")+ "/142";
         setToggleButtonText(asmStarter, text);
+        final ToggleButton avxStarter = (ToggleButton) findViewById(R.id.tbDLAVX);
+        text = "Avengers Vs X-Men " + getOfflineCardCountForSet("AVX")+ "/132";
+        setToggleButtonText(avxStarter, text);
+        final ToggleButton bfuStarter = (ToggleButton) findViewById(R.id.tbDLBFU);
+        text = "W40K: Battle for Ultramar " + getOfflineCardCountForSet("BFU")+ "/59";
+        setToggleButtonText(bfuStarter, text);
+        final ToggleButton orkStarter = (ToggleButton) findViewById(R.id.tbDLORK);
+        text = "W40K: Orks " + getOfflineCardCountForSet("ORK")+ "/24";
+        setToggleButtonText(orkStarter, text);
+        final ToggleButton swStarter = (ToggleButton) findViewById(R.id.tbDLSW);
+        text = "w40K: Space Wolves " + getOfflineCardCountForSet("SW")+ "/24";
+        setToggleButtonText(swStarter, text);
         //TODO: removing MarvelOP because "_" in name is causing some problems.
         final ToggleButton dlOP = (ToggleButton) findViewById(R.id.tbDLOP);
         text = "Marvel OP 2019 " + getOfflineCardCountForSet("m2019_")+ "/8";

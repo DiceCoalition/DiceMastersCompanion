@@ -557,6 +557,10 @@ public class DataManagement extends Activity {
         offlineCards.put("dxm", "24");
         offlineCards.put("xfo", "24");
         offlineCards.put("asm", "142");
+        offlineCards.put("avx", "132");
+        offlineCards.put("bfu", "59");
+        offlineCards.put("ork", "24");
+        offlineCards.put("sw", "24");
         offlineCards.put("m2019_", "8");
         try {
             ArrayList<String> files = new ArrayList<String>();

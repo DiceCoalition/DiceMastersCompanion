@@ -257,6 +257,82 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
+                    android:textOn="Avengers Vs X-Men"
+                    android:textOff="Avengers Vs X-Men"
+                    android:textSize="15sp"
+                    android:id="@+id/tbDLAVX"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:background="@color/grey">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textOn="W40K: Battle for Ultramar"
+                    android:textOff="W40K: Battle for Ultramar"
+                    android:textSize="15sp"
+                    android:id="@+id/tbDLBFU"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:background="@color/grey">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textOn="W40K: Orks"
+                    android:textOff="W40K: Orks"
+                    android:textSize="15sp"
+                    android:id="@+id/tbDLORK"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:background="@color/grey">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textOn="W40K: Space Wolves"
+                    android:textOff="W40K: Space Wolves"
+                    android:textSize="15sp"
+                    android:id="@+id/tbDLSW"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:background="@color/grey">
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
                     android:textOn="Marvel 2019 OP"
                     android:textOff="Marvel 2019 OP"
                     android:textSize="15sp"

@@ -34,7 +34,7 @@ public class MainActivity extends Activity {
                          /*+ "\n" + "\n" +
                          "Added Dark Phoenix OP cards"*/
                          + "\n" + "\n" +
-                         "SKC Full Art BAC Images Coming Soon..."
+                         "Moved more sets to offline to reduce app size"
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",
