@@ -30,11 +30,11 @@ public class MainActivity extends Activity {
                 MainActivity.this);
         closeAlert.setTitle("Updates");
         closeAlert
-                .setMessage("Standardized Set Abbreviations"
-                         /*+ "\n" + "\n" +
-                         "Added Dark Phoenix OP cards"*/
+                .setMessage("Added Collection 'Extra' search"
                          + "\n" + "\n" +
-                         "Fixed Uncanny X-Men database bug"
+                        "Fixed Collection Export/Import Issue"
+                         + "\n" + "\n" +
+                         "Fixed missing Starfire dice image"
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",

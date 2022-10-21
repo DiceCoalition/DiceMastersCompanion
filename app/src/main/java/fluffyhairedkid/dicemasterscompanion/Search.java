@@ -99,6 +99,7 @@ public class Search extends Activity {
         final CheckBox engMask = (CheckBox) findViewById(R.id.cb14);
         final CheckBox owned = (CheckBox) findViewById(R.id.cb25);
         final CheckBox notOwned = (CheckBox) findViewById(R.id.cb26);
+        final CheckBox extra = (CheckBox) findViewById(R.id.cb149);
         final CheckBox starter = (CheckBox) findViewById(R.id.cb33);
         final CheckBox common = (CheckBox) findViewById(R.id.cb28);
         final CheckBox uncommon = (CheckBox) findViewById(R.id.cb29);
@@ -805,7 +806,9 @@ public class Search extends Activity {
                                                   collectionCriteria = "";
                                               }
                                           }
-
+                                          if (extra.isChecked()) {
+                                              collectionCriteria = "(NumOwned>1 or NumFoilsOwned>1)";
+                                          }
                                           //if (!"".equals(collectionCriteria)) {
                                           //    collectionCriteria = "(NumOwned" + collectionCriteria + ")";
                                           //}
@@ -1604,6 +1607,7 @@ public class Search extends Activity {
                                          uniWWE.setChecked(false);
                                          owned.setChecked(false);
                                          notOwned.setChecked(false);
+                                         extra.setChecked(false);
                                          setAvX.setChecked(false);
                                          setUX.setChecked(false);
                                          setS1.setChecked(false);
