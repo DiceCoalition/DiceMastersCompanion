@@ -337,9 +337,9 @@ public class Search extends Activity {
                                           }
                                           if (setUX.isChecked()) {
                                               if (setCriteria.equals("")) {
-                                                  setCriteria = setCriteria + "'UXM'";
+                                                  setCriteria = setCriteria + "'UX','UXM'";
                                               } else {
-                                                  setCriteria = setCriteria + ",'UXM'";
+                                                  setCriteria = setCriteria + ",'UX','UXM'";
                                               }
 
                                           }
@@ -1733,6 +1733,7 @@ public class Search extends Activity {
                                          setTAG.setChecked(false);
                                          setIG.setChecked(false);
                                          setDPS.setChecked(false);
+                                         setSKC.setChecked(false);
                                          forcegrey.setChecked(false);
                                          wwelegends.setChecked(false);
                                          newday.setChecked(false);

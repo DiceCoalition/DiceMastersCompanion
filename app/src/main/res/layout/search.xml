@@ -183,13 +183,13 @@
                     android:id="@+id/cb16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="UX" />
+                    android:text="UXM" />
 
                 <CheckBox
                     android:id="@+id/cb17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="S1" />
+                    android:text="YGO" />
 
                 <CheckBox
                     android:id="@+id/cb18"
@@ -261,7 +261,7 @@
                     android:id="@+id/cb87"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="GATF" />
+                    android:text="GAF" />
             </LinearLayout>
 
             <LinearLayout
@@ -273,7 +273,7 @@
                     android:id="@+id/cb88"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="DS" />
+                    android:text="DrS" />
 
                 <CheckBox
                     android:id="@+id/cb92"
@@ -291,7 +291,7 @@
                     android:id="@+id/cb94"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="IMWM" />
+                    android:text="IMW" />
             </LinearLayout>
 
             <LinearLayout
@@ -303,13 +303,13 @@
                     android:id="@+id/cb97"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TD" />
+                    android:text="Def" />
 
                 <CheckBox
                     android:id="@+id/cb99"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="BM" />
+                    android:text="BAT" />
 
                 <CheckBox
                     android:id="@+id/cb100"
@@ -321,7 +321,7 @@
                     android:id="@+id/cb102"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SMMC" />
+                    android:text="SMC" />
 
             </LinearLayout>
 
@@ -340,19 +340,19 @@
                     android:id="@+id/cb104"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="XMFC" />
+                    android:text="XFC" />
 
                 <CheckBox
                     android:id="@+id/cb101"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ToA" />
+                    android:text="TOA" />
 
                 <CheckBox
                     android:id="@+id/cb107"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TMT" />
+                    android:text="THOR" />
 
 
             </LinearLayout>

@@ -65,7 +65,7 @@ public class Marvel extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(Marvel.this, CardCollectorNEW.class);
                 intent.putExtra("view", "collection");
-                intent.putExtra("whereCriteria", "where CardSet='UXM'");
+                intent.putExtra("whereCriteria", "where CardSet='UX' or CardSet='UXM'");
                 startActivity(intent);
             }
         });
@@ -332,7 +332,7 @@ public class Marvel extends Activity {
                 ListBuilder cardList = new ListBuilder(Marvel.this,
                         getPackageName());
                 MainActivity.masterList = cardList
-                        .buildList("where CardSet='UXM'");
+                        .buildList("where CardSet='UX'");
 
                 Intent intent = new Intent(Marvel.this, CardCollector.class);
                 intent.putExtra("view", "collection");

@@ -30,11 +30,11 @@ public class MainActivity extends Activity {
                 MainActivity.this);
         closeAlert.setTitle("Updates");
         closeAlert
-                .setMessage("Added Superman Kryptonite Crisis cards"
+                .setMessage("Standardized Set Abbreviations"
                          /*+ "\n" + "\n" +
                          "Added Dark Phoenix OP cards"*/
                          + "\n" + "\n" +
-                         "Moved more sets to offline to reduce app size"
+                         "Fixed Uncanny X-Men database bug"
                 );
         closeAlert.setCancelable(true);
         closeAlert.setPositiveButton("OK",

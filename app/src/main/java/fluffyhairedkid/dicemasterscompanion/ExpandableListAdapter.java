@@ -467,6 +467,18 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         datasource = new SQLDataSource(context);
 
         String cardName = (String) getGroup(groupPosition);
+        cardName = cardName.replace("(S1)", "(YGO)");
+        cardName = cardName.replace("(UX)", "(UXM)");
+        cardName = cardName.replace("(GATF)", "(GAF)");
+        cardName = cardName.replace("(DS)", "(DrS)");
+        cardName = cardName.replace("(IMWM)", "(IMW)");
+        cardName = cardName.replace("(TD)", "(Def)");
+        cardName = cardName.replace("(BM)", "(BAT)");
+        cardName = cardName.replace("(SMMC)", "(SMC)");
+        cardName = cardName.replace("(XFMC)", "(XFC)");
+        cardName = cardName.replace("(ToA)", "(TOA)");
+        cardName = cardName.replace("(TMT)", "(THOR)");
+
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
